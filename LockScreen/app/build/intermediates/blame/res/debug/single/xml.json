@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "F:\\android applications\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_feedback.xml",
+        "source": "F:\\android applications\\LockScreen\\app\\src\\main\\res\\xml\\pref_feedback.xml"
+    },
+    {
+        "merged": "F:\\android applications\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_changepassword.xml",
+        "source": "F:\\android applications\\LockScreen\\app\\src\\main\\res\\xml\\pref_changepassword.xml"
+    },
+    {
+        "merged": "F:\\android applications\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_general.xml",
+        "source": "F:\\android applications\\LockScreen\\app\\src\\main\\res\\xml\\pref_general.xml"
+    },
+    {
+        "merged": "F:\\android applications\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_pass_icons.xml",
+        "source": "F:\\android applications\\LockScreen\\app\\src\\main\\res\\xml\\pref_pass_icons.xml"
+    },
+    {
+        "merged": "F:\\android applications\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_headers.xml",
+        "source": "F:\\android applications\\LockScreen\\app\\src\\main\\res\\xml\\pref_headers.xml"
+    }
+]
