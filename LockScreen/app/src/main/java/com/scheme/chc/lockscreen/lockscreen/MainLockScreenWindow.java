@@ -1,6 +1,7 @@
 package com.scheme.chc.lockscreen.lockscreen;
 
 import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.KeyguardManager;
@@ -11,8 +12,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.preference.PreferenceManager;
+import android.support.v4.app.NavUtils;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -28,8 +31,7 @@ import com.scheme.chc.lockscreen.settings.SettingsActivity;
 
 import java.util.List;
 
-public class MainLockScreenWindow extends Activity implements
-        LockScreenUtils.OnLockStatusChangedListener, SurfaceHolder.Callback{
+public class MainLockScreenWindow extends Activity implements LockScreenUtils.OnLockStatusChangedListener, SurfaceHolder.Callback{
 
     // User-interface
     public static Button btnUnlock;
@@ -39,6 +41,7 @@ public class MainLockScreenWindow extends Activity implements
     // Member variables
     private LockScreenUtils mLockscreenUtils;
     public static boolean opensettings = true;
+    private boolean pref_enablechc;
 
     // Set appropriate flags to make the screen appear over the keyguard
     @Override
@@ -62,7 +65,7 @@ public class MainLockScreenWindow extends Activity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainlockscreenwindow);
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        boolean pref_enablechc = (preferences.getBoolean("enablechc", false));
+        pref_enablechc = (preferences.getBoolean("enablechc", false));
 
         System.out.println("pref is " + pref_enablechc + " " + LockScreenService.notification);
         if((!pref_enablechc && opensettings) && LockScreenService.notification == null){
@@ -183,6 +186,7 @@ public class MainLockScreenWindow extends Activity implements
     public void onBackPressed() {}
 
     // Handle button clicks
+    @SuppressLint("InlinedApi")
     @Override
     public boolean onKeyDown(int keyCode, android.view.KeyEvent event) {
 
@@ -195,11 +199,13 @@ public class MainLockScreenWindow extends Activity implements
     }
 
     // handle the key press events here itself
+    @SuppressLint("InlinedApi")
     public boolean dispatchKeyEvent(KeyEvent event) {
         return !(event.getKeyCode() == KeyEvent.KEYCODE_VOLUME_UP
                 || (event.getKeyCode() == KeyEvent.KEYCODE_VOLUME_DOWN)
                 || (event.getKeyCode() == KeyEvent.KEYCODE_POWER))
-                && (event.getKeyCode() == KeyEvent.KEYCODE_HOME);
+                && (event.getKeyCode() == KeyEvent.KEYCODE_HOME)
+                && (event.getKeyCode() == KeyEvent.KEYCODE_APP_SWITCH);
     }
 
     // Lock home button
@@ -224,6 +230,18 @@ public class MainLockScreenWindow extends Activity implements
     protected void onStop() {
         super.onStop();
         unlockHomeButton();
+    }
+
+    @SuppressLint("NewApi")
+    @Override
+    protected void onPause() {
+        super.onPause();
+        System.out.println("prefernce si" + opensettings);
+        if (pref_enablechc && LockScreenService.notification != null && !opensettings && isScreenLocked() && isServiceRunning(getString(R.string.ServiceClass))) {
+            ((ActivityManager) getApplicationContext().getSystemService(Context.ACTIVITY_SERVICE)).moveTaskToFront(2, 0);
+//            moveToFront();
+            System.out.println("inpause");
+        }
     }
 
     @SuppressWarnings("deprecation")

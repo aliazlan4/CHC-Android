@@ -32,6 +32,7 @@ import java.util.Random;
 
 class MainCanvasEngine extends Thread implements View.OnTouchListener{
 
+    @SuppressLint("StaticFieldLeak")
     private static MainCanvasEngine mainCanvasEngine;
     private final SurfaceView surfaceView;
     private Utilities utilities;
@@ -120,14 +121,14 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener{
         IconHeight = CanvasWidth/numberOfIconsHorizontally;
         TotalRounds = utilities.getTotalRounds();
 
-        if(utilities.getChoosenPassIcons().length > 0) {
+        if(utilities.getChoosenPassIcons().length > 1) {
             SelectedPassIcons.clear();
             iconscopylist.clear();
             Collections.addAll(iconscopylist,utilities.getChoosenPassIcons());
             for (int i = 0; i < TotalNumberOfPassIcons; i++)
                 SelectedPassIcons.add(getFilenameFromAssets((String) iconscopylist.get(i)));
         }
-        else if(utilities.getUploadedPassIcons().length > 0){
+        else if(utilities.getUploadedPassIcons().length > 1){
             SelectedPassIcons.clear();
             iconscopylist.clear();
             Collections.addAll(iconscopylist,utilities.getUploadedPassIcons());
@@ -256,9 +257,9 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener{
             } else {
                 iconsArrayFromAssets.clear();
             }
-            System.out.println(utilities.getChoosenPassIcons().length + " " +utilities.getUploadedPassIcons().length );
-            if(utilities.getChoosenPassIcons().length <= 0 && utilities.getUploadedPassIcons().length <= 0) {
 
+            System.out.println(utilities.getChoosenPassIcons().length + " " +utilities.getUploadedPassIcons().length );
+            if(utilities.getChoosenPassIcons().length <= 1 && utilities.getUploadedPassIcons().length <= 1) {
                 for (int i = 1; i <= TotalNumberOfPassIcons; i++) {
                     System.out.println("icons/" + i +".png");
                     SelectedPassIcons.add(bitmapFromAssets(assetManager.open("icons/" + i + ".png")));

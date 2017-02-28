@@ -94,32 +94,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
 //                }
 //            });
 
-//            pref_totalicons.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-//                @Override
-//                public boolean onPreferenceChange(Preference preference, Object newValue) {
-//                    pref_totalicons.setSummary(newValue.toString());
-//                    pref_totalicons.setDefaultValue(newValue);
-//                    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
-//                    SharedPreferences.Editor edit = preferences.edit();
-//                    edit.remove("total_icons");
-//                    edit.putString("total_icons", String.valueOf(newValue));
-//                    edit.apply();
-//                    return false;
-//                }
-//            });
-//            pref_totalrounds.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-//                @Override
-//                public boolean onPreferenceChange(Preference preference, Object newValue) {
-//                    pref_totalrounds.setSummary(newValue.toString());
-//                    pref_totalrounds.setDefaultValue(newValue);
-//                    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
-//                    SharedPreferences.Editor edit = preferences.edit();
-//                    edit.remove("rounds");
-//                    edit.putString("rounds", String.valueOf(newValue));
-//                    edit.apply();
-//                    return false;
-//                }
-//            });
         }
 
         @Override
@@ -167,19 +141,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             pref_uploadpassicon = findPreference("custom_pass_icon");
             pref_choosepassicon = findPreference("choose_pass_icon");
             pref_viewpassicon = findPreference("view_pass_icons");
-
-//            pref_totalpassicon.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-//                @Override
-//                public boolean onPreferenceChange(Preference preference, Object newValue) {
-//                    noofpassicons = Integer.parseInt(newValue.toString());
-//                    pref_totalpassicon.setSummary(newValue.toString());
-//                    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
-//                    SharedPreferences.Editor edit = preferences.edit();
-//                    edit.putString("no_of_pass_icons", newValue.toString());
-//                    edit.apply();
-//                    return false;
-//                }
-//            });
 
             pref_uploadpassicon.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @SuppressLint("InlinedApi")
@@ -298,8 +259,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                 }
             });
 
-
-
             dialog.getButton(DialogInterface.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -310,16 +269,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                     else dialog.dismiss();
                 }
             });
-
-//            dialog.setOnShowListener(new DialogInterface.OnShowListener() {
-//                @Override
-//                public void onShow(DialogInterface dialog) {
-//                    Button positiveButton = ((AlertDialog) dialog)
-//                            .getButton(AlertDialog.BUTTON_POSITIVE);
-//                    positiveButton.setText("Select (" +itemclickcount+"/"+noofpassicons+")");
-//                }
-//            });
-
             dialog.getButton(DialogInterface.BUTTON_POSITIVE).setText("Select (" +itemclickcount+"/"+noofpassicons+")");
         }
 
@@ -411,31 +360,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         }
     }
 
-//
-//    /**
-//     * This fragment shows ChangePassword preferences only. It is used when the
-//     * activity is showing a two-pane settings UI.
-//     */
-//    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-//    public static class ChangePasswordPreferenceFragment extends PreferenceFragment {
-//        @Override
-//        public void onCreate(Bundle savedInstanceState) {
-//            super.onCreate(savedInstanceState);
-//            addPreferencesFromResource(R.xml.pref_changepassword);
-//            setHasOptionsMenu(true);
-//        }
-//
-//
-//        @Override
-//        public boolean onOptionsItemSelected(MenuItem item) {
-//            int id = item.getItemId();
-//            if (id == android.R.id.home) {
-//                startActivity(new Intent(getActivity(), SettingsActivity.class));
-//                return true;
-//            }
-//            return super.onOptionsItemSelected(item);
-//        }
-//    }
 
     /**
      * This fragment shows Feedback preferences only. It is used when the
@@ -561,14 +485,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         super.onCreate(savedInstanceState);
     }
 
-//    private void setupActionBar() {
-//        ActionBar actionBar = getSupportActionBar();
-//        if (actionBar != null) {
-//            // Show the Up button in the action bar.
-//            actionBar.setDisplayHomeAsUpEnabled(true);
-//        }
-//    }
-
     @Override
     public boolean onIsMultiPane() {
         return isXLargeTablet(this);
@@ -588,7 +504,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         return PreferenceFragment.class.getName().equals(fragmentName)
                 || GeneralPreferenceFragment.class.getName().equals(fragmentName)
                 || PassIconsPreferenceFragment.class.getName().equals(fragmentName)
-//                || ChangePasswordPreferenceFragment.class.getName().equals(fragmentName)
                 || FeedbackPreferenceFragment.class.getName().equals(fragmentName)
                 || ExitPreferenceFragment.class.getName().equals(fragmentName);
     }
@@ -601,5 +516,20 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
     @Override
     public void onStop() {
         super.onStop();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == android.R.id.home) {
+            startActivity(new Intent(this, SettingsActivity.class));
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

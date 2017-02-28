@@ -1,7 +1,4 @@
-#Sun Feb 26 17:51:52 PKT 2017
-base.0=F\:\\android applications\\LockScreen\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_4cd364734ea16b68a69efa86cc43f308fc170eb1
-renamed.1=classes2.dex
+#Tue Feb 28 10:19:18 PKT 2017
+base.0=F\:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
-file.1=F\:\\android applications\\LockScreen\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_17629aabe971e5a2bc94b6af8e53a8ea5ebd9d17\\classes.dex
-base.1=F\:\\android applications\\LockScreen\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_17629aabe971e5a2bc94b6af8e53a8ea5ebd9d17
-file.0=F\:\\android applications\\LockScreen\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_4cd364734ea16b68a69efa86cc43f308fc170eb1\\classes.dex
+file.0=F\:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
