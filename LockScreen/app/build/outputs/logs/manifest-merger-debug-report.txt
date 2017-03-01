@@ -91,7 +91,7 @@ ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\And
 	android:launchMode
 		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:29:13-44
 	android:configChanges
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:30:13-59
+		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:30:13-74
 	android:theme
 		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:32:13-71
 	android:name

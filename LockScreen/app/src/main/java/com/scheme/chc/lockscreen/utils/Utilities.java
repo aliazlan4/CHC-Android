@@ -44,7 +44,7 @@ public class Utilities {
         TotalRounds = Integer.parseInt(preferences.getString("rounds", "5"));
         numberOfIconsVertically = Math.abs(totalIconsToDisplay /5);
         numberOfIconsHorizontally =  Math.abs((totalIconsToDisplay /numberOfIconsVertically));
-        System.out.println("H: " + numberOfIconsHorizontally + " V: " + numberOfIconsVertically);
+//        System.out.println("H: " + numberOfIconsHorizontally + " V: " + numberOfIconsVertically);
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.HONEYCOMB) {
             Set<String> viewingIcons = preferences.getStringSet("view_pass_icons", null);
@@ -55,9 +55,9 @@ public class Utilities {
             ViewingPassicons = viewingIcons != null ? viewingIcons.toArray(new String[]{}) : new String[0];
         }
 
-        System.out.println("Uploaded " + Arrays.toString(UploadedPassIcons));
-        System.out.println("Choosen " + Arrays.toString(ChoosenPassIcons));
-        System.out.println("viewing " + Arrays.toString(ViewingPassicons));
+//        System.out.println("Uploaded " + Arrays.toString(UploadedPassIcons));
+//        System.out.println("Choosen " + Arrays.toString(ChoosenPassIcons));
+//        System.out.println("viewing " + Arrays.toString(ViewingPassicons));
     }
 
     public int getRandomInt(int limit) {

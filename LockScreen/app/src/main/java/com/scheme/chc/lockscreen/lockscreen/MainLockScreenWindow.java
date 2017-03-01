@@ -12,10 +12,12 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.preference.PreferenceManager;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.NavUtils;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -42,6 +44,9 @@ public class MainLockScreenWindow extends Activity implements LockScreenUtils.On
     private LockScreenUtils mLockscreenUtils;
     public static boolean opensettings = true;
     private boolean pref_enablechc;
+    private long userLeaveTime;
+    private boolean isNotPower;
+    private long defStop;
 
     // Set appropriate flags to make the screen appear over the keyguard
     @Override
@@ -53,7 +58,17 @@ public class MainLockScreenWindow extends Activity implements LockScreenUtils.On
                         | WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
                         | WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
                         | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
+                        //self addded
+                        | WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON
+                        | WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN
+                        | WindowManager.LayoutParams.FLAG_IGNORE_CHEEK_PRESSES
+                        | WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
+                        | WindowManager.LayoutParams.FLAG_SECURE
+                        | WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH
+
         );
+        WindowManager.LayoutParams window = new WindowManager.LayoutParams();
+        window.gravity = Gravity.TOP;
 
         super.onAttachedToWindow();
     }
@@ -73,7 +88,6 @@ public class MainLockScreenWindow extends Activity implements LockScreenUtils.On
             startActivity(new Intent(MainLockScreenWindow.this,SettingsActivity.class));
         }
 
-        mLockscreenUtils = new LockScreenUtils();
         initializeVariables();
 
         if(pref_enablechc) {
@@ -87,27 +101,27 @@ public class MainLockScreenWindow extends Activity implements LockScreenUtils.On
                 try {
                     disableKeyguard();
                     lockHomeButton();
+
                     // start service for observing intents
                     startService(new Intent(this, LockScreenService.class));
-                    System.out.println("Locked: " +isScreenLocked() + "" +opensettings);
+
+                    MyPhoneStateListener();
+
+//                    System.out.println("Locked: " +isScreenLocked() + "" +opensettings);
+
                     if(isScreenLocked() && opensettings){        //should be not
-                        System.out.println("here");
+//                        System.out.println("here");
                         startActivity(new Intent(MainLockScreenWindow.this,SettingsActivity.class));
                     }
                     else {
                         opensettings = (getIntent().getBooleanExtra("settings", false));
-                        System.out.println("settings " + opensettings + "Locked1: " + isScreenLocked() + " " + LockScreenService.notification + " " + isServiceRunning(getString(R.string.ServiceClass)));
+//                        System.out.println("settings " + opensettings + "Locked1: " + isScreenLocked() + " " + LockScreenService.notification + " " + isServiceRunning(getString(R.string.ServiceClass)));
                         if (LockScreenService.notification != null && !opensettings && isScreenLocked() && isServiceRunning(getString(R.string.ServiceClass))) {
-                            opensettings = true;
                             startSurfaceViewThread();
-                            System.out.println("here1");
+//                            System.out.println("here1");
                         }
                     }
 
-                    // listen the events get fired during the call
-                    StateListener phoneStateListener = new StateListener();
-                    TelephonyManager telephonyManager = (TelephonyManager) this.getSystemService(TELEPHONY_SERVICE);
-                    telephonyManager.listen(phoneStateListener, PhoneStateListener.LISTEN_CALL_STATE);
 
                 } catch (Exception ignored) {
                 }
@@ -115,11 +129,18 @@ public class MainLockScreenWindow extends Activity implements LockScreenUtils.On
         }
     }
 
+    private void MyPhoneStateListener() {
+        // listen the events get fired during the call
+        StateListener phoneStateListener = new StateListener();
+        TelephonyManager telephonyManager = (TelephonyManager) this.getSystemService(TELEPHONY_SERVICE);
+        telephonyManager.listen(phoneStateListener, PhoneStateListener.LISTEN_CALL_STATE);
+    }
+
 
     @SuppressLint("NewApi")
     public boolean isScreenLocked(){
         PowerManager powerManager = (PowerManager) getSystemService(Context.POWER_SERVICE);
-        return (Build.VERSION.SDK_INT < 20 ? powerManager.isScreenOn() : powerManager.isInteractive());
+        return (Build.VERSION.SDK_INT < 20 ? powerManager.isInteractive() : powerManager.isInteractive());
     }
 
     public boolean isServiceRunning(String serviceClassName){
@@ -135,6 +156,7 @@ public class MainLockScreenWindow extends Activity implements LockScreenUtils.On
     }
 
     private void initializeVariables() {
+        mLockscreenUtils = new LockScreenUtils();
         btnUnlock = (Button) findViewById(R.id.btnUnlock);
         surfaceView = (SurfaceView) findViewById(R.id.mysurface);
         surfaceHolder = surfaceView.getHolder();
@@ -194,7 +216,8 @@ public class MainLockScreenWindow extends Activity implements LockScreenUtils.On
                 || (keyCode == KeyEvent.KEYCODE_POWER)
                 || (keyCode == KeyEvent.KEYCODE_VOLUME_UP)
                 || (keyCode == KeyEvent.KEYCODE_CAMERA)
-                || (keyCode == KeyEvent.KEYCODE_HOME);
+                || (keyCode == KeyEvent.KEYCODE_HOME)
+                || (keyCode == KeyEvent.KEYCODE_APP_SWITCH);
 
     }
 
@@ -226,23 +249,54 @@ public class MainLockScreenWindow extends Activity implements LockScreenUtils.On
         }
     }
 
+    @SuppressLint("InlinedApi")
+    @RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
     @Override
     protected void onStop() {
         super.onStop();
-        unlockHomeButton();
+
+        defStop = System.currentTimeMillis() - userLeaveTime;
+        if (defStop < 200) {        //means recent apps button is pressed
+            if (pref_enablechc && LockScreenService.notification != null && !opensettings && isScreenLocked() && isServiceRunning(getString(R.string.ServiceClass))) {
+                unlockDevice();
+                startActivity(new Intent(this,MainLockScreenWindow.class));
+                System.out.println("in stop");
+            }
+        }
+        else    //back button or home
+            unlockHomeButton();
+    }
+
+    @Override
+    public void onUserLeaveHint() {
+        super.onUserLeaveHint();
+        userLeaveTime = System.currentTimeMillis() ;
     }
 
     @SuppressLint("NewApi")
     @Override
     protected void onPause() {
         super.onPause();
-        System.out.println("prefernce si" + opensettings);
-        if (pref_enablechc && LockScreenService.notification != null && !opensettings && isScreenLocked() && isServiceRunning(getString(R.string.ServiceClass))) {
-            ((ActivityManager) getApplicationContext().getSystemService(Context.ACTIVITY_SERVICE)).moveTaskToFront(2, 0);
-//            moveToFront();
-            System.out.println("inpause");
-        }
+
+//        if (pref_enablechc && LockScreenService.notification != null && !opensettings && isScreenLocked() && isServiceRunning(getString(R.string.ServiceClass))) {
+//            ActivityManager activityManager = (ActivityManager) getApplicationContext() .getSystemService(Context.ACTIVITY_SERVICE);
+//            activityManager.moveTaskToFront(getTaskId(), 0);
+//            System.out.println("inpause "+getTaskId());
+//        }
     }
+
+//    @SuppressLint("NewApi")
+//    @Override
+//    public void onWindowFocusChanged(boolean hasFocus) {
+//        super.onWindowFocusChanged(hasFocus);
+//        if(!hasFocus) {
+//            System.out.println("in window");
+//            ActivityManager am = (ActivityManager)getSystemService(Context.ACTIVITY_SERVICE);
+//            am.moveTaskToFront(getTaskId(), 0);
+//            Intent closeDialog = new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
+//            sendBroadcast(closeDialog);
+//        }
+//    }
 
     @SuppressWarnings("deprecation")
     private void disableKeyguard() {

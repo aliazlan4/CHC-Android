@@ -88,7 +88,6 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener{
             if (!surfaceHolder.getSurface().isValid()) {continue;}
             draw();
             lock = false;
-            MainLockScreenWindow.opensettings = true;
         }
     }
 
@@ -229,7 +228,7 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener{
                 }
             }
         }
-        System.out.println("X: " +passIconsXlist + " Y:"+ passIconsYlist);
+//        System.out.println("X: " +passIconsXlist + " Y:"+ passIconsYlist);
     }
 
     @SuppressLint("NewApi")
@@ -261,7 +260,7 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener{
             System.out.println(utilities.getChoosenPassIcons().length + " " +utilities.getUploadedPassIcons().length );
             if(utilities.getChoosenPassIcons().length <= 1 && utilities.getUploadedPassIcons().length <= 1) {
                 for (int i = 1; i <= TotalNumberOfPassIcons; i++) {
-                    System.out.println("icons/" + i +".png");
+//                    System.out.println("icons/" + i +".png");
                     SelectedPassIcons.add(bitmapFromAssets(assetManager.open("icons/" + i + ".png")));
                 }
             }
@@ -274,7 +273,7 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener{
                 for (int j = 0; j < SelectedPassIcons.size(); j++) {
                     if (iconsArrayFromAssets.get(i).sameAs(SelectedPassIcons.get(j))) {
                         iconsArrayFromAssets.remove(i);
-                        System.out.println("removed from array");
+//                        System.out.println("removed from array");
                     }
                 }
             }
@@ -308,8 +307,10 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener{
             float y = event.getY();
             path.computeBounds(pBounds, true);
             if (pBounds.contains(x, y)) {
-                if (draw == TotalRounds)
+                if (draw == TotalRounds) {
+                    MainLockScreenWindow.opensettings = true;
                     UnlockPhone();
+                }
                 else {
                     draw++;
                     draw();
