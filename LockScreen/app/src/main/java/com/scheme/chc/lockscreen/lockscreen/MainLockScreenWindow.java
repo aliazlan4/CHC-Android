@@ -34,6 +34,7 @@ import java.util.List;
 public class MainLockScreenWindow extends Activity implements LockScreenUtils.OnLockStatusChangedListener, SurfaceHolder.Callback{
 
     // User-interface
+    @SuppressLint("StaticFieldLeak")
     public static Button btnUnlock;
     private SurfaceView surfaceView;
     private SurfaceHolder surfaceHolder;
@@ -43,9 +44,6 @@ public class MainLockScreenWindow extends Activity implements LockScreenUtils.On
     public static boolean opensettings = true;
     private boolean pref_enablechc;
     private long userLeaveTime;
-    private boolean isNotPower;
-    private long defStop;
-    private  WindowManager manager ;
     private NotificationBlockView view;
     public static boolean removeview = false;
 
@@ -80,47 +78,55 @@ public class MainLockScreenWindow extends Activity implements LockScreenUtils.On
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainlockscreenwindow);
+        initializeVariables();
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         pref_enablechc = (preferences.getBoolean("enablechc", false));
 
 
-        System.out.println("pref is " + pref_enablechc + " " + LockScreenService.notification);
-        if((!pref_enablechc && opensettings) && LockScreenService.notification == null){
+        System.out.println("pref is " + pref_enablechc + "opening  "+opensettings+" " + LockScreenService.notification);
+        if(!pref_enablechc && opensettings || LockScreenService.notification == null){
             System.out.println("here");
             startActivity(new Intent(MainLockScreenWindow.this,SettingsActivity.class));
         }
 
-        initializeVariables();
+
 
         // unlock screen in case of app get killed by system
-        if(pref_enablechc) if (getIntent() != null && getIntent().hasExtra("kill")
-                && getIntent().getExtras().getInt("kill") == 1) {
-            enableKeyguard();
-            unlockHomeButton();
-        } else try {
-            disableKeyguard();
-            lockHomeButton();
+        if(pref_enablechc) {
+            if (getIntent() != null && getIntent().hasExtra("kill")
+                    && getIntent().getExtras().getInt("kill") == 1) {
+                enableKeyguard();
+                unlockHomeButton();
+            } else try {
+                disableKeyguard();
+                lockHomeButton();
 
-            // start service for observing intents
-            startService(new Intent(this, LockScreenService.class));
+                // start service for observing intents
+                startService(new Intent(this, LockScreenService.class));
 
-            MyPhoneStateListener();
-            //should be not
-            if (isScreenLocked() && opensettings)
-                startActivity(new Intent(MainLockScreenWindow.this, SettingsActivity.class));
-            else {
-                opensettings = (getIntent().getBooleanExtra("settings", false));
-//                        System.out.println("settings " + opensettings + "Locked1: " + isScreenLocked() + " " + LockScreenService.notification + " " + isServiceRunning(getString(R.string.ServiceClass)));
-                if (!opensettings && isScreenLocked() && isServiceRunning(getString(R.string.ServiceClass))) {
-                    blockNotificationbar(true);
-                    startSurfaceViewThread();
+                MyPhoneStateListener();
+
+                if (opensettings)
+                    startActivity(new Intent(MainLockScreenWindow.this, SettingsActivity.class));
+                else {
+                    opensettings = (getIntent().getBooleanExtra("settings", false));
+//                    System.out.println("settings " + opensettings + "Locked1: " + isScreenLocked() + " " + isServiceRunning(getString(R.string.ServiceClass)));
+                    if (!opensettings) {
+                        System.out.println("here in");
+                        blockNotificationbar(true);
+                        startSurfaceViewThread();
+                    }
                 }
-            }
-        } catch (Exception ignored) {}
+            } catch (Exception ignored) {}
+        }
+        else {
+            System.out.println("finishing");
+            finish();
+        }
     }
 
     private void blockNotificationbar(Boolean add) {
-        manager = ((WindowManager) getApplicationContext().getSystemService(Context.WINDOW_SERVICE));
+        WindowManager manager = ((WindowManager) getApplicationContext().getSystemService(Context.WINDOW_SERVICE));
         if(add) {
             WindowManager.LayoutParams localLayoutParams = new WindowManager.LayoutParams();
             localLayoutParams.type = WindowManager.LayoutParams.TYPE_SYSTEM_ERROR;
@@ -272,7 +278,7 @@ public class MainLockScreenWindow extends Activity implements LockScreenUtils.On
     protected void onStop() {
         super.onStop();
 
-        defStop = System.currentTimeMillis() - userLeaveTime;
+        long defStop = System.currentTimeMillis() - userLeaveTime;
         if (defStop < 200) {        //means recent apps button is pressed
             if (pref_enablechc && LockScreenService.notification != null && !opensettings && isScreenLocked() && isServiceRunning(getString(R.string.ServiceClass))) {
                 unlockDevice();

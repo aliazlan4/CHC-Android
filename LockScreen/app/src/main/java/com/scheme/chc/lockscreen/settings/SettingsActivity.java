@@ -3,6 +3,7 @@ package com.scheme.chc.lockscreen.settings;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.admin.DevicePolicyManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -20,6 +21,7 @@ import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
+import android.preference.SwitchPreference;
 import android.provider.MediaStore;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AlertDialog;
@@ -64,6 +66,10 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
     @SuppressLint({"NewApi","CommitPrefEdits"})
     public static class GeneralPreferenceFragment extends PreferenceFragment {
 
+        private SwitchPreference pref_enablechc;
+        private Preference pref_totalicons;
+        private Preference pref_totalrounds;
+
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -72,9 +78,9 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
 
             bindPreferenceSummaryToValue(findPreference("rounds"));
             bindPreferenceSummaryToValue(findPreference("total_icons"));
-//            pref_enablechc = (SwitchPreference) findPreference("enablechc");
-//            pref_totalicons =  findPreference("total_icons");
-//            pref_totalrounds =  findPreference("rounds");
+            pref_enablechc = (SwitchPreference) findPreference("enablechc");
+            pref_totalicons =  findPreference("total_icons");
+            pref_totalrounds =  findPreference("rounds");
 //            pref_enablechc.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
 //                @Override
 //                public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -82,10 +88,10 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
 //                    pref_enablechc.setEnabled((Boolean) newValue);
 //                    pref_enablechc.setChecked((Boolean) newValue);
 //                    pref_enablechc.setSelectable(true);
-////                    if(pref_enablechc.isEnabled()) {
-////                        Intent intent = new Intent(DevicePolicyManager.ACTION_SET_NEW_PASSWORD);
-////                        startActivity(intent);
-////                    }
+//                    if(pref_enablechc.isEnabled()) {
+//                        Intent intent = new Intent(DevicePolicyManager.ACTION_SET_NEW_PASSWORD);
+//                        startActivity(intent);
+//                    }
 //                    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
 //                    SharedPreferences.Editor edit = preferences.edit();
 //                    edit.putBoolean("enablechc", (Boolean) newValue);
@@ -93,7 +99,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
 //                    return false;
 //                }
 //            });
-
         }
 
         @Override
@@ -413,8 +418,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             assert cursor != null;
             cursor.moveToFirst();
 
-//            int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
-//            String filePath = cursor.getString(columnIndex);
+            int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+            String filePath = cursor.getString(columnIndex);
             cursor.close();
 
         }
@@ -516,20 +521,22 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
     @Override
     public void onStop() {
         super.onStop();
+//        finish();
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+//        finish();
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == android.R.id.home) {
-            startActivity(new Intent(this, SettingsActivity.class));
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        int id = item.getItemId();
+//        if (id == android.R.id.home) {
+//            startActivity(new Intent(this, SettingsActivity.class));
+//            return true;
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 }
