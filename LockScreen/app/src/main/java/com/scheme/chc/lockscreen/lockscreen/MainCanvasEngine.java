@@ -72,17 +72,9 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener{
         vibrator = (Vibrator)context.getSystemService(Context.VIBRATOR_SERVICE);
     }
 
-    public static MainCanvasEngine getInstance(Object... params) {
-        if (mainCanvasEngine == null) {
-            mainCanvasEngine = new MainCanvasEngine((Context) params[0], (Boolean) params[1], (SurfaceHolder) params[2], (SurfaceView) params[3]);
-        }
-        return mainCanvasEngine;
-    }
-
     @Override
     public void run() {
         super.run();
-        System.out.println("coming here");
         while (lock) {
             //checks if the lockCanvas() method will be success,and if not, will check this statement again
             if (!surfaceHolder.getSurface().isValid()) {continue;}
@@ -309,6 +301,7 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener{
             if (pBounds.contains(x, y)) {
                 if (draw == TotalRounds) {
                     MainLockScreenWindow.opensettings = true;
+                    MainLockScreenWindow.removeview = true;
                     UnlockPhone();
                 }
                 else {
@@ -319,7 +312,7 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener{
             }
             else{
                 if(WrongTrys == 3) {
-                    vibrator.vibrate(3000);
+                    vibrator.vibrate(2000);
                     Toast.makeText(context, "Incorrect: Try Again", Toast.LENGTH_LONG).show();
                     draw = 1;
                     WrongTrys = 1;

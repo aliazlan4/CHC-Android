@@ -11,27 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90c402f5-828e-4378-8374-4013dd2dd458" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/zip-cache/aW100ghav39K2d4JLvswq4mCBNs=" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageInstantRunResourcesDebug/zip-cache/aW100ghav39K2d4JLvswq4mCBNs=" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.1.1_a6b0461f01e3f788f511b88dc76d0c3ec39fbd61.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.1.1_ee7afac74362024be37f092d07203bffe3fb2ecf.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-design-25.1.1_866667bd2c088f8464c572f43618e5dc90a1f644.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-25.1.1_c63fd923f67aa3a8817bc21153dd78b841b225be.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.1.1_7100ab631f2b7c4b674f12afe8c43428d83309f8.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.1.1_0a175b76c46df82e0cd3ad49dfc41f41628dbc27.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.1.1_5ea0d06b20a7af41918018457fc7760ee3588943.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.1.1_b03ee7f578b675afa5d6965243e001c02a1c4de3.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.1.1_15e55d5a957400a7d7c94ca2b994c176383add52.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.1.1_1abf2c7a47fc2d38c325c40fcd72975ea191afdc.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.1.1_57598f002a8c90e72ffc249e4cf89e9557914260.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-transition-25.1.1_d8c5430c6f0dcbb412f4931c4f56bc7f0a5c6e29.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-appindexing-8.4.0_70b4ff960ef268f6fb7305ca5a4cf070e2b43ad9.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-8.4.0_85d8f02e693047a8d942661a05baa381365656a1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-8.4.0_e45a189c69f6f020373a0f0972cff1adb1a2ec9d.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_ee33802b11bf3d2e70e864fb383a3402da02f33c.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/mongo-java-driver-3.2.0-SNAPSHOT_9f3dccc586747e8fad15c6ffcc7ec19f87a5d543.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/support-annotations-25.1.1_da8eade7c900e3bb776344a91c6d2b95164b6155.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/builds/debug/211600043971422/classes.dex" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/buildId.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/lockscreen/NotificationBlockView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
@@ -40,227 +22,20 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/1.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/10.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/10.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/100.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/101.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/101.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/102.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/102.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/103.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/103.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/104.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/104.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/105.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/105.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/106.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/106.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/107.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/107.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/108.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/108.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/109.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/109.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/11.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/11.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/110.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/110.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/111.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/111.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/112.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/112.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/113.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/113.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/114.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/114.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/115.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/115.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/116.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/116.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/117.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/117.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/118.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/118.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/119.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/119.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/12.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/12.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/120.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/120.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/121.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/121.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/122.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/122.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/123.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/123.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/124.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/124.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/13.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/13.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/14.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/14.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/15.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/15.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/16.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/16.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/17.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/17.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/18.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/18.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/19.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/19.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/2.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/20.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/20.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/21.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/21.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/22.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/22.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/23.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/23.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/24.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/24.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/25.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/25.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/26.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/26.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/27.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/27.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/28.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/28.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/29.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/29.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/3.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/30.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/30.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/31.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/31.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/32.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/32.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/33.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/33.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/34.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/34.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/35.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/35.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/36.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/36.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/37.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/37.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/38.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/38.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/39.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/39.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/4.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/40.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/40.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/41.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/41.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/42.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/42.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/43.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/43.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/44.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/44.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/45.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/45.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/46.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/46.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/47.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/47.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/48.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/48.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/49.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/49.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/5.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/5.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/50.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/50.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/51.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/51.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/52.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/52.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/53.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/53.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/54.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/54.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/55.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/55.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/56.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/56.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/57.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/57.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/58.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/58.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/59.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/59.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/6.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/60.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/60.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/61.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/61.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/62.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/62.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/63.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/63.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/64.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/64.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/65.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/65.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/66.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/66.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/67.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/67.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/68.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/68.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/69.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/69.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/7.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/7.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/70.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/70.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/71.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/71.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/72.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/72.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/73.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/73.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/74.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/74.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/75.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/75.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/76.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/76.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/77.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/77.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/78.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/78.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/79.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/79.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/8.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/8.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/80.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/80.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/81.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/81.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/82.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/82.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/83.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/83.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/84.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/84.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/86.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/86.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/87.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/87.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/88.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/88.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/89.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/89.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/9.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/9.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/90.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/90.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/91.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/91.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/92.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/92.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/93.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/93.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/94.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/94.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/95.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/95.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/96.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/96.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/97.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/97.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/98.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/98.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/99.png" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/icons/99.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/lockscreen/MainCanvasEngine.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/lockscreen/MainCanvasEngine.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow$StateListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow$StateListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$ExitPreferenceFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$ExitPreferenceFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$FeedbackPreferenceFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$FeedbackPreferenceFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$GeneralPreferenceFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$GeneralPreferenceFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/settings/SettingsActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/utils/Utilities.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/utils/Utilities.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/lockscreen/MainCanvasEngine.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/lockscreen/MainCanvasEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow$StateListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow$StateListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$ExitPreferenceFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$ExitPreferenceFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$FeedbackPreferenceFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$FeedbackPreferenceFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$GeneralPreferenceFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$GeneralPreferenceFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/settings/SettingsActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/utils/Utilities.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/scheme/chc/lockscreen/utils/Utilities.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/instant-run-support/debug/instant-run.zip" afterPath="$PROJECT_DIR$/app/build/intermediates/instant-run-support/debug/instant-run.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/zip-cache/aW100ghav39K2d4JLvswq4mCBNs=" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/zip-cache/aW100ghav39K2d4JLvswq4mCBNs=" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_ee33802b11bf3d2e70e864fb383a3402da02f33c.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_ee33802b11bf3d2e70e864fb383a3402da02f33c.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/lockscreen/MainCanvasEngine.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/lockscreen/MainCanvasEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow$StateListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow$StateListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity$ExitPreferenceFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity$ExitPreferenceFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity$FeedbackPreferenceFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity$FeedbackPreferenceFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity$GeneralPreferenceFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity$GeneralPreferenceFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/settings/SettingsActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/utils/Utilities.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/scheme/chc/lockscreen/utils/Utilities.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity$ExitPreferenceFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity$ExitPreferenceFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity$FeedbackPreferenceFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity$FeedbackPreferenceFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity$GeneralPreferenceFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity$GeneralPreferenceFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity$PassIconsPreferenceFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/scheme/chc/lockscreen/settings/SettingsActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/scheme/chc/lockscreen/lockscreen/MainCanvasEngine.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/scheme/chc/lockscreen/lockscreen/MainCanvasEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow$StateListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow$StateListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/com/scheme/chc/lockscreen/utils/Utilities.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/com/scheme/chc/lockscreen/utils/Utilities.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/file-input-save-data.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageInstantRunResourcesDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageInstantRunResourcesDebug/dex-renamer-state.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageInstantRunResourcesDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageInstantRunResourcesDebug/file-input-save-data.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/instant-run-support/debug/manifest.crc" afterPath="$PROJECT_DIR$/app/build/intermediates/instant-run-support/debug/manifest.crc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/instant-run-support/debug/manifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/instant-run-support/debug/manifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/instant-run/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/instant-run/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/restart-dex/debug/build-info.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/restart-dex/debug/build-info.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/lockscreen/MainCanvasEngine.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/lockscreen/MainCanvasEngine.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/utils/Utilities.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/utils/Utilities.java" />
     </list>
     <ignored path="LockScreen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -296,20 +71,68 @@
       <file leaf-file-name="MainLockScreenWindow.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="263" column="13" selection-start-line="263" selection-start-column="13" selection-end-line="263" selection-end-column="13" />
+            <state relative-caret-position="207">
+              <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
               <folding>
-                <element signature="e#5037#5069#0" expanded="true" />
-                <element signature="method#MyPhoneStateListener#0;class#MainLockScreenWindow#0" expanded="false" />
-                <element signature="e#9419#9420#0" expanded="true" />
-                <element signature="e#9460#9461#0" expanded="true" />
-                <element signature="e#10094#10126#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#4758#4790#0" expanded="true" />
+                <element signature="e#6244#6276#0" expanded="true" />
+                <element signature="method#isScreenLocked#0;class#MainLockScreenWindow#0" expanded="false" />
+                <element signature="method#isServiceRunning#0;class#MainLockScreenWindow#0" expanded="false" />
+                <element signature="method#initializeVariables#0;class#MainLockScreenWindow#0" expanded="false" />
+                <element signature="e#7847#8070#0" expanded="true" />
+                <element signature="e#8069#8070#0" expanded="true" />
+                <element signature="method#startSurfaceViewThread#0;class#MainLockScreenWindow#0" expanded="false" />
+                <element signature="class#StateListener#0;class#MainLockScreenWindow#0" expanded="false" />
+                <element signature="method#onKeyDown#0;class#MainLockScreenWindow#0" expanded="false" />
+                <element signature="method#dispatchKeyEvent#0;class#MainLockScreenWindow#0" expanded="false" />
+                <element signature="e#10300#10301#0" expanded="true" />
+                <element signature="e#10364#10365#0" expanded="true" />
+                <element signature="method#onLockStatusChanged#0;class#MainLockScreenWindow#0" expanded="false" />
+                <element signature="e#10712#10739#0" expanded="false" />
+                <element signature="method#onStop#0;class#MainLockScreenWindow#0" expanded="false" />
+                <element signature="method#onUserLeaveHint#0;class#MainLockScreenWindow#0" expanded="false" />
+                <element signature="e#11851#11883#0" expanded="true" />
+                <element signature="e#12957#12958#0" expanded="true" />
+                <element signature="e#12981#12982#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="MainCanvasEngine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/lockscreen/MainCanvasEngine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="117" column="42" selection-start-line="117" selection-start-column="42" selection-end-line="117" selection-end-column="42" />
+              <folding>
+                <element signature="method#createConvexHull#0;class#MainCanvasEngine#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-manifest">
+            <state />
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="ASClass" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -2047,8 +1870,9 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/settings/SettingsActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/lockscreen/MainCanvasEngine.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/utils/Utilities.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/lockscreen/NotificationBlockView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/lockscreen/MainCanvasEngine.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow.java" />
       </list>
     </option>
@@ -2085,6 +1909,9 @@
     </navigator>
     <panes>
       <pane id="ProjectPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2156,12 +1983,71 @@
               <option name="myItemId" value="lockscreen" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="settings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LockScreen" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lockscreen" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LockScreen" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lockscreen" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lockscreen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LockScreen" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manifests" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2171,7 +2057,7 @@
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="device.picker.selection" value="31000f8058383300" />
+    <property name="device.picker.selection" value="47f09ac6" />
   </component>
   <component name="RunManager" selected="Android App.app">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
@@ -2492,7 +2378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1488354828342</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="recent task bug fix&#10;icons fixed&#10;">
+      <created>1488386755395</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1488386755395</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2546,13 +2439,46 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="bug fixes" />
     <MESSAGE value="icon size reduced" />
-    <option name="LAST_COMMIT_MESSAGE" value="icon size reduced" />
+    <MESSAGE value="recent task bug fix&#10;icons fixed&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="recent task bug fix&#10;icons fixed&#10;" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4758#4790#0" expanded="true" />
+            <element signature="e#6244#6276#0" expanded="true" />
+            <element signature="method#isScreenLocked#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="method#isServiceRunning#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="method#initializeVariables#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="e#7847#8070#0" expanded="true" />
+            <element signature="e#8069#8070#0" expanded="true" />
+            <element signature="method#startSurfaceViewThread#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="class#StateListener#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="method#onKeyDown#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="method#dispatchKeyEvent#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="e#10300#10301#0" expanded="true" />
+            <element signature="e#10364#10365#0" expanded="true" />
+            <element signature="method#onLockStatusChanged#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="e#10712#10739#0" expanded="false" />
+            <element signature="method#onStop#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="method#onUserLeaveHint#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="e#11851#11883#0" expanded="true" />
+            <element signature="e#12957#12958#0" expanded="true" />
+            <element signature="e#12981#12982#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/lockscreen/MainCanvasEngine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2568,11 +2494,27 @@
         <state relative-caret-position="68">
           <caret line="33" column="61" selection-start-line="33" selection-start-column="61" selection-end-line="33" selection-end-column="61" />
           <folding>
-            <element signature="e#5037#5069#0" expanded="true" />
-            <element signature="method#MyPhoneStateListener#0;class#MainLockScreenWindow#0" expanded="false" />
-            <element signature="e#9419#9420#0" expanded="true" />
-            <element signature="e#9460#9461#0" expanded="true" />
-            <element signature="e#10094#10126#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4758#4790#0" expanded="true" />
+            <element signature="e#6244#6276#0" expanded="true" />
+            <element signature="method#isScreenLocked#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="method#isServiceRunning#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="method#initializeVariables#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="e#7847#8070#0" expanded="true" />
+            <element signature="e#8069#8070#0" expanded="true" />
+            <element signature="method#startSurfaceViewThread#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="class#StateListener#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="method#onKeyDown#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="method#dispatchKeyEvent#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="e#10300#10301#0" expanded="true" />
+            <element signature="e#10364#10365#0" expanded="true" />
+            <element signature="method#onLockStatusChanged#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="e#10712#10739#0" expanded="false" />
+            <element signature="method#onStop#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="method#onUserLeaveHint#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="e#11851#11883#0" expanded="true" />
+            <element signature="e#12957#12958#0" expanded="true" />
+            <element signature="e#12981#12982#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2621,23 +2563,28 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#5037#5069#0" expanded="true" />
-            <element signature="method#MyPhoneStateListener#0;class#MainLockScreenWindow#0" expanded="false" />
-            <element signature="e#9419#9420#0" expanded="true" />
-            <element signature="e#9460#9461#0" expanded="true" />
-            <element signature="e#10094#10126#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4758#4790#0" expanded="true" />
+            <element signature="e#6244#6276#0" expanded="true" />
+            <element signature="method#isScreenLocked#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="method#isServiceRunning#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="method#initializeVariables#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="e#7847#8070#0" expanded="true" />
+            <element signature="e#8069#8070#0" expanded="true" />
+            <element signature="method#startSurfaceViewThread#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="class#StateListener#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="method#onKeyDown#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="method#dispatchKeyEvent#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="e#10300#10301#0" expanded="true" />
+            <element signature="e#10364#10365#0" expanded="true" />
+            <element signature="method#onLockStatusChanged#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="e#10712#10739#0" expanded="false" />
+            <element signature="method#onStop#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="method#onUserLeaveHint#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="e#11851#11883#0" expanded="true" />
+            <element signature="e#12957#12958#0" expanded="true" />
+            <element signature="e#12981#12982#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2657,16 +2604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/lockscreen/MainCanvasEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="123" column="38" selection-start-line="123" selection-start-column="38" selection-end-line="123" selection-end-column="38" />
-          <folding>
-            <element signature="method#createConvexHull#0;class#MainCanvasEngine#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/settings/SettingsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -2680,16 +2617,113 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/extras/android/m2repository/com/android/support/appcompat-v7/25.1.1/appcompat-v7-25.1.1-sources.jar!/android/support/v7/app/AppCompatDelegate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="280" column="25" selection-start-line="280" selection-start-column="25" selection-end-line="280" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/settings/AppCompatPreferenceActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="91" column="24" selection-start-line="91" selection-start-column="24" selection-end-line="91" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/lockscreen/NotificationBlockView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#276#277#0" expanded="true" />
+            <element signature="e#306#307#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-25/android/view/ViewManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-25/android/view/WindowManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="703" column="73" selection-start-line="703" selection-start-column="65" selection-end-line="703" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-25/android/os/Looper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/lockscreen/MainCanvasEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="117" column="42" selection-start-line="117" selection-start-column="42" selection-end-line="117" selection-end-column="42" />
+          <folding>
+            <element signature="method#createConvexHull#0;class#MainCanvasEngine#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="263" column="13" selection-start-line="263" selection-start-column="13" selection-end-line="263" selection-end-column="13" />
+        <state relative-caret-position="207">
+          <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
           <folding>
-            <element signature="e#5037#5069#0" expanded="true" />
-            <element signature="method#MyPhoneStateListener#0;class#MainLockScreenWindow#0" expanded="false" />
-            <element signature="e#9419#9420#0" expanded="true" />
-            <element signature="e#9460#9461#0" expanded="true" />
-            <element signature="e#10094#10126#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4758#4790#0" expanded="true" />
+            <element signature="e#6244#6276#0" expanded="true" />
+            <element signature="method#isScreenLocked#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="method#isServiceRunning#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="method#initializeVariables#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="e#7847#8070#0" expanded="true" />
+            <element signature="e#8069#8070#0" expanded="true" />
+            <element signature="method#startSurfaceViewThread#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="class#StateListener#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="method#onKeyDown#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="method#dispatchKeyEvent#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="e#10300#10301#0" expanded="true" />
+            <element signature="e#10364#10365#0" expanded="true" />
+            <element signature="method#onLockStatusChanged#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="e#10712#10739#0" expanded="false" />
+            <element signature="method#onStop#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="method#onUserLeaveHint#0;class#MainLockScreenWindow#0" expanded="false" />
+            <element signature="e#11851#11883#0" expanded="true" />
+            <element signature="e#12957#12958#0" expanded="true" />
+            <element signature="e#12981#12982#0" expanded="true" />
           </folding>
         </state>
       </provider>
