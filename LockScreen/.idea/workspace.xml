@@ -11,31 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90c402f5-828e-4378-8374-4013dd2dd458" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/builds/debug/211600043971422/classes.dex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/buildId.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/lockscreen/NotificationBlockView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/lockscreen/MainCanvasEngine.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/lockscreen/MainCanvasEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow$StateListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow$StateListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/zip-cache/aW100ghav39K2d4JLvswq4mCBNs=" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/zip-cache/aW100ghav39K2d4JLvswq4mCBNs=" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_ee33802b11bf3d2e70e864fb383a3402da02f33c.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_ee33802b11bf3d2e70e864fb383a3402da02f33c.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/scheme/chc/lockscreen/lockscreen/NotificationBlockView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/file-input-save-data.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/lockscreen/MainCanvasEngine.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/lockscreen/MainCanvasEngine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow.java" />
     </list>
     <ignored path="LockScreen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,11 +45,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainLockScreenWindow.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainLockScreenWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
+            <state relative-caret-position="88">
+              <caret line="271" column="28" selection-start-line="271" selection-start-column="28" selection-end-line="271" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4758#4790#0" expanded="true" />
@@ -90,11 +67,23 @@
                 <element signature="e#10364#10365#0" expanded="true" />
                 <element signature="method#onLockStatusChanged#0;class#MainLockScreenWindow#0" expanded="false" />
                 <element signature="e#10712#10739#0" expanded="false" />
-                <element signature="method#onStop#0;class#MainLockScreenWindow#0" expanded="false" />
                 <element signature="method#onUserLeaveHint#0;class#MainLockScreenWindow#0" expanded="false" />
                 <element signature="e#11851#11883#0" expanded="true" />
                 <element signature="e#12957#12958#0" expanded="true" />
                 <element signature="e#12981#12982#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SettingsActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/settings/SettingsActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="77" column="67" selection-start-line="77" selection-start-column="67" selection-end-line="77" selection-end-column="67" />
+              <folding>
+                <element signature="e#22422#22423#0" expanded="true" />
+                <element signature="e#22459#22460#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2385,12 +2374,19 @@
       <option name="project" value="LOCAL" />
       <updated>1488386755395</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="notification bar bug fixed">
+      <created>1488442654814</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1488442654814</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2401,7 +2397,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3327645" sideWeight="0.5030257" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3327645" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -2440,7 +2436,8 @@
     <MESSAGE value="bug fixes" />
     <MESSAGE value="icon size reduced" />
     <MESSAGE value="recent task bug fix&#10;icons fixed&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="recent task bug fix&#10;icons fixed&#10;" />
+    <MESSAGE value="notification bar bug fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="notification bar bug fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2470,7 +2467,6 @@
             <element signature="e#10364#10365#0" expanded="true" />
             <element signature="method#onLockStatusChanged#0;class#MainLockScreenWindow#0" expanded="false" />
             <element signature="e#10712#10739#0" expanded="false" />
-            <element signature="method#onStop#0;class#MainLockScreenWindow#0" expanded="false" />
             <element signature="method#onUserLeaveHint#0;class#MainLockScreenWindow#0" expanded="false" />
             <element signature="e#11851#11883#0" expanded="true" />
             <element signature="e#12957#12958#0" expanded="true" />
@@ -2510,7 +2506,6 @@
             <element signature="e#10364#10365#0" expanded="true" />
             <element signature="method#onLockStatusChanged#0;class#MainLockScreenWindow#0" expanded="false" />
             <element signature="e#10712#10739#0" expanded="false" />
-            <element signature="method#onStop#0;class#MainLockScreenWindow#0" expanded="false" />
             <element signature="method#onUserLeaveHint#0;class#MainLockScreenWindow#0" expanded="false" />
             <element signature="e#11851#11883#0" expanded="true" />
             <element signature="e#12957#12958#0" expanded="true" />
@@ -2579,7 +2574,6 @@
             <element signature="e#10364#10365#0" expanded="true" />
             <element signature="method#onLockStatusChanged#0;class#MainLockScreenWindow#0" expanded="false" />
             <element signature="e#10712#10739#0" expanded="false" />
-            <element signature="method#onStop#0;class#MainLockScreenWindow#0" expanded="false" />
             <element signature="method#onUserLeaveHint#0;class#MainLockScreenWindow#0" expanded="false" />
             <element signature="e#11851#11883#0" expanded="true" />
             <element signature="e#12957#12958#0" expanded="true" />
@@ -2601,19 +2595,6 @@
         <state relative-caret-position="121">
           <caret line="95" column="28" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="28" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/settings/SettingsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="521" column="33" selection-start-line="521" selection-start-column="33" selection-end-line="521" selection-end-column="33" />
-          <folding>
-            <element signature="e#2731#2809#0" expanded="false" />
-            <element signature="e#22343#22344#0" expanded="true" />
-            <element signature="e#22373#22374#0" expanded="true" />
-            <element signature="e#22459#22460#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2700,8 +2681,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/lockscreen/MainLockScreenWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
+        <state relative-caret-position="88">
+          <caret line="271" column="28" selection-start-line="271" selection-start-column="28" selection-end-line="271" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4758#4790#0" expanded="true" />
@@ -2719,11 +2700,21 @@
             <element signature="e#10364#10365#0" expanded="true" />
             <element signature="method#onLockStatusChanged#0;class#MainLockScreenWindow#0" expanded="false" />
             <element signature="e#10712#10739#0" expanded="false" />
-            <element signature="method#onStop#0;class#MainLockScreenWindow#0" expanded="false" />
             <element signature="method#onUserLeaveHint#0;class#MainLockScreenWindow#0" expanded="false" />
             <element signature="e#11851#11883#0" expanded="true" />
             <element signature="e#12957#12958#0" expanded="true" />
             <element signature="e#12981#12982#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/scheme/chc/lockscreen/settings/SettingsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="77" column="67" selection-start-line="77" selection-start-column="67" selection-end-line="77" selection-end-column="67" />
+          <folding>
+            <element signature="e#22422#22423#0" expanded="true" />
+            <element signature="e#22459#22460#0" expanded="true" />
           </folding>
         </state>
       </provider>
