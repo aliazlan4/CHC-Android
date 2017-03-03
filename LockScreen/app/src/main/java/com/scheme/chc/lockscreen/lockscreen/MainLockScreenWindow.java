@@ -89,7 +89,8 @@ public class MainLockScreenWindow extends Activity implements LockScreenUtils.On
             startActivity(new Intent(MainLockScreenWindow.this,SettingsActivity.class));
         }
 
-
+        if(isServiceRunning(getString(R.string.ServiceClass)) && !pref_enablechc)
+                stopService(new Intent(this, LockScreenService.class));
 
         // unlock screen in case of app get killed by system
         if(pref_enablechc) {
@@ -303,7 +304,6 @@ public class MainLockScreenWindow extends Activity implements LockScreenUtils.On
     @Override
     protected void onPause() {
         super.onPause();
-
         if (pref_enablechc && LockScreenService.notification != null && !opensettings && isScreenLocked() && isServiceRunning(getString(R.string.ServiceClass))) {
             unlockDevice();
             startActivity(new Intent(this,MainLockScreenWindow.class));
