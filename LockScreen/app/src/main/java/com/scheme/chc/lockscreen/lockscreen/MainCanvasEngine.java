@@ -12,6 +12,7 @@ import android.graphics.Path;
 import android.graphics.Point;
 import android.graphics.PorterDuff;
 import android.graphics.RectF;
+import android.net.Uri;
 import android.os.Vibrator;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
@@ -23,6 +24,7 @@ import com.scheme.chc.lockscreen.utils.GrahamScan;
 import com.scheme.chc.lockscreen.utils.Utilities;
 
 import java.io.BufferedInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -123,8 +125,10 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener{
             SelectedPassIcons.clear();
             iconscopylist.clear();
             Collections.addAll(iconscopylist,utilities.getUploadedPassIcons());
-            for (int i = 0; i <TotalNumberOfPassIcons; i++)
-                SelectedPassIcons.add(getFilenameFromAssets((String) iconscopylist.get(i)));
+            for (int i = 0; i < TotalNumberOfPassIcons; i++) {
+                Uri myUri = Uri.parse(String.valueOf(iconscopylist.get(i)));
+                SelectedPassIcons.add(convertUriToBitmap(myUri));
+            }
         }
     }
 
@@ -236,6 +240,17 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener{
     private Bitmap bitmapFromAssets(InputStream inputStream) {
         return Bitmap.createScaledBitmap(BitmapFactory.decodeStream(new BufferedInputStream(inputStream)), IconWidth, IconHeight, false);
     }
+
+    private Bitmap convertUriToBitmap(Uri id) {
+        Bitmap bitmap = null;
+        try {
+            bitmap = Bitmap.createScaledBitmap(BitmapFactory.decodeStream(context.getContentResolver().openInputStream(id)), IconWidth, IconHeight, false);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return bitmap;
+    }
+
 
     @SuppressLint("NewApi")
     private void getAllIconsFromAssets() {
