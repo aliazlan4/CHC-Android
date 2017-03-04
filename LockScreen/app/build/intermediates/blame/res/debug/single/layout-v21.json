@@ -1,18 +1,18 @@
 [
     {
-        "merged": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
-        "source": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\layout-v21\\notification_template_custom_big.xml"
+        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\b0136805c59f50db0ee1258b06e9097b9186446c\\output\\res\\layout-v21\\notification_template_custom_big.xml"
     },
     {
-        "merged": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
-        "source": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\layout-v21\\notification_action.xml"
+        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\b0136805c59f50db0ee1258b06e9097b9186446c\\output\\res\\layout-v21\\notification_action.xml"
     },
     {
-        "merged": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
-        "source": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\layout-v21\\notification_action_tombstone.xml"
+        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\b0136805c59f50db0ee1258b06e9097b9186446c\\output\\res\\layout-v21\\notification_action_tombstone.xml"
     },
     {
-        "merged": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
-        "source": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\layout-v21\\notification_template_icon_group.xml"
+        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\b0136805c59f50db0ee1258b06e9097b9186446c\\output\\res\\layout-v21\\notification_template_icon_group.xml"
     }
 ]

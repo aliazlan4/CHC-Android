@@ -1,161 +1,184 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:2:1-54:12
+ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:2:1-54:12
 	package
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:4:5-40
-		INJECTED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml
-		INJECTED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:4:5-40
+		INJECTED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml
-		INJECTED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:3:5-51
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:3:5-51
 	xmlns:android
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml
-		INJECTED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.DISABLE_KEYGUARD
-ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:7:5-75
+ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:7:5-75
 	android:name
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:7:22-72
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:7:22-72
 uses-permission#android.permission.WAKE_LOCK
-ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:8:5-68
+ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:8:5-68
 	android:name
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:8:22-65
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:8:22-65
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:9:5-81
+ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:9:5-81
 	android:name
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:9:22-78
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:9:22-78
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:10:5-75
+ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:10:5-75
 	android:name
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:10:22-72
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:10:22-72
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
-ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:11:5-78
+ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:11:5-78
 	android:name
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:11:22-75
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:11:22-75
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:12:5-80
+ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:12:5-80
 	android:name
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:12:22-77
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:12:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:13:5-80
+ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:13:5-80
 	android:name
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:13:22-78
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:13:22-78
 uses-permission#android.permission.VIBRATE
-ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:14:5-65
+ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:14:5-65
 	android:name
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:14:22-63
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:14:22-63
 uses-permission#android.permission.REORDER_TASKS
-ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:15:5-71
+ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:15:5-71
 	android:name
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:15:22-69
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:15:22-69
 application
-ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:18:5-52:19
-MERGED from [com.android.support:design:25.1.1] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.android.support\design\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:appcompat-v7:25.1.1] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.1.1] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:25.1.1] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.1\AndroidManifest.xml:23:5-20
-MERGED from [com.android.support:transition:25.1.1] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.android.support\transition\25.1.1\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-appindexing:8.4.0] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:25.1.1] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:25.1.1] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.1.1] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.1.1] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.1.1] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.1.1] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\AndroidManifest.xml:25:5-20
+ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:18:5-52:19
+MERGED from [com.android.support:design:25.2.0] C:\Users\Paroxis' Matrices\.android\build-cache\833e881c8cf59a3ce1d8a6534cfa1dee1d83c411\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:25.2.0] C:\Users\Paroxis' Matrices\.android\build-cache\b0136805c59f50db0ee1258b06e9097b9186446c\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.2.0] C:\Users\Paroxis' Matrices\.android\build-cache\8bf807a5d2e4f4e997f3368fbcf3409b55793a6e\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.2.0] C:\Users\Paroxis' Matrices\.android\build-cache\c3f55c8a477a8a1d7d8e9795bdc3ab4f0c4d0790\output\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:transition:25.2.0] C:\Users\Paroxis' Matrices\.android\build-cache\11cdfcd3f95f7c1fe7c08c0aa8b5698bd79e27cb\output\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-appindexing:9.8.0] C:\Users\Paroxis' Matrices\.android\build-cache\1612cb2869bd8f05a98cfa7984c0aadd05298943\output\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\Paroxis' Matrices\.android\build-cache\7455edf36cfef78c84e075daaa068ed6488e65d8\output\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.firebase:firebase-common:9.8.0] C:\Users\Paroxis' Matrices\.android\build-cache\c116006bc12d6f174ba7e9074a92d97e37f606d7\output\AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.android.gms:play-services-tasks:9.8.0] C:\Users\Paroxis' Matrices\.android\build-cache\8a3b5d4a9d17803135291c630c7e4439bba26391\output\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\Paroxis' Matrices\.android\build-cache\ca5ff81ab3e45ecf5cefafc003f92a43523ddcbc\output\AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:25.2.0] C:\Users\Paroxis' Matrices\.android\build-cache\38b21220611b27f5ff9abc4a378c6a20c3d0ebc8\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\Paroxis' Matrices\.android\build-cache\8c0325704bca1630eae16587023b3ea4c0961334\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\Paroxis' Matrices\.android\build-cache\06224a36f21d2d1339f2361f6d1eef60bed466dd\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\Paroxis' Matrices\.android\build-cache\fd31367a591fd24edd00f916b4eeffbbd2694dd0\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\Paroxis' Matrices\.android\build-cache\b202c66614f825c704eb6dfb71a78b8278cdc7d2\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] C:\Users\Paroxis' Matrices\.android\build-cache\3a2084e71465df96a9760c042de343e7b3c7b150\output\AndroidManifest.xml:25:5-20
 	android:label
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:21:9-41
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:21:9-41
 	android:supportsRtl
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:22:9-35
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:22:9-35
 	tools:ignore
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:24:9-71
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:24:9-71
 	android:allowBackup
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:19:9-35
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:19:9-35
 	android:icon
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:20:9-43
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:20:9-43
 	android:largeHeap
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:23:9-33
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:23:9-33
 	tools:targetApi
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:25:9-36
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:25:9-36
 activity#com.scheme.chc.lockscreen.lockscreen.MainLockScreenWindow
-ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:26:9-38:20
+ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:26:9-38:20
 	android:screenOrientation
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:31:13-49
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:31:13-49
 	android:label
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:33:13-45
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:33:13-45
 	android:excludeFromRecents
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:28:13-46
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:28:13-46
 	android:launchMode
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:29:13-44
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:29:13-44
 	android:configChanges
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:30:13-74
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:30:13-74
 	android:theme
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:32:13-71
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:32:13-71
 	android:name
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:27:13-85
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:27:13-85
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:34:13-37:29
+ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:34:13-37:29
 action#android.intent.action.MAIN
-ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:35:17-69
+ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:35:17-69
 	android:name
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:35:25-66
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:35:25-66
 category#android.intent.category.LAUNCHER
-ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:36:17-77
+ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:36:17-77
 	android:name
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:36:27-74
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:36:27-74
 activity#com.scheme.chc.lockscreen.settings.SettingsActivity
-ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:40:9-41:46
+ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:40:9-41:46
 	android:theme
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:41:13-44
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:41:13-44
 	android:name
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:40:19-60
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:40:19-60
 service#com.scheme.chc.lockscreen.service.LockScreenService
-ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:43:9-62
+ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:43:9-62
 	android:name
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:43:18-59
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:43:18-59
 receiver#com.scheme.chc.lockscreen.service.LockScreenReceiver
-ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:45:9-51:20
+ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:45:9-51:20
 	android:enabled
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:47:13-35
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:47:13-35
 	android:name
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:46:13-55
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:46:13-55
 intent-filter#android.intent.action.BOOT_COMPLETED
-ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:48:13-50:29
+ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:48:13-50:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:49:17-79
+ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:49:17-79
 	android:name
-		ADDED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml:49:25-76
+		ADDED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml:49:25-76
 uses-sdk
-INJECTED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:design:25.1.1] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.android.support\design\25.1.1\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.1.1] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.1\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.1.1] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.1.1] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.1\AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:recyclerview-v7:25.1.1] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.1.1\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.1.1] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.android.support\transition\25.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-appindexing:8.4.0] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-base:8.4.0] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:25.1.1] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.1.1] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.1.1] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.1\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.1.1] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.1.1] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.1.1] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\AndroidManifest.xml:21:5-23:58
+INJECTED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:design:25.2.0] C:\Users\Paroxis' Matrices\.android\build-cache\833e881c8cf59a3ce1d8a6534cfa1dee1d83c411\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.2.0] C:\Users\Paroxis' Matrices\.android\build-cache\b0136805c59f50db0ee1258b06e9097b9186446c\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.2.0] C:\Users\Paroxis' Matrices\.android\build-cache\8bf807a5d2e4f4e997f3368fbcf3409b55793a6e\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.2.0] C:\Users\Paroxis' Matrices\.android\build-cache\c3f55c8a477a8a1d7d8e9795bdc3ab4f0c4d0790\output\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:recyclerview-v7:25.2.0] C:\Users\Paroxis' Matrices\.android\build-cache\21bdeaf5c0b211cf3c4a8b366efe7dc0917cb9b5\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.2.0] C:\Users\Paroxis' Matrices\.android\build-cache\11cdfcd3f95f7c1fe7c08c0aa8b5698bd79e27cb\output\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-appindexing:9.8.0] C:\Users\Paroxis' Matrices\.android\build-cache\1612cb2869bd8f05a98cfa7984c0aadd05298943\output\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\Paroxis' Matrices\.android\build-cache\7455edf36cfef78c84e075daaa068ed6488e65d8\output\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-common:9.8.0] C:\Users\Paroxis' Matrices\.android\build-cache\c116006bc12d6f174ba7e9074a92d97e37f606d7\output\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-tasks:9.8.0] C:\Users\Paroxis' Matrices\.android\build-cache\8a3b5d4a9d17803135291c630c7e4439bba26391\output\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\Paroxis' Matrices\.android\build-cache\ca5ff81ab3e45ecf5cefafc003f92a43523ddcbc\output\AndroidManifest.xml:17:5-42
+MERGED from [com.android.support:support-v4:25.2.0] C:\Users\Paroxis' Matrices\.android\build-cache\38b21220611b27f5ff9abc4a378c6a20c3d0ebc8\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\Paroxis' Matrices\.android\build-cache\8c0325704bca1630eae16587023b3ea4c0961334\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\Paroxis' Matrices\.android\build-cache\06224a36f21d2d1339f2361f6d1eef60bed466dd\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\Paroxis' Matrices\.android\build-cache\fd31367a591fd24edd00f916b4eeffbbd2694dd0\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\Paroxis' Matrices\.android\build-cache\b202c66614f825c704eb6dfb71a78b8278cdc7d2\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.2.0] C:\Users\Paroxis' Matrices\.android\build-cache\3a2084e71465df96a9760c042de343e7b3c7b150\output\AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.1.1] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.android.support\design\25.1.1\AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.2.0] C:\Users\Paroxis' Matrices\.android\build-cache\833e881c8cf59a3ce1d8a6534cfa1dee1d83c411\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml
-		INJECTED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml
-		INJECTED from F:\android applications\AndroidLockScreen\LockScreen\app\src\main\AndroidManifest.xml
-meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:8.4.0] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-	android:value
-		ADDED from [com.google.android.gms:play-services-basement:8.4.0] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:23:13-66
+		INJECTED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Paroxis' Matrices\Documents\GitHub\CHC-Android\LockScreen\app\src\main\AndroidManifest.xml
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\Paroxis' Matrices\.android\build-cache\7455edf36cfef78c84e075daaa068ed6488e65d8\output\AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\Paroxis' Matrices\.android\build-cache\7455edf36cfef78c84e075daaa068ed6488e65d8\output\AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\Paroxis' Matrices\.android\build-cache\7455edf36cfef78c84e075daaa068ed6488e65d8\output\AndroidManifest.xml:19:86-145
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:8.4.0] F:\android applications\AndroidLockScreen\LockScreen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:22:13-58
+		ADDED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\Paroxis' Matrices\.android\build-cache\7455edf36cfef78c84e075daaa068ed6488e65d8\output\AndroidManifest.xml:19:19-85
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:9.8.0] C:\Users\Paroxis' Matrices\.android\build-cache\c116006bc12d6f174ba7e9074a92d97e37f606d7\output\AndroidManifest.xml:6:9-175
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:9.8.0] C:\Users\Paroxis' Matrices\.android\build-cache\c116006bc12d6f174ba7e9074a92d97e37f606d7\output\AndroidManifest.xml:6:19-78
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:9.8.0] C:\Users\Paroxis' Matrices\.android\build-cache\c116006bc12d6f174ba7e9074a92d97e37f606d7\output\AndroidManifest.xml:6:125-149
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:9.8.0] C:\Users\Paroxis' Matrices\.android\build-cache\c116006bc12d6f174ba7e9074a92d97e37f606d7\output\AndroidManifest.xml:6:150-173
+	android:name
+		ADDED from [com.google.firebase:firebase-common:9.8.0] C:\Users\Paroxis' Matrices\.android\build-cache\c116006bc12d6f174ba7e9074a92d97e37f606d7\output\AndroidManifest.xml:6:79-124
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\Paroxis' Matrices\.android\build-cache\ca5ff81ab3e45ecf5cefafc003f92a43523ddcbc\output\AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\Paroxis' Matrices\.android\build-cache\ca5ff81ab3e45ecf5cefafc003f92a43523ddcbc\output\AndroidManifest.xml:20:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\Paroxis' Matrices\.android\build-cache\ca5ff81ab3e45ecf5cefafc003f92a43523ddcbc\output\AndroidManifest.xml:20:20-65

@@ -1,10 +1,10 @@
 [
     {
-        "merged": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
-        "source": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.1\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
+        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
+        "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\833e881c8cf59a3ce1d8a6534cfa1dee1d83c411\\output\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
     },
     {
-        "merged": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
-        "source": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.1\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
+        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
+        "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\833e881c8cf59a3ce1d8a6534cfa1dee1d83c411\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
     }
 ]

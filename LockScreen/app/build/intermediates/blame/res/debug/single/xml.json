@@ -1,22 +1,22 @@
 [
     {
-        "merged": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_changepassword.xml",
-        "source": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\src\\main\\res\\xml\\pref_changepassword.xml"
+        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_changepassword.xml",
+        "source": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\src\\main\\res\\xml\\pref_changepassword.xml"
     },
     {
-        "merged": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_pass_icons.xml",
-        "source": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\src\\main\\res\\xml\\pref_pass_icons.xml"
+        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_feedback.xml",
+        "source": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\src\\main\\res\\xml\\pref_feedback.xml"
     },
     {
-        "merged": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_general.xml",
-        "source": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\src\\main\\res\\xml\\pref_general.xml"
+        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_pass_icons.xml",
+        "source": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\src\\main\\res\\xml\\pref_pass_icons.xml"
     },
     {
-        "merged": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_feedback.xml",
-        "source": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\src\\main\\res\\xml\\pref_feedback.xml"
+        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_headers.xml",
+        "source": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\src\\main\\res\\xml\\pref_headers.xml"
     },
     {
-        "merged": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_headers.xml",
-        "source": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\src\\main\\res\\xml\\pref_headers.xml"
+        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_general.xml",
+        "source": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\src\\main\\res\\xml\\pref_general.xml"
     }
 ]

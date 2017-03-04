@@ -1,34 +1,34 @@
 [
     {
-        "merged": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_hide_password.xml",
-        "source": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.1\\res\\drawable-v21\\avd_hide_password.xml"
+        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\b0136805c59f50db0ee1258b06e9097b9186446c\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
     },
     {
-        "merged": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
-        "source": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\drawable-v21\\notification_action_background.xml"
+        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_hide_password.xml",
+        "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\833e881c8cf59a3ce1d8a6534cfa1dee1d83c411\\output\\res\\drawable-v21\\avd_hide_password.xml"
     },
     {
-        "merged": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_show_password.xml",
-        "source": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.1\\res\\drawable-v21\\avd_show_password.xml"
+        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\833e881c8cf59a3ce1d8a6534cfa1dee1d83c411\\output\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
     },
     {
-        "merged": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
-        "source": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_password_eye.xml",
+        "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\833e881c8cf59a3ce1d8a6534cfa1dee1d83c411\\output\\res\\drawable-v21\\design_password_eye.xml"
     },
     {
-        "merged": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
-        "source": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.1\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
+        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_show_password.xml",
+        "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\833e881c8cf59a3ce1d8a6534cfa1dee1d83c411\\output\\res\\drawable-v21\\avd_show_password.xml"
     },
     {
-        "merged": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
-        "source": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\drawable-v21\\abc_btn_colored_material.xml"
+        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\b0136805c59f50db0ee1258b06e9097b9186446c\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
     },
     {
-        "merged": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
-        "source": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\drawable-v21\\abc_edit_text_material.xml"
+        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\b0136805c59f50db0ee1258b06e9097b9186446c\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
     },
     {
-        "merged": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_password_eye.xml",
-        "source": "F:\\android applications\\AndroidLockScreen\\LockScreen\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.1\\res\\drawable-v21\\design_password_eye.xml"
+        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\b0136805c59f50db0ee1258b06e9097b9186446c\\output\\res\\drawable-v21\\notification_action_background.xml"
     }
 ]
