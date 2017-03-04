@@ -5,11 +5,10 @@
 
     <!-- Example General settings -->
     <string name="pref_header_general">General</string>
-
     <string name="pref_total_challenges">Select Total Rounds</string>
-    <string name="pref_description_total_challenges">How many rounds do you want before you login
+    <string name="pref_description_total_challenges">
+        How many rounds do you want before you login
     </string>
-
     <string name="pref_title_display_name">Enter name</string>
     <string name="pref_default_display_name">John Smith</string>
 
@@ -62,11 +61,14 @@
         <item>10</item>
     </string-array>
 
-
     <string name="pref_header_notifications">Pass Icons</string>
     <string name="pref_exit">Exit</string>
     <string name="pref_header_changepassword">Change Password</string>
     <string name="pref_header_feedback">Feedback</string>
-    <string name="pref_general_total_icons_sumary">Select total icons to Display on Screen</string>
-    <string name="ServiceClass">com.scheme.chc.lockscreen.service.LockScreenService</string>
+    <string name="pref_general_total_icons_sumary">
+        Select total icons to Display on Screen
+    </string>
+    <string name="ServiceClass">
+        com.scheme.chc.lockscreen.service.LockScreenService
+    </string>
 </resources>
