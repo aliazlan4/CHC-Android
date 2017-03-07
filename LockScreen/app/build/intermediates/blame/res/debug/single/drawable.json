@@ -8,10 +8,6 @@
         "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\b0136805c59f50db0ee1258b06e9097b9186446c\\output\\res\\drawable\\abc_ratingbar_indicator_material.xml"
     },
     {
-        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_icon_light.xml",
-        "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\f6e97e2f166902678c08e55949f2500829355f74\\output\\res\\drawable\\common_plus_signin_btn_icon_light.xml"
-    },
-    {
         "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_password_eye.xml",
         "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\833e881c8cf59a3ce1d8a6534cfa1dee1d83c411\\output\\res\\drawable\\design_password_eye.xml"
     },
@@ -72,12 +68,12 @@
         "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\7455edf36cfef78c84e075daaa068ed6488e65d8\\output\\res\\drawable\\common_google_signin_btn_text_light_focused.xml"
     },
     {
-        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
-        "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\7455edf36cfef78c84e075daaa068ed6488e65d8\\output\\res\\drawable\\common_google_signin_btn_text_light.xml"
-    },
-    {
         "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark_focused.xml",
         "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\7455edf36cfef78c84e075daaa068ed6488e65d8\\output\\res\\drawable\\common_google_signin_btn_text_dark_focused.xml"
+    },
+    {
+        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\7455edf36cfef78c84e075daaa068ed6488e65d8\\output\\res\\drawable\\common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
@@ -176,16 +172,8 @@
         "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\b0136805c59f50db0ee1258b06e9097b9186446c\\output\\res\\drawable\\abc_ic_ab_back_material.xml"
     },
     {
-        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_icon_dark.xml",
-        "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\f6e97e2f166902678c08e55949f2500829355f74\\output\\res\\drawable\\common_plus_signin_btn_icon_dark.xml"
-    },
-    {
         "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
         "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\b0136805c59f50db0ee1258b06e9097b9186446c\\output\\res\\drawable\\abc_cab_background_top_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_text_light.xml",
-        "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\f6e97e2f166902678c08e55949f2500829355f74\\output\\res\\drawable\\common_plus_signin_btn_text_light.xml"
     },
     {
         "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
@@ -208,16 +196,12 @@
         "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\b0136805c59f50db0ee1258b06e9097b9186446c\\output\\res\\drawable\\abc_ic_menu_overflow_material.xml"
     },
     {
-        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_text_dark.xml",
-        "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\f6e97e2f166902678c08e55949f2500829355f74\\output\\res\\drawable\\common_plus_signin_btn_text_dark.xml"
+        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\b0136805c59f50db0ee1258b06e9097b9186446c\\output\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
         "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark.xml",
         "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\7455edf36cfef78c84e075daaa068ed6488e65d8\\output\\res\\drawable\\common_google_signin_btn_text_dark.xml"
-    },
-    {
-        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
-        "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\b0136805c59f50db0ee1258b06e9097b9186446c\\output\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
         "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",

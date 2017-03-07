@@ -691,7 +691,9 @@
     <integer name="hide_password_duration">320</integer>
     <integer name="show_password_duration">200</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
-    <string name="ServiceClass">com.scheme.chc.lockscreen.service.LockScreenService</string>
+    <string name="ServiceClass">
+        com.scheme.chc.lockscreen.service.LockScreenService
+    </string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
     <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
@@ -750,10 +752,13 @@
     <string name="path_password_eye_mask_visible" translatable="false">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
     <string name="pref_default_display_name">John Smith</string>
-    <string name="pref_description_total_challenges">How many rounds do you want before you login
+    <string name="pref_description_total_challenges">
+        How many rounds do you want before you login
     </string>
     <string name="pref_exit">Exit</string>
-    <string name="pref_general_total_icons_sumary">Select total icons to Display on Screen</string>
+    <string name="pref_general_total_icons_sumary">
+        Select total icons to Display on Screen
+    </string>
     <string name="pref_header_changepassword">Change Password</string>
     <string name="pref_header_feedback">Feedback</string>
     <string name="pref_header_general">General</string>

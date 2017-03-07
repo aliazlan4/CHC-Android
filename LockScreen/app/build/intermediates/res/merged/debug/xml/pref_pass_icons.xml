@@ -7,19 +7,19 @@
         android:key="no_of_pass_icons"
         android:negativeButtonText="@null"
         android:positiveButtonText="@null"
-        android:title="Total Pass Icons"/>
+        android:title="Total Pass Icons" />
 
     <Preference
         android:key="choose_pass_icon"
-        android:title="Choose your Pass Icons"/>
+        android:title="Choose your Pass Icons" />
 
     <Preference
         android:key="custom_pass_icon"
-        android:title="Upload your own Pass Icon"/>
+        android:title="Upload your own Pass Icon" />
 
     <Preference
         android:key="view_pass_icons"
-        android:title="View Your Pass Icon"/>
+        android:title="View Your Pass Icon" />
 
 </PreferenceScreen>
 

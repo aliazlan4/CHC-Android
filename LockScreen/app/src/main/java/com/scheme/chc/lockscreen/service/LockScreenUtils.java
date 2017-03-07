@@ -1,4 +1,5 @@
 package com.scheme.chc.lockscreen.service;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.support.annotation.NonNull;
@@ -14,12 +15,6 @@ public class LockScreenUtils {
     // Member variables
     private OverlayDialog mOverlayDialog;
     private OnLockStatusChangedListener mLockStatusChangedListener;
-
-    // Interface to communicate with owner activity
-    public interface OnLockStatusChangedListener
-    {
-        void onLockStatusChanged(boolean isLocked);
-    }
 
     // Reset the variables
     public LockScreenUtils() {
@@ -48,14 +43,18 @@ public class LockScreenUtils {
         if (mOverlayDialog != null) {
             mOverlayDialog.dismiss();
             mOverlayDialog = null;
-            if(mLockStatusChangedListener!=null)
-            {
+            if (mLockStatusChangedListener != null) {
                 mLockStatusChangedListener.onLockStatusChanged(false);
             }
         }
     }
 
-    // Create overlay dialog for lockedscreen to disable hardware buttons
+    // Interface to communicate with owner activity
+    public interface OnLockStatusChangedListener {
+        void onLockStatusChanged(boolean isLocked);
+    }
+
+    // Create overlay dialog for locked screen to disable hardware buttons
     private static class OverlayDialog extends AlertDialog {
 
         OverlayDialog(Activity activity) {
@@ -76,6 +75,5 @@ public class LockScreenUtils {
         public final boolean dispatchTouchEvent(@NonNull MotionEvent motionevent) {
             return true;
         }
-
     }
 }

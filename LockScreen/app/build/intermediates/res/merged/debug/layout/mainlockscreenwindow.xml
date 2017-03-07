@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@android:color/white" >
-
+    android:background="@android:color/white">
 
     <SurfaceView
         android:id="@+id/mysurface"
@@ -16,14 +15,12 @@
         android:id="@+id/btnUnlock"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:text="Unlock Me"
-        android:textColor="@android:color/black"
-        tools:ignore="HardcodedText"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="61dp"
+        android:text="Unlock Me"
+        android:textColor="@android:color/black"
         android:visibility="invisible"
-        android:layout_marginBottom="61dp" />
-
-
+        tools:ignore="HardcodedText" />
 
 </RelativeLayout>

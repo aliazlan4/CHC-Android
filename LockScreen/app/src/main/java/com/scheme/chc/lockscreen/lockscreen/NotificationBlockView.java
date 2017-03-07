@@ -5,7 +5,6 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.ViewGroup;
 
-
 public class NotificationBlockView extends ViewGroup {
 
     public NotificationBlockView(Context context) {

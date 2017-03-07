@@ -11,22 +11,20 @@ public class LockScreenReceiver extends BroadcastReceiver {
     // Handle actions and display Lockscreen
     @Override
     public void onReceive(Context context, Intent intent) {
-
         if (intent.getAction().equals(Intent.ACTION_SCREEN_ON)
-                || intent.getAction().equals(Intent. ACTION_USER_UNLOCKED)
-                || intent.getAction().equals(Intent. ACTION_BOOT_COMPLETED)) {
-            start_lockscreen(context);
+                || intent.getAction().equals(Intent.ACTION_USER_UNLOCKED)
+                || intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
+            startLockScreen(context);
         }
     }
 
     // Display lock screen
-    private void start_lockscreen(Context context) {
+    private void startLockScreen(Context context) {
         System.out.println("start");
         MainLockScreenWindow.opensettings = false;
         Intent mIntent = new Intent(context, MainLockScreenWindow.class);
-        mIntent.putExtra("settings",false);
+        mIntent.putExtra("settings", false);
         mIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(mIntent);
     }
-
 }

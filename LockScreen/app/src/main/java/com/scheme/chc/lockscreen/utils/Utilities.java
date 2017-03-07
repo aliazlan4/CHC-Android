@@ -1,63 +1,90 @@
 package com.scheme.chc.lockscreen.utils;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
+import android.util.DisplayMetrics;
+import android.view.Display;
+import android.view.WindowManager;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Set;
 
-
+@SuppressLint("StaticFieldLeak")
+@SuppressWarnings({"WeakerAccess", "unused"})
 public class Utilities {
 
     private static Utilities instance;
-    private final int totalNumberOfPassIcons;
+    private Context context;
+
     private final int totalIconsToDisplay;
-    private final int TotalNumberOfRegularIcons;
+    private final int totalNumberOfPassIcons;
     private final int numberOfIconsVertically;
     private final int numberOfIconsHorizontally;
-    private final int TotalRounds;
-    private String[] ViewingPassicons = new String[getTotalNumberOfPassIcons()];
-    private String[] ChoosenPassIcons = new String[getTotalNumberOfPassIcons()];
-    private String[] UploadedPassIcons = new String[getTotalNumberOfPassIcons()];
-    public ArrayList<Integer> index  = new ArrayList<>();
+    private final int totalNumberOfRegularIcons;
+    private final int totalRounds, iconWidth, iconHeight;
+
+    private String[] viewingPassIcons;
+    private String[] chosenPassIcons;
+    private String[] uploadedPassIcons;
+    public ArrayList<Integer> index;
+
+    private Utilities(Context context) {
+        this.context = context;
+        this.index = new ArrayList<>();
+
+        AppSharedPrefs appSharedPrefs = AppSharedPrefs.getInstance();
+        this.totalRounds = Integer.parseInt(appSharedPrefs.getRounds());
+        this.totalIconsToDisplay = Integer.parseInt(appSharedPrefs.getTotalIcons());
+        this.totalNumberOfPassIcons = Integer.parseInt(appSharedPrefs.getNumPassIcons());
+        this.totalNumberOfRegularIcons = Integer.parseInt(appSharedPrefs.getTotalIcons()) - totalNumberOfPassIcons;
+
+        this.numberOfIconsVertically = Math.abs(totalIconsToDisplay / 5);
+        this.numberOfIconsHorizontally = Math.abs(totalIconsToDisplay / numberOfIconsVertically);
+
+        this.viewingPassIcons = new String[totalNumberOfPassIcons];
+        this.chosenPassIcons = new String[totalNumberOfPassIcons];
+        this.uploadedPassIcons = new String[totalNumberOfPassIcons];
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.HONEYCOMB) {
+            Set<String> viewingIcons = appSharedPrefs.getViewPassIcons();
+            Set<String> selectionsChosenGallery = appSharedPrefs.getCustomPassIcons();
+            Set<String> selectionsCustomUploaded = appSharedPrefs.getCustomPassIcons();
+            this.viewingPassIcons = viewingIcons != null
+                    ? viewingIcons.toArray(new String[]{})
+                    : new String[0];
+            this.chosenPassIcons = selectionsChosenGallery != null
+                    ? selectionsChosenGallery.toArray(new String[]{})
+                    : new String[0];
+            this.uploadedPassIcons = selectionsCustomUploaded != null
+                    ? selectionsCustomUploaded.toArray(new String[]{})
+                    : new String[0];
+        }
+        // System.out.println("Chosen " + Arrays.toString(chosenPassIcons));
+        // System.out.println("viewing " + Arrays.toString(viewingPassIcons));
+        // System.out.println("Uploaded " + Arrays.toString(uploadedPassIcons));
+
+        DisplayMetrics displayMetrics = getScreenMetrics();
+        this.iconWidth = displayMetrics.widthPixels / numberOfIconsHorizontally;
+        //noinspection SuspiciousNameCombination
+        this.iconHeight = this.iconWidth;
+    }
+
+    public static void initialize(Context context) {
+        instance = new Utilities(context);
+    }
 
     public static Utilities getInstance() {
         if (instance == null) {
-            throw new ExceptionInInitializerError("Context not initialized. User getInstance(Context) first.");
+            throw new ExceptionInInitializerError("Context not initialized. User " +
+                    "initialize(Context) or getInstance(Context) first.");
         }
         return instance;
     }
 
-    public static Utilities getInstance( Context context) {
+    public static Utilities getInstance(Context context) {
         instance = new Utilities(context);
         return instance;
-    }
-
-    private Utilities(Context context){
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-        totalNumberOfPassIcons = Integer.parseInt(preferences.getString("no_of_pass_icons", "5"));
-        totalIconsToDisplay = (Integer.parseInt(preferences.getString("total_icons", "40")));
-        TotalNumberOfRegularIcons = (Integer.parseInt(preferences.getString("total_icons", "40"))) - totalNumberOfPassIcons;
-        TotalRounds = Integer.parseInt(preferences.getString("rounds", "5"));
-        numberOfIconsVertically = Math.abs(totalIconsToDisplay /5);
-        numberOfIconsHorizontally =  Math.abs((totalIconsToDisplay /numberOfIconsVertically));
-//        System.out.println("H: " + numberOfIconsHorizontally + " V: " + numberOfIconsVertically);
-
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.HONEYCOMB) {
-            Set<String> viewingIcons = preferences.getStringSet("view_pass_icons", null);
-            Set<String> selectionscustomuploaded = preferences.getStringSet("custom_pass_icon", null);
-            Set<String> selectionschoosengallery = preferences.getStringSet("choose_pass_icon", null);
-            UploadedPassIcons = selectionscustomuploaded != null ? selectionscustomuploaded.toArray(new String[]{}) : new String[0];
-            ChoosenPassIcons = selectionschoosengallery != null ? selectionschoosengallery.toArray(new String[]{}) : new String[0];
-            ViewingPassicons = viewingIcons != null ? viewingIcons.toArray(new String[]{}) : new String[0];
-        }
-
-//        System.out.println("Uploaded " + Arrays.toString(UploadedPassIcons));
-//        System.out.println("Choosen " + Arrays.toString(ChoosenPassIcons));
-//        System.out.println("viewing " + Arrays.toString(ViewingPassicons));
     }
 
     public int getRandomInt(int limit) {
@@ -65,23 +92,26 @@ public class Utilities {
 
         if (index.contains(random)) {
             random = getRandomInt(limit);
-        }
-        else {
+        } else {
             index.add(random);
         }
         return random;
     }
 
-    public int getTotalNumberOfPassIcons() {
-        return totalNumberOfPassIcons;
+    private DisplayMetrics getScreenMetrics() {
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        Display display = wm.getDefaultDisplay();
+        DisplayMetrics metrics = new DisplayMetrics();
+        display.getMetrics(metrics);
+        return metrics;
     }
 
     public int getTotalIconsToDisplay() {
         return totalIconsToDisplay;
     }
 
-    public int getTotalNumberOfRegularIcons() {
-        return TotalNumberOfRegularIcons;
+    public int getTotalNumberOfPassIcons() {
+        return totalNumberOfPassIcons;
     }
 
     public int getNumberOfIconsVertically() {
@@ -92,16 +122,31 @@ public class Utilities {
         return numberOfIconsHorizontally;
     }
 
+    public int getTotalNumberOfRegularIcons() {
+        return totalNumberOfRegularIcons;
+    }
+
     public int getTotalRounds() {
-        return TotalRounds;
+        return totalRounds;
+    }
+
+    public int getIconWidth() {
+        return iconWidth;
+    }
+
+    public int getIconHeight() {
+        return iconHeight;
+    }
+
+    public String[] getViewingPassIcons() {
+        return viewingPassIcons;
+    }
+
+    public String[] getChosenPassIcons() {
+        return chosenPassIcons;
     }
 
     public String[] getUploadedPassIcons() {
-        return UploadedPassIcons;
+        return uploadedPassIcons;
     }
-
-    public String[] getChoosenPassIcons() {
-        return ChoosenPassIcons;
-    }
-
 }

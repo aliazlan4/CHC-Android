@@ -1997,7 +1997,12 @@
         <item>50(Recommended)</item>
         <item>60</item>
         <item>70(Not Recommended)</item>
-    </string-array><string name="pref_header_notifications">Pass Icons</string><string name="pref_total_challenges">Select Total Rounds</string><string name="ServiceClass">com.scheme.chc.lockscreen.service.LockScreenService</string><string name="pref_general_total_icons_sumary">Select total icons to Display on Screen</string><string name="pref_description_total_challenges">How many rounds do you want before you login
+    </string-array><string name="pref_header_notifications">Pass Icons</string><string name="pref_total_challenges">Select Total Rounds</string><string name="ServiceClass">
+        com.scheme.chc.lockscreen.service.LockScreenService
+    </string><string name="pref_general_total_icons_sumary">
+        Select total icons to Display on Screen
+    </string><string name="pref_description_total_challenges">
+        How many rounds do you want before you login
     </string><string name="pref_default_display_name">John Smith</string><string name="app_name">CHC-LockScreen</string><string-array name="icon_resources_values">
         <item>1</item>
         <item>2</item>

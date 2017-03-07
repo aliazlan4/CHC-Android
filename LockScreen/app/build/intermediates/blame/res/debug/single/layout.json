@@ -48,12 +48,12 @@
         "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\b0136805c59f50db0ee1258b06e9097b9186446c\\output\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
-        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
-        "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\b0136805c59f50db0ee1258b06e9097b9186446c\\output\\res\\layout\\notification_template_lines_media.xml"
-    },
-    {
         "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
         "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\b0136805c59f50db0ee1258b06e9097b9186446c\\output\\res\\layout\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
+        "source": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\b0136805c59f50db0ee1258b06e9097b9186446c\\output\\res\\layout\\notification_template_lines_media.xml"
     },
     {
         "merged": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",

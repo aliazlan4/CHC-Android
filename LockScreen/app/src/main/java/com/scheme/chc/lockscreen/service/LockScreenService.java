@@ -12,8 +12,8 @@ import com.scheme.chc.lockscreen.R;
 
 public class LockScreenService extends Service {
 
-    private BroadcastReceiver mReceiver;
     public static Notification notification;
+    private BroadcastReceiver mReceiver;
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -46,7 +46,7 @@ public class LockScreenService extends Service {
                 .setContentIntent(null)
                 .setOngoing(true)
                 .build();
-        startForeground(9999,notification);
+        startForeground(9999, notification);
     }
 
     // Unregister receiver

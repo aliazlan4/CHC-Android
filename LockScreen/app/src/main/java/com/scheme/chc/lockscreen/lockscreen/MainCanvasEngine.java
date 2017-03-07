@@ -21,6 +21,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.scheme.chc.lockscreen.utils.GrahamScan;
+import com.scheme.chc.lockscreen.utils.Icon;
+import com.scheme.chc.lockscreen.utils.IconPool;
 import com.scheme.chc.lockscreen.utils.Utilities;
 
 import java.io.BufferedInputStream;
@@ -32,230 +34,105 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-class MainCanvasEngine extends Thread implements View.OnTouchListener{
+class MainCanvasEngine extends Thread implements View.OnTouchListener {
 
-    @SuppressLint("StaticFieldLeak")
-    private static MainCanvasEngine mainCanvasEngine;
-    private final SurfaceView surfaceView;
     private Utilities utilities;
-    private SurfaceHolder surfaceHolder;
-    private Boolean lock = false;
+    private IconPool iconPool;
     private Context context;
-    private int CanvasWidth;
-    private int CanvasHeight;
-    private int TotalIconsToDisplay;
-    private int TotalRounds;
-    private int TotalNumberOfPassIcons;
-    private int IconWidth;
-    private int IconHeight;
-    private ArrayList<Bitmap> SelectedPassIcons = new ArrayList<>() ;
-    private ArrayList<Bitmap> iconsArrayFromAssets = new ArrayList<>();
-    private int TotalIconsInAssets = 0;
-    private int numberOfIconsVertically;
-    private int numberOfIconsHorizontally;
-    private int TotalNumberOfRegularIcons;
-    private ArrayList<Integer> passIconsXlist = new ArrayList<>();
-    private ArrayList<Integer> passIconsYlist = new ArrayList<>();
-    private ArrayList<Bitmap> bitmapArrayList = new ArrayList<>();
-    private List iconscopylist = new ArrayList<>();
-    private int Boundry = 0;
-    private Path path = new Path();
-    private int draw = 1;
-    private Paint paint = new Paint();
-    private int WrongTrys = 1;
     private Vibrator vibrator;
+    private SurfaceView surfaceView;
+    private SurfaceHolder surfaceHolder;
 
+    private int totalIconsInAssets;
+    private int canvasWidth, canvasHeight;
+    private int draw, boundary, wrongTries;
 
-    MainCanvasEngine(Context context, Boolean lock, SurfaceHolder surfaceHolder, SurfaceView surfaceView) {
+    private ArrayList<Integer> passIconsXList;
+    private ArrayList<Integer> passIconsYList;
+    private ArrayList<Bitmap> bitmapArrayList;
+    private ArrayList<Bitmap> selectedPassIcons;
+    private ArrayList<Icon> iconsArrayFromAssets;
+
+    private Path path;
+    private Paint paint;
+    private boolean lock;
+
+    MainCanvasEngine(Context context, boolean lock, SurfaceHolder surfaceHolder, SurfaceView surfaceView) {
+        this.utilities = Utilities.getInstance();
+        this.iconPool = IconPool.getInstance();
         this.context = context;
-        this.lock = lock;
-        this.surfaceHolder = surfaceHolder;
         this.surfaceView = surfaceView;
-        vibrator = (Vibrator)context.getSystemService(Context.VIBRATOR_SERVICE);
+        this.surfaceHolder = surfaceHolder;
+        this.vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+
+        this.draw = 1;
+        this.boundary = 0;
+        this.wrongTries = 1;
+        this.totalIconsInAssets = 0;
+
+        this.passIconsXList = new ArrayList<>();
+        this.passIconsYList = new ArrayList<>();
+        this.bitmapArrayList = new ArrayList<>();
+        this.selectedPassIcons = new ArrayList<>();
+        this.iconsArrayFromAssets = new ArrayList<>();
+
+        this.lock = lock;
+        this.path = new Path();
+        this.paint = new Paint();
     }
 
     @Override
     public void run() {
         super.run();
         while (lock) {
-            //checks if the lockCanvas() method will be success,and if not, will check this statement again
-            if (!surfaceHolder.getSurface().isValid()) {continue;}
+            // Checks if the lockCanvas() method will be success, and if not,
+            // will check this statement again
+            if (!surfaceHolder.getSurface().isValid()) {
+                continue;
+            }
             draw();
             lock = false;
         }
     }
 
     private void draw() {
-        /** Start editing pixels in this surface.*/
+        /* Start editing pixels in this surface.*/
         Canvas canvas = surfaceHolder.lockCanvas();
         canvas.drawColor(Color.DKGRAY, PorterDuff.Mode.CLEAR);
         surfaceView.setOnTouchListener(this);
 
-        InitializeUtilities(canvas);
+        initializeUtilities(canvas);
         getAllIconsFromAssets();
         drawIcons(paint, canvas);
         createConvexHull();
-        drawpolygon(paint, canvas);
+        drawPolygon(paint, canvas);
 
         // End of painting to canvas. system will paint with this canvas,to the surface.
         surfaceHolder.unlockCanvasAndPost(canvas);
     }
 
-    private void InitializeUtilities(Canvas canvas) {
-        utilities = Utilities.getInstance(context);
-        CanvasWidth = canvas.getWidth();
-        CanvasHeight = canvas.getHeight();
-        TotalIconsToDisplay = utilities.getTotalIconsToDisplay();
-        TotalNumberOfPassIcons = utilities.getTotalNumberOfPassIcons();
-        TotalNumberOfRegularIcons = utilities.getTotalNumberOfRegularIcons();
-        numberOfIconsVertically = utilities.getNumberOfIconsVertically();
-        numberOfIconsHorizontally = utilities.getNumberOfIconsHorizontally();
-        IconWidth = CanvasWidth/numberOfIconsHorizontally;
-        IconHeight = CanvasWidth/numberOfIconsHorizontally;
-        TotalRounds = utilities.getTotalRounds();
+    private void initializeUtilities(Canvas canvas) {
+        canvasWidth = canvas.getWidth();
+        canvasHeight = canvas.getHeight();
+        selectedPassIcons.clear();
 
-        if(utilities.getChoosenPassIcons().length > 1) {
-            SelectedPassIcons.clear();
-            iconscopylist.clear();
-            Collections.addAll(iconscopylist,utilities.getChoosenPassIcons());
-            for (int i = 0; i < TotalNumberOfPassIcons; i++)
-                SelectedPassIcons.add(getFilenameFromAssets((String) iconscopylist.get(i)));
+        String[] passIcons = utilities.getChosenPassIcons();
+        if (passIcons.length > 1) {
+            for (int i = 0; i < utilities.getTotalNumberOfPassIcons(); i++) {
+                selectedPassIcons.add(getFilenameFromAssets(passIcons[i]));
+            }
+        } else {
+            passIcons = utilities.getUploadedPassIcons();
         }
-        else if(utilities.getUploadedPassIcons().length > 1){
-            SelectedPassIcons.clear();
-            iconscopylist.clear();
-            Collections.addAll(iconscopylist,utilities.getUploadedPassIcons());
-            for (int i = 0; i < TotalNumberOfPassIcons; i++) {
-                Uri myUri = Uri.parse(String.valueOf(iconscopylist.get(i)));
-                SelectedPassIcons.add(convertUriToBitmap(myUri));
+        if (passIcons.length > 1) {
+            for (int i = 0; i < utilities.getTotalNumberOfPassIcons(); i++) {
+                selectedPassIcons.add(convertUriToBitmap(Uri.parse(passIcons[i])));
             }
         }
     }
 
-    private void drawpolygon(Paint paint, Canvas canvas) {
-        path.reset();
-        path.moveTo(passIconsXlist.get(0), passIconsYlist.get(0));
-        for (int i = 1; i < passIconsYlist.size(); i++) {
-            path.lineTo(passIconsXlist.get(i), passIconsYlist.get(i));
-        }
-        path.lineTo(passIconsXlist.get(0), passIconsYlist.get(0));
-
-        paint.setColor(Color.WHITE);
-        paint.setStyle(Paint.Style.STROKE);
-        paint.setStrokeWidth(5);
-        canvas.drawPath(path,paint);
-    }
-
-    private void createConvexHull() {
-        List<Point> points = GrahamScan.getConvexHull(passIconsXlist, passIconsYlist);
-
-        points.remove(points.size() - 1);
-
-        for (int i = 0; i < passIconsYlist.size(); i++) {
-            boolean flag = false;
-            for (int j = 0; j < points.size(); j++) {
-                int X = points.get(j).x;
-                int Y = points.get(j).y;
-                if (passIconsXlist.get(i) == X && passIconsYlist.get(i) == Y) {
-                    flag = true;
-                }
-            }
-            if (!flag) {
-                points.add(new Point(passIconsXlist.get(i), passIconsYlist.get(i)));
-            }
-        }
-
-        for (int i = 0; i < points.size(); i++) {
-            Point point = points.get(i);
-            passIconsXlist.set(i, point.x);
-            passIconsYlist.set(i, point.y);
-        }
-        System.out.println("X1: " +passIconsXlist + " Y1:"+ passIconsYlist);
-    }
-
-    @SuppressLint("NewApi")
-    private void drawIcons(Paint paint, Canvas canvas) {
-        bitmapArrayList.clear();
-        int iconTopSpace = 5;
-        int iconLeftSpace = 5;
-        passIconsXlist.clear();
-        passIconsYlist.clear();
-        utilities.index.clear();
-        path.reset();
-
-        for(int i = 0; i < TotalNumberOfPassIcons ; i++) {
-            bitmapArrayList.add(SelectedPassIcons.get(i));
-        }
-
-        for (int i = 0; i < TotalNumberOfRegularIcons ; i++) {
-            int randomNumber = utilities.getRandomInt(TotalIconsInAssets);
-            Bitmap drawingbitmap = (iconsArrayFromAssets.get(randomNumber));
-            boolean same = false;
-            for (Bitmap bitmap : bitmapArrayList) {
-                same = bitmap.sameAs(drawingbitmap);
-            }
-            if(!same) {
-                bitmapArrayList.add(drawingbitmap);
-            }
-            else
-                System.out.println("Not adding");
-        }
-
-        Collections.shuffle(bitmapArrayList, new Random(System.nanoTime()));
-
-        for (int i = 0; i < TotalIconsToDisplay ; i++) {
-            canvas.drawBitmap(bitmapArrayList.get(i), iconLeftSpace, iconTopSpace, paint);
-            iconLeftSpace += CanvasWidth/numberOfIconsHorizontally;
-            if(iconLeftSpace >= CanvasWidth) {
-                Boundry = iconLeftSpace;
-                iconLeftSpace = 5;
-                iconTopSpace +=  (CanvasHeight/numberOfIconsVertically) ;
-            }
-
-            if(isPassIcon(bitmapArrayList.get(i))){
-//                System.out.println("space " +IconLeftSpace);
-                if(iconLeftSpace <= 5) {
-                    passIconsXlist.add(Boundry - (IconWidth/2));
-                    passIconsYlist.add(iconTopSpace - (CanvasHeight/numberOfIconsVertically) + (IconHeight/2));
-                }
-                else {
-                    passIconsXlist.add(iconLeftSpace - (IconWidth / 2));
-                    passIconsYlist.add(iconTopSpace + (IconHeight / 2));
-                }
-            }
-        }
-//        System.out.println("X: " +passIconsXlist + " Y:"+ passIconsYlist);
-    }
-
-    @SuppressLint("NewApi")
-    private boolean isPassIcon(Bitmap bitmap) {
-        for (Bitmap SelectedPassIcon : SelectedPassIcons) {
-            if (SelectedPassIcon.sameAs(bitmap)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    private Bitmap bitmapFromAssets(InputStream inputStream) {
-        return Bitmap.createScaledBitmap(BitmapFactory.decodeStream(new BufferedInputStream(inputStream)), IconWidth, IconHeight, false);
-    }
-
-    private Bitmap convertUriToBitmap(Uri id) {
-        Bitmap bitmap = null;
-        try {
-            bitmap = Bitmap.createScaledBitmap(BitmapFactory.decodeStream(context.getContentResolver().openInputStream(id)), IconWidth, IconHeight, false);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        return bitmap;
-    }
-
-
-    @SuppressLint("NewApi")
     private void getAllIconsFromAssets() {
-        try {
-
+        /*try {
             AssetManager assetManager = context.getAssets();
             String[] fileList = assetManager.list("icons");
             if (iconsArrayFromAssets == null) {
@@ -264,49 +141,185 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener{
                 iconsArrayFromAssets.clear();
             }
 
-            System.out.println(utilities.getChoosenPassIcons().length + " " +utilities.getUploadedPassIcons().length );
-            if(utilities.getChoosenPassIcons().length <= 1 && utilities.getUploadedPassIcons().length <= 1) {
-                for (int i = 1; i <= TotalNumberOfPassIcons; i++) {
-//                    System.out.println("icons/" + i +".png");
-                    SelectedPassIcons.add(bitmapFromAssets(assetManager.open("icons/" + i + ".png")));
+            System.out.println(utilities.getChosenPassIcons().length + " " + utilities.getUploadedPassIcons().length);
+            if (utilities.getChosenPassIcons().length <= 1 && utilities.getUploadedPassIcons().length <= 1) {
+                for (int i = 1; i <= utilities.getTotalNumberOfPassIcons(); i++) {
+                    // System.out.println("icons/" + i +".png");
+                    selectedPassIcons.add(bitmapFromAssets(assetManager.open("icons/" + i + ".png")));
                 }
             }
-
-            for (int i = 1; i <= fileList.length;i++) {
-                iconsArrayFromAssets.add(bitmapFromAssets(assetManager.open("icons/" +  i +".png")));
+            for (int i = 1; i <= fileList.length; i++) {
+                iconsArrayFromAssets.add(bitmapFromAssets(assetManager.open("icons/" + i + ".png")));
             }
 
-            for (int i = 0; i<iconsArrayFromAssets.size();i++) {
-                for (int j = 0; j < SelectedPassIcons.size(); j++) {
-                    if (iconsArrayFromAssets.get(i).sameAs(SelectedPassIcons.get(j))) {
+            for (int i = 0; i < iconsArrayFromAssets.size(); i++) {
+                for (int j = 0; j < selectedPassIcons.size(); j++) {
+                    if (iconsArrayFromAssets.get(i).sameAs(selectedPassIcons.get(j))) {
                         iconsArrayFromAssets.remove(i);
-//                        System.out.println("removed from array");
+                        // System.out.println("removed from array");
                     }
                 }
             }
-            TotalIconsInAssets = iconsArrayFromAssets.size();
+            totalIconsInAssets = iconsArrayFromAssets.size();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
+        try {
+            iconsArrayFromAssets.clear();
+            iconsArrayFromAssets.addAll(iconPool.getIconPool());
+            if (utilities.getChosenPassIcons().length <= 1
+                    && utilities.getUploadedPassIcons().length <= 1) {
+                for (int i = 1; i <= utilities.getTotalNumberOfPassIcons(); i++) {
+                    selectedPassIcons.add(bitmapFromAssets(context.getAssets().open("icons/" + i + ".png")));
+                }
+            }
+            totalIconsInAssets = iconsArrayFromAssets.size() - utilities.getTotalNumberOfPassIcons();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private Bitmap getFilenameFromAssets(String filename){
+    @SuppressLint("NewApi")
+    private void drawIcons(Paint paint, Canvas canvas) {
+        bitmapArrayList.clear();
+        int iconTopSpace = 5;
+        int iconLeftSpace = 5;
+        passIconsXList.clear();
+        passIconsYList.clear();
+        utilities.index.clear();
+        path.reset();
+
+        for (int i = 0; i < utilities.getTotalNumberOfPassIcons(); i++) {
+            bitmapArrayList.add(selectedPassIcons.get(i));
+        }
+
+        for (int i = 0; i < utilities.getTotalNumberOfRegularIcons(); i++) {
+            int randomNumber = utilities.getRandomInt(totalIconsInAssets);
+            Bitmap drawingBitmap = (iconsArrayFromAssets.get(randomNumber)).getImageData();
+            // int same = 0;
+            boolean same = false;
+            for (Bitmap bitmap : bitmapArrayList) {
+                same = bitmap.sameAs(drawingBitmap);
+                /*if (bitmap.sameAs(drawingBitmap)) {
+                    same++;
+                }*/
+            }
+            if (!same) {
+            // if (same > 0) {
+                bitmapArrayList.add(drawingBitmap);
+            } else
+                System.out.println("Not adding");
+        }
+
+        Collections.shuffle(bitmapArrayList, new Random(System.nanoTime()));
+
+        for (int i = 0; i < utilities.getTotalIconsToDisplay(); i++) {
+            canvas.drawBitmap(bitmapArrayList.get(i), iconLeftSpace, iconTopSpace, paint);
+            iconLeftSpace += canvasWidth / utilities.getNumberOfIconsHorizontally();
+            if (iconLeftSpace >= canvasWidth) {
+                boundary = iconLeftSpace;
+                iconLeftSpace = 5;
+                iconTopSpace += (canvasHeight / utilities.getNumberOfIconsVertically());
+            }
+
+            if (isPassIcon(bitmapArrayList.get(i))) {
+                // System.out.println("space " + IconLeftSpace);
+                if (iconLeftSpace <= 5) {
+                    passIconsXList.add(boundary - (utilities.getIconWidth() / 2));
+                    passIconsYList.add(iconTopSpace - (canvasHeight / utilities.getNumberOfIconsVertically()) + (utilities.getIconHeight() / 2));
+                } else {
+                    passIconsXList.add(iconLeftSpace - (utilities.getIconWidth() / 2));
+                    passIconsYList.add(iconTopSpace + (utilities.getIconHeight() / 2));
+                }
+            }
+        }
+        // System.out.println("X: " +passIconsXList + " Y:"+ passIconsYList);
+    }
+
+    private void createConvexHull() {
+        List<Point> points = GrahamScan.getConvexHull(passIconsXList, passIconsYList);
+
+        points.remove(points.size() - 1);
+
+        for (int i = 0; i < passIconsYList.size(); i++) {
+            boolean flag = false;
+            for (int j = 0; j < points.size(); j++) {
+                int X = points.get(j).x;
+                int Y = points.get(j).y;
+                if (passIconsXList.get(i) == X && passIconsYList.get(i) == Y) {
+                    flag = true;
+                }
+            }
+            if (!flag) {
+                points.add(new Point(passIconsXList.get(i), passIconsYList.get(i)));
+            }
+        }
+
+        for (int i = 0; i < points.size(); i++) {
+            Point point = points.get(i);
+            passIconsXList.set(i, point.x);
+            passIconsYList.set(i, point.y);
+        }
+        System.out.println("X1: " + passIconsXList + " Y1:" + passIconsYList);
+    }
+
+    private void drawPolygon(Paint paint, Canvas canvas) {
+        path.reset();
+        path.moveTo(passIconsXList.get(0), passIconsYList.get(0));
+        for (int i = 1; i < passIconsYList.size(); i++) {
+            path.lineTo(passIconsXList.get(i), passIconsYList.get(i));
+        }
+        path.lineTo(passIconsXList.get(0), passIconsYList.get(0));
+
+        paint.setColor(Color.WHITE);
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(5);
+        canvas.drawPath(path, paint);
+    }
+
+    @SuppressLint("NewApi")
+    private boolean isPassIcon(Bitmap bitmap) {
+        for (Bitmap SelectedPassIcon : selectedPassIcons) {
+            if (SelectedPassIcon.sameAs(bitmap)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private Bitmap bitmapFromAssets(InputStream inputStream) {
+        return Bitmap.createScaledBitmap(BitmapFactory.decodeStream(new BufferedInputStream(inputStream)),
+                utilities.getIconWidth(), utilities.getIconHeight(), false);
+    }
+
+    private Bitmap convertUriToBitmap(Uri id) {
+        Bitmap bitmap = null;
+        try {
+            bitmap = Bitmap.createScaledBitmap(BitmapFactory.decodeStream(context.getContentResolver().openInputStream(id)),
+                    utilities.getIconWidth(), utilities.getIconHeight(), false);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return bitmap;
+    }
+
+    private Bitmap getFilenameFromAssets(String filename) {
         AssetManager assetManager = context.getAssets();
         Bitmap bitmap = null;
         try {
-            bitmap = bitmapFromAssets(assetManager.open("icons/" +  filename));
+            bitmap = bitmapFromAssets(assetManager.open("icons/" + filename));
         } catch (IOException e) {
             e.printStackTrace();
         }
         return bitmap;
     }
 
-    private void UnlockPhone(){
+    private void UnlockPhone() {
         MainLockScreenWindow.btnUnlock.performClick();
     }
 
-    @SuppressLint("NewApi")
     @Override
+    @SuppressLint("NewApi")
     public boolean onTouch(View v, MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_DOWN && v == surfaceView) {
             RectF pBounds = new RectF();
@@ -314,27 +327,24 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener{
             float y = event.getY();
             path.computeBounds(pBounds, true);
             if (pBounds.contains(x, y)) {
-                if (draw == TotalRounds) {
+                if (draw == utilities.getTotalRounds()) {
                     MainLockScreenWindow.opensettings = true;
                     MainLockScreenWindow.removeview = true;
                     UnlockPhone();
-                }
-                else {
+                } else {
                     draw++;
                     draw();
                 }
                 return true;
-            }
-            else{
-                if(WrongTrys == 3) {
+            } else {
+                if (wrongTries == 3) {
                     vibrator.vibrate(2000);
                     Toast.makeText(context, "Incorrect: Try Again", Toast.LENGTH_LONG).show();
                     draw = 1;
-                    WrongTrys = 1;
+                    wrongTries = 1;
                     draw();
-                }
-                else {
-                    WrongTrys++;
+                } else {
+                    wrongTries++;
                     draw();
                 }
             }

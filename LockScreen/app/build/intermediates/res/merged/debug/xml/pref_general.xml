@@ -5,10 +5,10 @@
     <!-- NOTE: ListPreference's summary should be set to its value by the activity code. -->
 
     <SwitchPreference
-        android:key="enablechc"
-        android:title="Enable CHC Scheme"
         android:defaultValue="false"
-        android:summary="Set CHC Scheme as your password" />
+        android:key="enablechc"
+        android:summary="Set CHC Scheme as your password"
+        android:title="Enable CHC Scheme" />
 
     <ListPreference
         android:defaultValue="5"
@@ -16,8 +16,8 @@
         android:entryValues="@array/number_of_rounds"
         android:key="rounds"
         android:positiveButtonText="Select"
-        android:title="@string/pref_total_challenges"
-        android:summary="@string/pref_description_total_challenges"/>
+        android:summary="@string/pref_description_total_challenges"
+        android:title="@string/pref_total_challenges" />
 
     <ListPreference
         android:defaultValue="50"
@@ -25,7 +25,7 @@
         android:entryValues="@array/number_of_icons_values"
         android:key="total_icons"
         android:positiveButtonText="Select"
-        android:title="Total Icons to Display on Screen"
-        android:summary="@string/pref_general_total_icons_sumary"/>
+        android:summary="@string/pref_general_total_icons_sumary"
+        android:title="Total Icons to Display on Screen" />
 
 </PreferenceScreen>

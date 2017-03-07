@@ -35,6 +35,7 @@ import android.widget.Toast;
 
 import com.scheme.chc.lockscreen.R;
 import com.scheme.chc.lockscreen.lockscreen.MainLockScreenWindow;
+import com.scheme.chc.lockscreen.utils.AppSharedPrefs;
 
 import java.io.BufferedInputStream;
 import java.io.FileNotFoundException;
@@ -185,7 +186,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
      * activity is showing a two-pane settings UI.
      */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    @SuppressLint({"NewApi","CommitPrefEdits"})
+    @SuppressLint({"NewApi", "CommitPrefEdits"})
     public static class GeneralPreferenceFragment extends PreferenceFragment {
 
         private SwitchPreference pref_enablechc;
@@ -207,21 +208,22 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                     pref_enablechc.setEnabled((Boolean) newValue);
                     pref_enablechc.setChecked((Boolean) newValue);
                     pref_enablechc.setSelectable(true);
-                    if(pref_enablechc.isEnabled()) {
+                    if (pref_enablechc.isEnabled()) {
                         Intent intent = new Intent(DevicePolicyManager.ACTION_SET_NEW_PASSWORD);
                         startActivity(intent);
                     }
-                    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+                    AppSharedPrefs.getInstance().setEnabledCHC((boolean) newValue);
+                    /*SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
                     SharedPreferences.Editor edit = preferences.edit();
                     edit.putBoolean("enablechc", (Boolean) newValue);
-                    edit.apply();
+                    edit.apply();*/
                     restartActivity();
                     return false;
                 }
             });
         }
 
-        private void restartActivity(){
+        private void restartActivity() {
             getActivity().startActivity(new Intent(getActivity(), MainLockScreenWindow.class));
         }
 
@@ -240,7 +242,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
      * This fragment shows PassIcons preferences only. It is used when the
      * activity is showing a two-pane settings UI.
      */
-    @SuppressLint({"NewApi","CommitPrefEdits"})
+    @SuppressLint({"NewApi", "CommitPrefEdits"})
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public static class PassIconsPreferenceFragment extends PreferenceFragment {
         int PICK_IMAGE_MULTIPLE = 1;
@@ -284,12 +286,12 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                     SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
                     noofpassicons = Integer.parseInt(preferences.getString("no_of_pass_icons", ""));
                     uploading = true;
-                    itemclickcount = 0 ;
+                    itemclickcount = 0;
                     intent.setType("image/*");
                     intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
                     intent.setAction(Intent.ACTION_GET_CONTENT);        //                    intent.setAction(Intent.ACTION_PICK);
                     for (int i = 0; i < noofpassicons; i++) {
-                        itemclickcount ++;
+                        itemclickcount++;
                         startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_MULTIPLE);
                     }
                     return true;
@@ -319,7 +321,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
 
         }
 
-        @SuppressLint({ "PrivateResource"})
+        @SuppressLint({"PrivateResource"})
         private void InflateViewingGallery(Activity activity) {
             AlertDialog.Builder builder = new AlertDialog.Builder(activity);
             builder.setTitle("Your Gallery");
@@ -349,7 +351,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
             noofpassicons = Integer.parseInt(preferences.getString("no_of_pass_icons", ""));
             passiconarray = new String[noofpassicons];
-            builder.setTitle("Please Select " +noofpassicons+" icons");
+            builder.setTitle("Please Select " + noofpassicons + " icons");
 
             RelativeLayout gridlayout;
 
@@ -367,7 +369,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
 
                 }
             });
-            builder.setNegativeButton ("Cancel", null);
+            builder.setNegativeButton("Cancel", null);
             dialog = builder.create();
 
             dialog.show();
@@ -376,32 +378,31 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                     GridViewIcon item = (GridViewIcon) parent.getItemAtPosition(position);
                     passiconarray[itemclickcount] = item.getTitle();
 
-                    itemclickcount ++;
-                    if(itemclickcount == noofpassicons) {
-                        System.out.println(itemclickcount +" " + (noofpassicons-1));
+                    itemclickcount++;
+                    if (itemclickcount == noofpassicons) {
+                        System.out.println(itemclickcount + " " + (noofpassicons - 1));
                         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
                         SharedPreferences.Editor edit = preferences.edit();
                         Set<String> mySet = new HashSet<>(Arrays.asList(passiconarray));
-                        edit.putStringSet("custom_pass_icon", null );
-                        edit.putStringSet("choose_pass_icon", mySet );
-                        edit.putStringSet("view_pass_icons", mySet );
+                        edit.putStringSet("custom_pass_icon", null);
+                        edit.putStringSet("choose_pass_icon", mySet);
+                        edit.putStringSet("view_pass_icons", mySet);
                         edit.apply();
                     }
-                    dialog.getButton(DialogInterface.BUTTON_POSITIVE).setText("Select (" +itemclickcount+"/"+noofpassicons+")");
+                    dialog.getButton(DialogInterface.BUTTON_POSITIVE).setText("Select (" + itemclickcount + "/" + noofpassicons + ")");
                 }
             });
 
             dialog.getButton(DialogInterface.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if(itemclickcount != noofpassicons){
-                        Toast.makeText(getActivity(),"Try Again: You selected " +itemclickcount+"/" +noofpassicons+ " icons", Toast.LENGTH_LONG).show();
+                    if (itemclickcount != noofpassicons) {
+                        Toast.makeText(getActivity(), "Try Again: You selected " + itemclickcount + "/" + noofpassicons + " icons", Toast.LENGTH_LONG).show();
                         itemclickcount = 0;
-                    }
-                    else dialog.dismiss();
+                    } else dialog.dismiss();
                 }
             });
-            dialog.getButton(DialogInterface.BUTTON_POSITIVE).setText("Select (" +itemclickcount+"/"+noofpassicons+")");
+            dialog.getButton(DialogInterface.BUTTON_POSITIVE).setText("Select (" + itemclickcount + "/" + noofpassicons + ")");
         }
 
         private Bitmap bitmapFromAssets(InputStream inputStream) {
@@ -416,7 +417,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                 fileList = assetManager.list("icons");
                 for (int i = 1; i < fileList.length; i++) {
                     try {
-                        gridViewIcons.add(new GridViewIcon(bitmapFromAssets(assetManager.open("icons/" + i + ".png")),i+".png"));
+                        gridViewIcons.add(new GridViewIcon(bitmapFromAssets(assetManager.open("icons/" + i + ".png")), i + ".png"));
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -430,14 +431,14 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
 
         private ArrayList<GridViewIcon> getViewingData() {
             SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
-            Set<String> viewingIcons = preferences.getStringSet("view_pass_icons",null);
-            Set<String> uploadIcons = preferences.getStringSet("custom_pass_icon",null);
+            Set<String> viewingIcons = preferences.getStringSet("view_pass_icons", null);
+            Set<String> uploadIcons = preferences.getStringSet("custom_pass_icon", null);
             totalpassicontoview = Integer.parseInt(preferences.getString("no_of_pass_icons", "5"));
             final ArrayList<GridViewIcon> gridViewIcons = new ArrayList<>();
             ArrayList<String> arrayList = new ArrayList<>();
-            System.out.println("vieing ones: "+viewingIcons);
+            System.out.println("vieing ones: " + viewingIcons);
 
-            if(viewingIcons == null ) {
+            if (viewingIcons == null) {
                 AssetManager assetManager = getActivity().getAssets();
                 for (int i = 1; i <= totalpassicontoview; i++)
                     try {
@@ -445,15 +446,13 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-            }
-            else {
+            } else {
                 if (uploadIcons == null) {
                     String[] ViewPassIcons = viewingIcons.toArray(new String[]{});
                     Collections.addAll(arrayList, ViewPassIcons);
                     for (int i = 0; i < totalpassicontoview; i++)
                         gridViewIcons.add(new GridViewIcon(getFilenameFromAssets(arrayList.get(i)), i + ".png"));
-                }
-                else{
+                } else {
                     Set<String> viewing = preferences.getStringSet("view_pass_icons", null);
                     String[] ViewPassIcons = viewing != null ? viewing.toArray(new String[]{}) : new String[0];
                     for (int i = 0; i < totalpassicontoview; i++) {
@@ -476,11 +475,11 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         }
 
 
-        private Bitmap getFilenameFromAssets(String filename){
+        private Bitmap getFilenameFromAssets(String filename) {
             AssetManager assetManager = getActivity().getAssets();
             Bitmap bitmap = null;
             try {
-                bitmap = bitmapFromAssets(assetManager.open("icons/" +  filename));
+                bitmap = bitmapFromAssets(assetManager.open("icons/" + filename));
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -496,15 +495,14 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                 imagesPathList.add(imagesPath);
                 yourbitmap = BitmapFactory.decodeFile(imagesPath);
                 imagebitmaps.add(yourbitmap);
-            }
-            else if (requestCode == PICK_IMAGE_MULTIPLE && resultCode == RESULT_OK && data.getData() != null && uploading){
+            } else if (requestCode == PICK_IMAGE_MULTIPLE && resultCode == RESULT_OK && data.getData() != null && uploading) {
                 bitmapsArraylistUploaded.add(data.getData().toString());
-                if(bitmapsArraylistUploaded.size() == noofpassicons){
+                if (bitmapsArraylistUploaded.size() == noofpassicons) {
                     SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
                     SharedPreferences.Editor edit = preferences.edit();
-                    System.out.println("array is  " +bitmapsArraylistUploaded);
-                    String[] savingIcons =  new String[noofpassicons];
-                    for(int i = 0 ; i < bitmapsArraylistUploaded.size();i++)
+                    System.out.println("array is  " + bitmapsArraylistUploaded);
+                    String[] savingIcons = new String[noofpassicons];
+                    for (int i = 0; i < bitmapsArraylistUploaded.size(); i++)
                         savingIcons[i] = String.valueOf(bitmapsArraylistUploaded.get(i));
                     Set<String> mySet = new HashSet<>(Arrays.asList(savingIcons));
                     edit.putStringSet("choose_pass_icon", null);
@@ -575,7 +573,5 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             super.onCreate(savedInstanceState);
             System.exit(1);
         }
-
     }
-
 }

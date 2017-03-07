@@ -17,9 +17,9 @@ import java.util.ArrayList;
 class GridViewAdapter extends ArrayAdapter {
     private Context context;
     private int layoutResourceId;
-    private ArrayList data = new ArrayList();
+    private ArrayList<GridViewIcon> data = new ArrayList<>();
 
-    GridViewAdapter(Context context, int layoutResourceId, ArrayList data) {
+    GridViewAdapter(Context context, int layoutResourceId, ArrayList<GridViewIcon> data) {
         super(context, layoutResourceId, data);
         this.layoutResourceId = layoutResourceId;
         this.context = context;
@@ -43,7 +43,7 @@ class GridViewAdapter extends ArrayAdapter {
             holder = (ViewHolder) row.getTag();
         }
 
-        GridViewIcon item = (GridViewIcon) data.get(position);
+        GridViewIcon item = data.get(position);
         holder.imageTitle.setText(item.getTitle());
         holder.image.setImageBitmap(item.getImage());
         return row;
