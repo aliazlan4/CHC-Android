@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Paroxis&apos; Matrices\Documents\GitHub\CHC-Android\LockScreen\app\libs\mongo-java-driver-3.2.0-SNAPSHOT.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="862e29a17a22cdbbdf5a5cfa5bb8d97b2cfd1548">
+        <dex dex="C:\Users\Paroxis&apos; Matrices\Documents\GitHub\CHC-Android\LockScreen\app\build\intermediates\pre-dexed\debug\mongo-java-driver-3.2.0-SNAPSHOT_d82be858fb5d1e10f3598dcec5b8e4474f61a95f.jar" />
+    </item>
+
+</items>

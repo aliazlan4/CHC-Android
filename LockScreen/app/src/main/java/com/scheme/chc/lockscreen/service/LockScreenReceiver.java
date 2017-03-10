@@ -8,7 +8,8 @@ import com.scheme.chc.lockscreen.lockscreen.MainLockScreenWindow;
 
 public class LockScreenReceiver extends BroadcastReceiver {
 
-    // Handle actions and display Lockscreen
+    // Handle actions and display LockScreen
+
     @Override
     public void onReceive(Context context, Intent intent) {
         if (intent.getAction().equals(Intent.ACTION_SCREEN_ON)
