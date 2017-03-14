@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Paroxis' Matrices\\Documents\\GitHub\\CHC-Android\\LockScreen\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v25\\values-v25.xml",
+        "outputFile": "F:\\LockScreen\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v25\\values-v25.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 121
                 },
                 "from": {
-                    "file": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\b0136805c59f50db0ee1258b06e9097b9186446c\\output\\res\\values-v25\\values-v25.xml",
+                    "file": "C:\\Users\\famst\\.android\\build-cache\\6432e4f452f6458747389f6e403a1d59ac8877e7\\output\\res\\values-v25\\values-v25.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 204
                 },
                 "from": {
-                    "file": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\b0136805c59f50db0ee1258b06e9097b9186446c\\output\\res\\values-v25\\values-v25.xml",
+                    "file": "C:\\Users\\famst\\.android\\build-cache\\6432e4f452f6458747389f6e403a1d59ac8877e7\\output\\res\\values-v25\\values-v25.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -50,7 +50,7 @@
                     "endOffset": 303
                 },
                 "from": {
-                    "file": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\b0136805c59f50db0ee1258b06e9097b9186446c\\output\\res\\values-v25\\values-v25.xml",
+                    "file": "C:\\Users\\famst\\.android\\build-cache\\6432e4f452f6458747389f6e403a1d59ac8877e7\\output\\res\\values-v25\\values-v25.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -71,7 +71,7 @@
                     "endOffset": 414
                 },
                 "from": {
-                    "file": "C:\\Users\\Paroxis' Matrices\\.android\\build-cache\\b0136805c59f50db0ee1258b06e9097b9186446c\\output\\res\\values-v25\\values-v25.xml",
+                    "file": "C:\\Users\\famst\\.android\\build-cache\\6432e4f452f6458747389f6e403a1d59ac8877e7\\output\\res\\values-v25\\values-v25.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,

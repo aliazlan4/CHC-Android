@@ -72,10 +72,9 @@ public class IconPool {
     }
 
     private ArrayList<Icon> getRandomIconPool(ArrayList<String> passIconNames) {
-        ArrayList<Icon> randomPool = new ArrayList<>();
         /*
             Randomize based on pass icons here...
         */
-        return randomPool;
+        return new ArrayList<>();
     }
 }

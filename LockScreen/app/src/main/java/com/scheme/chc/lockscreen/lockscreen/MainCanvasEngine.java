@@ -2,6 +2,7 @@ package com.scheme.chc.lockscreen.lockscreen;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -14,12 +15,14 @@ import android.graphics.PorterDuff;
 import android.graphics.RectF;
 import android.net.Uri;
 import android.os.Vibrator;
+import android.provider.CallLog;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Toast;
 
+import com.scheme.chc.lockscreen.service.LockScreenUtils;
 import com.scheme.chc.lockscreen.utils.GrahamScan;
 import com.scheme.chc.lockscreen.utils.Icon;
 import com.scheme.chc.lockscreen.utils.IconPool;
@@ -36,6 +39,7 @@ import java.util.Random;
 
 class MainCanvasEngine extends Thread implements View.OnTouchListener {
 
+    private final int intentchooser;
     private Utilities utilities;
     private IconPool iconPool;
     private Context context;
@@ -57,12 +61,13 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener {
     private Paint paint;
     private boolean lock;
 
-    MainCanvasEngine(Context context, boolean lock, SurfaceHolder surfaceHolder, SurfaceView surfaceView) {
+    MainCanvasEngine(Context context, boolean lock, SurfaceHolder surfaceHolder, SurfaceView surfaceView, int intentchooser) {
         this.utilities = Utilities.getInstance();
         this.iconPool = IconPool.getInstance();
         this.context = context;
         this.surfaceView = surfaceView;
         this.surfaceHolder = surfaceHolder;
+        this.intentchooser = intentchooser;
         this.vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
 
         this.draw = 1;
@@ -79,6 +84,7 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener {
         this.lock = lock;
         this.path = new Path();
         this.paint = new Paint();
+
     }
 
     @Override
@@ -132,38 +138,6 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener {
     }
 
     private void getAllIconsFromAssets() {
-        /*try {
-            AssetManager assetManager = context.getAssets();
-            String[] fileList = assetManager.list("icons");
-            if (iconsArrayFromAssets == null) {
-                iconsArrayFromAssets = new ArrayList<>();
-            } else {
-                iconsArrayFromAssets.clear();
-            }
-
-            System.out.println(utilities.getChosenPassIcons().length + " " + utilities.getUploadedPassIcons().length);
-            if (utilities.getChosenPassIcons().length <= 1 && utilities.getUploadedPassIcons().length <= 1) {
-                for (int i = 1; i <= utilities.getTotalNumberOfPassIcons(); i++) {
-                    // System.out.println("icons/" + i +".png");
-                    selectedPassIcons.add(bitmapFromAssets(assetManager.open("icons/" + i + ".png")));
-                }
-            }
-            for (int i = 1; i <= fileList.length; i++) {
-                iconsArrayFromAssets.add(bitmapFromAssets(assetManager.open("icons/" + i + ".png")));
-            }
-
-            for (int i = 0; i < iconsArrayFromAssets.size(); i++) {
-                for (int j = 0; j < selectedPassIcons.size(); j++) {
-                    if (iconsArrayFromAssets.get(i).sameAs(selectedPassIcons.get(j))) {
-                        iconsArrayFromAssets.remove(i);
-                        // System.out.println("removed from array");
-                    }
-                }
-            }
-            totalIconsInAssets = iconsArrayFromAssets.size();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
         try {
             iconsArrayFromAssets.clear();
             iconsArrayFromAssets.addAll(iconPool.getIconPool());
@@ -196,16 +170,11 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener {
         for (int i = 0; i < utilities.getTotalNumberOfRegularIcons(); i++) {
             int randomNumber = utilities.getRandomInt(totalIconsInAssets);
             Bitmap drawingBitmap = (iconsArrayFromAssets.get(randomNumber)).getImageData();
-            // int same = 0;
             boolean same = false;
             for (Bitmap bitmap : bitmapArrayList) {
                 same = bitmap.sameAs(drawingBitmap);
-                /*if (bitmap.sameAs(drawingBitmap)) {
-                    same++;
-                }*/
             }
             if (!same) {
-            // if (same > 0) {
                 bitmapArrayList.add(drawingBitmap);
             } else
                 System.out.println("Not adding");
@@ -223,7 +192,6 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener {
             }
 
             if (isPassIcon(bitmapArrayList.get(i))) {
-                // System.out.println("space " + IconLeftSpace);
                 if (iconLeftSpace <= 5) {
                     passIconsXList.add(boundary - (utilities.getIconWidth() / 2));
                     passIconsYList.add(iconTopSpace - (canvasHeight / utilities.getNumberOfIconsVertically()) + (utilities.getIconHeight() / 2));
@@ -233,7 +201,6 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener {
                 }
             }
         }
-        // System.out.println("X: " +passIconsXList + " Y:"+ passIconsYList);
     }
 
     private void createConvexHull() {
@@ -315,7 +282,7 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener {
     }
 
     private void UnlockPhone() {
-        MainLockScreenWindow.btnUnlock.performClick();
+        SlideActivity.btnUnlock.performClick();
     }
 
     @Override
@@ -328,9 +295,27 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener {
             path.computeBounds(pBounds, true);
             if (pBounds.contains(x, y)) {
                 if (draw == utilities.getTotalRounds()) {
-                    MainLockScreenWindow.opensettings = true;
-                    MainLockScreenWindow.removeview = true;
+//                    MainLockScreenWindow.opensettings = true;
+                    SlideActivity.removeview = true;
                     UnlockPhone();
+                    switch (intentchooser) {
+                        case 0:
+                            Intent showCallLog = new Intent();
+                            showCallLog.setAction(Intent.ACTION_VIEW);
+                            showCallLog.setType(CallLog.Calls.CONTENT_TYPE);
+                            context.startActivity(showCallLog);
+                            break;
+                        case 1:
+                            Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+                            context.startActivity(intent);
+                            break;
+                        case 2:
+                            Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
+                            smsIntent.addCategory(Intent.CATEGORY_DEFAULT);
+                            smsIntent.setType("vnd.android-dir/mms-sms");
+                            context.startActivity(smsIntent);
+                            break;
+                    }
                 } else {
                     draw++;
                     draw();
