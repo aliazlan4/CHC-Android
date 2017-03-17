@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "G:\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\background.png",
+        "source": "G:\\LockScreen\\app\\src\\main\\res\\drawable-hdpi\\background.png"
+    },
+    {
+        "merged": "G:\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\background_blurred.png",
+        "source": "G:\\LockScreen\\app\\src\\main\\res\\drawable-hdpi\\background_blurred.png"
+    }
+]

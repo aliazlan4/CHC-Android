@@ -1,0 +1,29 @@
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- These settings headers are only used on tablets. -->
+    <header
+        android:fragment="com.scheme.chc.lockscreen.settings.SettingsActivity$GeneralPreferenceFragment"
+        android:icon="@drawable/settings"
+        android:title="@string/pref_header_general" />
+
+    <header
+        android:fragment="com.scheme.chc.lockscreen.settings.SettingsActivity$PassIconsPreferenceFragment"
+        android:icon="@drawable/passicons"
+        android:title="@string/pref_header_notifications" />
+
+    <!--<header-->
+    <!--android:fragment="com.scheme.chc.lockscreen.settings.SettingsActivity$ChangePasswordPreferenceFragment"-->
+    <!--android:icon="@drawable/changepassword"-->
+    <!--android:title="@string/pref_header_changepassword" />-->
+
+    <header
+        android:fragment="com.scheme.chc.lockscreen.settings.SettingsActivity$FeedbackPreferenceFragment"
+        android:icon="@drawable/feedback"
+        android:title="@string/pref_header_feedback" />
+
+    <header
+        android:fragment="com.scheme.chc.lockscreen.settings.SettingsActivity$ExitPreferenceFragment"
+        android:icon="@drawable/exit"
+        android:title="@string/pref_exit" />
+
+</preference-headers>

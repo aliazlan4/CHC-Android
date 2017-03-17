@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">CHC-LockScreen</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+    <string name="pref_total_challenges">Select Total Rounds</string>
+    <string name="pref_description_total_challenges">
+        How many rounds do you want before you login
+    </string>
+    <string name="pref_title_display_name">Enter name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string-array name="number_of_rounds">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="number_of_pass_icons">
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="number_of_icons">
+        <item>30</item>
+        <item>40</item>
+        <item>50(Recommended)</item>
+        <item>60</item>
+        <item>70(Not Recommended)</item>
+    </string-array>
+
+    <string-array name="number_of_icons_values">
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+        <item>60</item>
+        <item>70</item>
+    </string-array>
+
+    <string-array name="icon_resources_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string name="pref_header_notifications">Pass Icons</string>
+    <string name="pref_exit">Exit</string>
+    <string name="pref_header_changepassword">Change Password</string>
+    <string name="pref_header_feedback">Feedback</string>
+    <string name="pref_general_total_icons_sumary">
+        Select total icons to Display on Screen
+    </string>
+    <string name="ServiceClass">
+        com.scheme.chc.lockscreen.service.LockScreenService
+    </string>
+</resources>

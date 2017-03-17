@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "G:\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\famst\\.android\\build-cache\\feae81da6c4f4dd222a0daae48e67a486e475e4b\\output\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "G:\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\famst\\.android\\build-cache\\feae81da6c4f4dd222a0daae48e67a486e475e4b\\output\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "G:\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\famst\\.android\\build-cache\\feae81da6c4f4dd222a0daae48e67a486e475e4b\\output\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "G:\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\famst\\.android\\build-cache\\feae81da6c4f4dd222a0daae48e67a486e475e4b\\output\\res\\layout-v21\\notification_action_tombstone.xml"
+    }
+]

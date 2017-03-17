@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="reddish">#a01e00</color>
+    <color name="greenish">#628e35</color>
+
+    <!--    Some colors internal to the app     -->
+    <color name="specialGray">#37474F</color>
+    <color name="specialYellow">#FFA62F</color>
+    <color name="almostTransparent">#80000000</color>
+    <color name="turquoise">#018F71</color>
+    <color name="magenta_ish">#C1253D</color>
+    <color name="calmPurple">#6C5AED</color>
+
+    <!--        Progress Bar        -->
+    <color name="progressBarFront">#C0253C</color>
+    <color name="progressBarBack">#E36F80</color>
+</resources>
