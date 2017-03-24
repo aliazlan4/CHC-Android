@@ -16,7 +16,27 @@
         "source": "G:\\LockScreen\\app\\src\\main\\res\\xml\\pref_feedback.xml"
     },
     {
+        "merged": "G:\\CHC-Android-master\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_changepassword.xml",
+        "source": "G:\\CHC-Android-master\\app\\src\\main\\res\\xml\\pref_changepassword.xml"
+    },
+    {
         "merged": "G:\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_changepassword.xml",
         "source": "G:\\LockScreen\\app\\src\\main\\res\\xml\\pref_changepassword.xml"
+    },
+    {
+        "merged": "G:\\CHC-Android-master\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_general.xml",
+        "source": "G:\\CHC-Android-master\\app\\src\\main\\res\\xml\\pref_general.xml"
+    },
+    {
+        "merged": "G:\\CHC-Android-master\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_headers.xml",
+        "source": "G:\\CHC-Android-master\\app\\src\\main\\res\\xml\\pref_headers.xml"
+    },
+    {
+        "merged": "G:\\CHC-Android-master\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_feedback.xml",
+        "source": "G:\\CHC-Android-master\\app\\src\\main\\res\\xml\\pref_feedback.xml"
+    },
+    {
+        "merged": "G:\\CHC-Android-master\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_pass_icons.xml",
+        "source": "G:\\CHC-Android-master\\app\\src\\main\\res\\xml\\pref_pass_icons.xml"
     }
 ]

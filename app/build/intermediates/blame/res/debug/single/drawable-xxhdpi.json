@@ -1,5 +1,13 @@
 [
     {
+        "merged": "G:\\CHC-Android-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\background_blurred.png",
+        "source": "G:\\CHC-Android-master\\app\\src\\main\\res\\drawable-xxhdpi\\background_blurred.png"
+    },
+    {
+        "merged": "G:\\CHC-Android-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\background.png",
+        "source": "G:\\CHC-Android-master\\app\\src\\main\\res\\drawable-xxhdpi\\background.png"
+    },
+    {
         "merged": "G:\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\background.png",
         "source": "G:\\LockScreen\\app\\src\\main\\res\\drawable-xxhdpi\\background.png"
     },

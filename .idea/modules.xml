@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LockScreen.iml" filepath="$PROJECT_DIR$/LockScreen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CHC-Android-master.iml" filepath="$PROJECT_DIR$/CHC-Android-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
