@@ -4,8 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import com.scheme.chc.lockscreen.lockscreen.MainLockScreenWindow;
-import com.scheme.chc.lockscreen.lockscreen.SlideActivity;
+import com.scheme.chc.lockscreen.LockScreenActivity;
 
 public class LockScreenReceiver extends BroadcastReceiver {
 
@@ -22,9 +21,7 @@ public class LockScreenReceiver extends BroadcastReceiver {
     // Display lock screen
     private void startLockScreen(Context context) {
         System.out.println("start");
-//        MainLockScreenWindow.opensettings = false;
-        Intent mIntent = new Intent(context, SlideActivity.class);
-//        mIntent.putExtra("settings", false);
+        Intent mIntent = new Intent(context, LockScreenActivity.class);
         mIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(mIntent);
     }

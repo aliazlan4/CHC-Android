@@ -1,8 +1,8 @@
 package com.scheme.chc.lockscreen.weather;
 
-public class weatherModel {
+public class WeatherModel {
 
-    public locationModel location;
+    public LocationModel location;
     public CurrentCondition currentCondition = new CurrentCondition();
     public Temperature temperature = new Temperature();
     public Wind wind = new Wind();

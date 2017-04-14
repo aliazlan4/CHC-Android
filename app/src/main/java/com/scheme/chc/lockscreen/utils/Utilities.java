@@ -2,11 +2,17 @@ package com.scheme.chc.lockscreen.utils;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.os.Build;
+import android.text.Html;
+import android.text.Spanned;
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.WindowManager;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 import java.util.Random;
 import java.util.Set;
 
@@ -15,19 +21,18 @@ import java.util.Set;
 public class Utilities {
 
     private static Utilities instance;
-    private Context context;
-
     private final int totalIconsToDisplay;
     private final int totalNumberOfPassIcons;
     private final int numberOfIconsVertically;
     private final int numberOfIconsHorizontally;
     private final int totalNumberOfRegularIcons;
     private final int totalRounds, iconWidth, iconHeight;
-
+    public ArrayList<Integer> index;
+    private Context context;
     private String[] viewingPassIcons;
     private String[] chosenPassIcons;
     private String[] uploadedPassIcons;
-    public ArrayList<Integer> index;
+    private SimpleDateFormat simpleDateFormat;
 
     private Utilities(Context context) {
         this.context = context;
@@ -68,6 +73,9 @@ public class Utilities {
         this.iconWidth = displayMetrics.widthPixels / numberOfIconsHorizontally;
         //noinspection SuspiciousNameCombination
         this.iconHeight = this.iconWidth;
+
+        // Date format
+        this.simpleDateFormat = new SimpleDateFormat("dd MMMM, yyyy, EEEE", Locale.getDefault());
     }
 
     public static void initialize(Context context) {
@@ -104,6 +112,21 @@ public class Utilities {
         DisplayMetrics metrics = new DisplayMetrics();
         display.getMetrics(metrics);
         return metrics;
+    }
+
+    private String getDateModifier(String date) {
+        int val = Integer.parseInt(date);
+        if (val >= 10 && val <= 20) {
+            return "th";
+        } else if ((val % 10) == 1) {
+            return "st";
+        } else if ((val % 10) == 2) {
+            return "nd";
+        } else if ((val % 10) == 3) {
+            return "rd";
+        } else {
+            return "th";
+        }
     }
 
     public int getTotalIconsToDisplay() {
@@ -148,5 +171,20 @@ public class Utilities {
 
     public String[] getUploadedPassIcons() {
         return uploadedPassIcons;
+    }
+
+    public Spanned getDate() {
+        String date = simpleDateFormat.format(new Date());
+        date = date.substring(0, 2)
+                + "<sup><small>"
+                + getDateModifier(date.substring(0, 2))
+                + "</small></sup>"
+                + date.substring(2, date.length());
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            return Html.fromHtml(date, Html.FROM_HTML_MODE_LEGACY);
+        } else {
+            //noinspection deprecation
+            return Html.fromHtml(date);
+        }
     }
 }

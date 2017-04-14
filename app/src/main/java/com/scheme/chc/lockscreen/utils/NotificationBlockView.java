@@ -1,4 +1,4 @@
-package com.scheme.chc.lockscreen.lockscreen;
+package com.scheme.chc.lockscreen.utils;
 
 import android.content.Context;
 import android.util.Log;

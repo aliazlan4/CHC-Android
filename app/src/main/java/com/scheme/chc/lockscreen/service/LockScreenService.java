@@ -12,7 +12,7 @@ import com.scheme.chc.lockscreen.R;
 
 public class LockScreenService extends Service {
 
-    public static Notification notification;
+    private Notification notification;
     private BroadcastReceiver mReceiver;
 
     @Override

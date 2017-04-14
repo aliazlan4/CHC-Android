@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LockScreenActivity"
+    tools:ignore="HardcodedText,RtlHardcoded"
+    tools:showIn="@layout/activity_slide">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_blurred" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/almostTransparent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.75"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/background_blurred" />
+
+            <DigitalClock
+                android:id="@+id/dcTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tvDate"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="54sp" />
+
+            <TextView
+                android:id="@id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tvWeatherIcon"
+                android:layout_centerHorizontal="true"
+                android:text="11th March, 2017, Saturday"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@id/tvWeatherIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tvTemperature"
+                android:layout_centerHorizontal="true"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="50sp" />
+
+            <TextView
+                android:id="@id/tvTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="sans-serif"
+                android:text="21°C"
+                android:textColor="@android:color/white"
+                android:textSize="50sp"
+                tools:targetApi="jelly_bean" />
+
+            <TextView
+                android:id="@+id/tvWeather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTemperature"
+                android:layout_centerHorizontal="true"
+                android:clickable="true"
+                android:text="Overcast"
+                android:textColor="@android:color/white"
+                android:textSize="36sp" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fabPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvWeather"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="4dp"
+                android:layout_toLeftOf="@+id/fabCamera"
+                android:clickable="true"
+                app:backgroundTint="@color/turquoise"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/ic_phone" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fabCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvWeather"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                app:backgroundTint="@color/magenta_ish"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/ic_camera" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fabMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvWeather"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="4dp"
+                android:layout_toRightOf="@id/fabCamera"
+                app:backgroundTint="@color/calmPurple"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/ic_message" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2.25"
+            android:gravity="center_vertical"
+            android:paddingLeft="54dp"
+            android:paddingRight="54dp">
+
+            <ImageView
+                android:id="@+id/ivPhoneIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginRight="24dp"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/ic_phone" />
+
+            <TextView
+                android:id="@+id/tvPhoneStarting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/ivPhoneIcon"
+                android:layout_alignTop="@id/ivPhoneIcon"
+                android:layout_toRightOf="@id/ivPhoneIcon"
+                android:gravity="center_vertical"
+                android:text="You have "
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvPhoneNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tvPhoneStarting"
+                android:layout_alignTop="@id/tvPhoneStarting"
+                android:layout_toRightOf="@id/tvPhoneStarting"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:minLines="1"
+                android:text="0 new message(s)"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/ivMessageIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_below="@id/ivPhoneIcon"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="6dp"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/ic_message" />
+
+            <TextView
+                android:id="@+id/tvMessageStarting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/ivMessageIcon"
+                android:layout_alignTop="@id/ivMessageIcon"
+                android:layout_toRightOf="@id/ivMessageIcon"
+                android:gravity="center_vertical"
+                android:text="You have "
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvMessageNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tvMessageStarting"
+                android:layout_alignTop="@id/tvMessageStarting"
+                android:layout_toRightOf="@id/tvMessageStarting"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:minLines="1"
+                android:text="0 missed call(s)"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabSlide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        app:backgroundTint="@color/specialYellow"
+        app:fabSize="normal"
+        app:layout_anchor="@id/ivBackground"
+        app:layout_anchorGravity="bottom|right|end"
+        app:srcCompat="@drawable/ic_lock" />
+
+    <ProgressBar
+        android:id="@+id/pbBatteryStatus"
+        style="?android:progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_gravity="bottom"
+        android:max="100"
+        android:progressDrawable="@drawable/progressbar_battery_status" />
+
+</android.support.design.widget.CoordinatorLayout>
+
+    <!--<ImageView
+                android:id="@id/ivWeatherIcon"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_above="@+id/tvTemperature"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="4dp"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/ic_cloud" />-->

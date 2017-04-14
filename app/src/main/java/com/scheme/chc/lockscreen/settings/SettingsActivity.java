@@ -34,7 +34,6 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.scheme.chc.lockscreen.R;
-import com.scheme.chc.lockscreen.lockscreen.MainLockScreenWindow;
 import com.scheme.chc.lockscreen.utils.AppSharedPrefs;
 
 import java.io.BufferedInputStream;
@@ -212,20 +211,17 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                     if (pref_enablechc.isEnabled()) {
                         Intent intent = new Intent(DevicePolicyManager.ACTION_SET_NEW_PASSWORD);
                         startActivity(intent);
-                    }
+                        restartActivity();
+                    } else
+                        restartActivity();
                     AppSharedPrefs.getInstance().setEnabledCHC((boolean) newValue);
-                    /*SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
-                    SharedPreferences.Editor edit = preferences.edit();
-                    edit.putBoolean("enablechc", (Boolean) newValue);
-                    edit.apply();*/
-                    restartActivity();
                     return false;
                 }
             });
         }
 
         private void restartActivity() {
-            getActivity().startActivity(new Intent(getActivity(), MainLockScreenWindow.class));
+            getActivity().startActivity(new Intent(getActivity(), com.scheme.chc.lockscreen.SettingsActivity.class));
         }
 
         @Override

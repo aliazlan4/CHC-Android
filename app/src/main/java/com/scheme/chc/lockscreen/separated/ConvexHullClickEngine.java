@@ -1,6 +1,7 @@
-package com.scheme.chc.lockscreen.lockscreen;
+package com.scheme.chc.lockscreen.separated;
 
 import android.annotation.SuppressLint;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
@@ -22,7 +23,8 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Toast;
 
-import com.scheme.chc.lockscreen.service.LockScreenUtils;
+import com.scheme.chc.lockscreen.LockScreenActivity;
+import com.scheme.chc.lockscreen.R;
 import com.scheme.chc.lockscreen.utils.GrahamScan;
 import com.scheme.chc.lockscreen.utils.Icon;
 import com.scheme.chc.lockscreen.utils.IconPool;
@@ -37,12 +39,11 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-class MainCanvasEngine extends Thread implements View.OnTouchListener {
+public class ConvexHullClickEngine extends Thread implements View.OnTouchListener {
 
-    private final int intentchooser;
+    private final int intentChooser;
     private Utilities utilities;
     private IconPool iconPool;
-    private Context context;
     private Vibrator vibrator;
     private SurfaceView surfaceView;
     private SurfaceHolder surfaceHolder;
@@ -60,15 +61,16 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener {
     private Path path;
     private Paint paint;
     private boolean lock;
+    private LockScreenActivity parentActivity;
 
-    MainCanvasEngine(Context context, boolean lock, SurfaceHolder surfaceHolder, SurfaceView surfaceView, int intentchooser) {
+    public ConvexHullClickEngine(final LockScreenActivity parentActivity, boolean lock, final int intentChooser) {
         this.utilities = Utilities.getInstance();
         this.iconPool = IconPool.getInstance();
-        this.context = context;
-        this.surfaceView = surfaceView;
-        this.surfaceHolder = surfaceHolder;
-        this.intentchooser = intentchooser;
-        this.vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+        this.parentActivity = parentActivity;
+        this.surfaceView = (SurfaceView) parentActivity.findViewById(R.id.mysurface);
+        this.surfaceHolder = this.surfaceView.getHolder();
+        this.intentChooser = intentChooser;
+        this.vibrator = (Vibrator) parentActivity.getSystemService(Context.VIBRATOR_SERVICE);
 
         this.draw = 1;
         this.boundary = 0;
@@ -105,8 +107,8 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener {
         /* Start editing pixels in this surface.*/
         Canvas canvas = surfaceHolder.lockCanvas();
         canvas.drawColor(Color.DKGRAY, PorterDuff.Mode.CLEAR);
-        surfaceView.setOnTouchListener(this);
 
+        surfaceView.setOnTouchListener(this);
         initializeUtilities(canvas);
         getAllIconsFromAssets();
         drawIcons(paint, canvas);
@@ -144,7 +146,7 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener {
             if (utilities.getChosenPassIcons().length <= 1
                     && utilities.getUploadedPassIcons().length <= 1) {
                 for (int i = 1; i <= utilities.getTotalNumberOfPassIcons(); i++) {
-                    selectedPassIcons.add(bitmapFromAssets(context.getAssets().open("icons/" + i + ".png")));
+                    selectedPassIcons.add(bitmapFromAssets(parentActivity.getAssets().open("icons/" + i + ".png")));
                 }
             }
             totalIconsInAssets = iconsArrayFromAssets.size() - utilities.getTotalNumberOfPassIcons();
@@ -262,7 +264,7 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener {
     private Bitmap convertUriToBitmap(Uri id) {
         Bitmap bitmap = null;
         try {
-            bitmap = Bitmap.createScaledBitmap(BitmapFactory.decodeStream(context.getContentResolver().openInputStream(id)),
+            bitmap = Bitmap.createScaledBitmap(BitmapFactory.decodeStream(parentActivity.getContentResolver().openInputStream(id)),
                     utilities.getIconWidth(), utilities.getIconHeight(), false);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -271,7 +273,7 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener {
     }
 
     private Bitmap getFilenameFromAssets(String filename) {
-        AssetManager assetManager = context.getAssets();
+        AssetManager assetManager = parentActivity.getAssets();
         Bitmap bitmap = null;
         try {
             bitmap = bitmapFromAssets(assetManager.open("icons/" + filename));
@@ -282,7 +284,7 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener {
     }
 
     private void UnlockPhone() {
-        SlideActivity.btnUnlock.performClick();
+        LockScreenActivity.btnUnlock.performClick();
     }
 
     @Override
@@ -295,46 +297,101 @@ class MainCanvasEngine extends Thread implements View.OnTouchListener {
             path.computeBounds(pBounds, true);
             if (pBounds.contains(x, y)) {
                 if (draw == utilities.getTotalRounds()) {
-//                    MainLockScreenWindow.opensettings = true;
-                    SlideActivity.removeview = true;
-                    UnlockPhone();
-                    switch (intentchooser) {
-                        case 0:
+
+                    switch (intentChooser) {
+                        case LockScreenActivity.INTENT_PHONE:
                             Intent showCallLog = new Intent();
                             showCallLog.setAction(Intent.ACTION_VIEW);
+                            //showCallLog.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             showCallLog.setType(CallLog.Calls.CONTENT_TYPE);
-                            context.startActivity(showCallLog);
+                            parentActivity.startActivity(showCallLog);
+                            LockScreenActivity.shouldRemoveView = true;
+                            UnlockPhone();
+                            parentActivity.finish();
                             break;
-                        case 1:
-                            Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
-                            context.startActivity(intent);
+                        case LockScreenActivity.INTENT_MESSAGES:
+                            try {
+                                Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+                                smsIntent.addCategory(Intent.CATEGORY_DEFAULT);
+                                //smsIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                smsIntent.setType("vnd.android-dir/mms-sms");
+                                parentActivity.startActivity(smsIntent);
+                                LockScreenActivity.shouldRemoveView = true;
+                                UnlockPhone();
+                                parentActivity.finish();
+                            } catch (ActivityNotFoundException e) {
+                                e.printStackTrace();
+                            }
                             break;
-                        case 2:
-                            Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
-                            smsIntent.addCategory(Intent.CATEGORY_DEFAULT);
-                            smsIntent.setType("vnd.android-dir/mms-sms");
-                            context.startActivity(smsIntent);
-                            break;
+                        default:
+                            LockScreenActivity.shouldRemoveView = true;
+                            UnlockPhone();
+                            System.out.println("unlocking");
                     }
                 } else {
                     draw++;
                     draw();
                 }
                 return true;
-            } else {
-                if (wrongTries == 3) {
-                    vibrator.vibrate(2000);
-                    Toast.makeText(context, "Incorrect: Try Again", Toast.LENGTH_LONG).show();
-                    draw = 1;
-                    wrongTries = 1;
-                    draw();
-                } else {
-                    wrongTries++;
-                    draw();
+            } else {        //outside the convex
+                switch (utilities.getTotalRounds()) {
+                    case 5:
+                        if (wrongTries == 3) {
+                            vibrator.vibrate(2000);
+                            Toast.makeText(parentActivity, "Incorrect: Try Again", Toast.LENGTH_LONG).show();
+                            draw = 1;
+                            wrongTries = 1;
+                            draw();
+                        } else {
+                            wrongTries++;
+                            draw();
+                        }
+                        break;
+                    case 4:
+                        if (wrongTries == 2) {
+                            vibrator.vibrate(2000);
+                            Toast.makeText(parentActivity, "Incorrect: Try Again", Toast.LENGTH_LONG).show();
+                            draw = 1;
+                            wrongTries = 1;
+                            draw();
+                        } else {
+                            wrongTries++;
+                            draw();
+                        }
+                        break;
+                    case 3:
+                        if (wrongTries == 1) {
+                            vibrator.vibrate(2000);
+                            Toast.makeText(parentActivity, "Incorrect: Try Again", Toast.LENGTH_LONG).show();
+                            draw = 1;
+                            wrongTries = 1;
+                            draw();
+                        } else {
+                            wrongTries++;
+                            draw();
+                        }
+                        break;
+                    case 2:
+                        if (wrongTries == 1) {
+                            vibrator.vibrate(2000);
+                            Toast.makeText(parentActivity, "Incorrect: Try Again", Toast.LENGTH_LONG).show();
+                            draw = 1;
+                            wrongTries = 1;
+                            draw();
+                        } else {
+                            wrongTries++;
+                            draw();
+                        }
+                        break;
+                    case 1:
+                        draw();
+                        break;
                 }
             }
         }
         vibrator.cancel();
         return false;
     }
+
+
 }

@@ -1,20 +1,19 @@
 package com.scheme.chc.lockscreen.weather;
 
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 public class JSONWeatherParser {
 
-    public static weatherModel getWeather(String data) throws JSONException  {
-        weatherModel weather = new weatherModel();
+    public static WeatherModel getWeather(String data) throws JSONException {
+        WeatherModel weather = new WeatherModel();
 
         // We create out JSONObject from the data
         JSONObject jObj = new JSONObject(data);
 
         // We start extracting the info
-        locationModel loc = new locationModel();
+        LocationModel loc = new LocationModel();
 
         JSONObject coordObj = getObject("coord", jObj);
         loc.setLatitude(getFloat("lat", coordObj));
@@ -25,7 +24,7 @@ public class JSONWeatherParser {
         loc.setSunrise(getInt("sunrise", sysObj));
         loc.setSunset(getInt("sunset", sysObj));
         loc.setCity(getString("name", jObj));
-//        loc.setid(getInt("id", sysObj));
+        // loc.setid(getInt("id", sysObj));
         weather.location = loc;
 
         // We get weather info (This is an array)
@@ -54,15 +53,11 @@ public class JSONWeatherParser {
         JSONObject cObj = getObject("clouds", jObj);
         weather.clouds.setPerc(getInt("all", cObj));
 
-
         // We download the icon to show
-
-
         return weather;
     }
 
-
-    private static JSONObject getObject(String tagName, JSONObject jObj)  throws JSONException {
+    private static JSONObject getObject(String tagName, JSONObject jObj) throws JSONException {
         return jObj.getJSONObject(tagName);
     }
 
@@ -70,12 +65,11 @@ public class JSONWeatherParser {
         return jObj.getString(tagName);
     }
 
-    private static float  getFloat(String tagName, JSONObject jObj) throws JSONException {
+    private static float getFloat(String tagName, JSONObject jObj) throws JSONException {
         return (float) jObj.getDouble(tagName);
     }
 
-    private static int  getInt(String tagName, JSONObject jObj) throws JSONException {
+    private static int getInt(String tagName, JSONObject jObj) throws JSONException {
         return jObj.getInt(tagName);
     }
-
 }
