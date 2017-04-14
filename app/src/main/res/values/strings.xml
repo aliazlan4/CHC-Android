@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">CHC-LockScreen</string>
+    <string name="initVector">O2OaVZr6tGHKAacV</string>
+    <string name="key">O2OaVZr6tGHKAacVO2OaVZr6tGHKAacV</string>
 
     <!-- Strings related to Settings -->
 

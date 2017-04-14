@@ -67,9 +67,7 @@
             android:name="com.scheme.chc.lockscreen.settings.SettingsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-        <!-- <parentActivity -->
-        <!-- android:name=".lockscreen.CameraActivity" -->
-        <!-- android:theme="@style/AppTheme.NoActionBar.FullScreen" /> -->
+
         <service android:name="com.scheme.chc.lockscreen.service.LockScreenService" />
 
         <receiver

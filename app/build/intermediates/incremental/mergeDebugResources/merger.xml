@@ -1874,7 +1874,7 @@
         <item>8</item>
         <item>9</item>
         <item>10</item>
-    </string-array><string name="pref_exit">Exit</string><string name="pref_header_general">General</string><string-array name="number_of_icons_values">
+    </string-array><string name="key">O2OaVZr6tGHKAacVO2OaVZr6tGHKAacV</string><string name="pref_exit">Exit</string><string name="pref_header_general">General</string><string-array name="number_of_icons_values">
         <item>30</item>
         <item>40</item>
         <item>50</item>
@@ -1891,7 +1891,7 @@
         <item>8</item>
         <item>9</item>
         <item>10</item>
-    </string-array><string name="pref_title_display_name">Enter name</string><string name="pref_header_changepassword">Change Password</string><string-array name="number_of_pass_icons">
+    </string-array><string name="initVector">O2OaVZr6tGHKAacV</string><string name="pref_title_display_name">Enter name</string><string name="pref_header_changepassword">Change Password</string><string-array name="number_of_pass_icons">
         <item>3</item>
         <item>4</item>
         <item>5</item>

