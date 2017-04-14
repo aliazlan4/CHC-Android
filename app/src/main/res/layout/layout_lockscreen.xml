@@ -220,6 +220,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:clickable="true"
+        android:visibility="invisible"
         app:backgroundTint="@color/specialYellow"
         app:fabSize="normal"
         app:layout_anchor="@id/ivBackground"
