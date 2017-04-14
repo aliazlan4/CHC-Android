@@ -1,18 +1,10 @@
 [
     {
-        "merged": "G:\\CHC-Android-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\background_blurred.png",
-        "source": "G:\\CHC-Android-master\\app\\src\\main\\res\\drawable-xxxhdpi\\background_blurred.png"
+        "merged": "C:\\Users\\famst\\Downloads\\CHC-Android-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\background.png",
+        "source": "C:\\Users\\famst\\Downloads\\CHC-Android-master\\app\\src\\main\\res\\drawable-xxxhdpi\\background.png"
     },
     {
-        "merged": "G:\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\background.png",
-        "source": "G:\\LockScreen\\app\\src\\main\\res\\drawable-xxxhdpi\\background.png"
-    },
-    {
-        "merged": "G:\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\background_blurred.png",
-        "source": "G:\\LockScreen\\app\\src\\main\\res\\drawable-xxxhdpi\\background_blurred.png"
-    },
-    {
-        "merged": "G:\\CHC-Android-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\background.png",
-        "source": "G:\\CHC-Android-master\\app\\src\\main\\res\\drawable-xxxhdpi\\background.png"
+        "merged": "C:\\Users\\famst\\Downloads\\CHC-Android-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\background_blurred.png",
+        "source": "C:\\Users\\famst\\Downloads\\CHC-Android-master\\app\\src\\main\\res\\drawable-xxxhdpi\\background_blurred.png"
     }
 ]

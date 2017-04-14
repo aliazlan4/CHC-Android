@@ -1,10 +1,6 @@
 [
     {
-        "merged": "G:\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\xml-v11\\pref_headers.xml",
-        "source": "G:\\LockScreen\\app\\src\\main\\res\\xml-v11\\pref_headers.xml"
-    },
-    {
-        "merged": "G:\\CHC-Android-master\\app\\build\\intermediates\\res\\merged\\debug\\xml-v11\\pref_headers.xml",
-        "source": "G:\\CHC-Android-master\\app\\src\\main\\res\\xml-v11\\pref_headers.xml"
+        "merged": "C:\\Users\\famst\\Downloads\\CHC-Android-master\\app\\build\\intermediates\\res\\merged\\debug\\xml-v11\\pref_headers.xml",
+        "source": "C:\\Users\\famst\\Downloads\\CHC-Android-master\\app\\src\\main\\res\\xml-v11\\pref_headers.xml"
     }
 ]

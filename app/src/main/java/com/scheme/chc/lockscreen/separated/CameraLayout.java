@@ -21,7 +21,7 @@ import java.util.List;
 @SuppressWarnings({"deprecation", "FieldCanBeLocal"})
 public class CameraLayout implements SurfaceHolder.Callback, Camera.PictureCallback, View.OnClickListener {
 
-    public boolean cameraActivated;
+    public boolean cameraActivated = false;
     public SurfaceView camView;
     private ImageButton switchCamera;
     private ImageButton captureImage;
@@ -48,7 +48,7 @@ public class CameraLayout implements SurfaceHolder.Callback, Camera.PictureCallb
 
         imagePath = "";
         camCondition = false;
-        cameraActivated = true;
+//        cameraActivated = true;
         camId = Camera.CameraInfo.CAMERA_FACING_BACK;
     }
 
@@ -131,6 +131,7 @@ public class CameraLayout implements SurfaceHolder.Callback, Camera.PictureCallb
             fileOutputStream = new FileOutputStream(imagePath);
             fileOutputStream.write(data);
             fileOutputStream.close();
+            camera.startPreview();
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -32,7 +33,7 @@ public class LockScreenActivity extends AppCompatActivity implements LockScreenU
     public static final int INTENT_MESSAGES = 24;
 
     public static Button btnUnlock;
-    public static boolean shouldRemoveView;
+    public static boolean shouldRemoveView = false;
 
     private ViewFlipper vfFlipper;
     private CameraLayout cameraLayout;
@@ -43,31 +44,31 @@ public class LockScreenActivity extends AppCompatActivity implements LockScreenU
     private LockScreenUtils lockScreenUtils;
     private ConvexHullClickEngine convexHullClickEngine;
 
-    /*@Override
-    public void onAttachedToWindow() {
-        // Set appropriate flags to make the screen appear over the keyguard
-        this.getWindow().setType(WindowManager.LayoutParams.TYPE_KEYGUARD_DIALOG);
-        this.getWindow().addFlags(
-                          WindowManager.LayoutParams.FLAG_FULLSCREEN
-                        | WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
-                        | WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
-                        | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
-                        // Self added
-                        | WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON
-                        | WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN
-                        | WindowManager.LayoutParams.FLAG_IGNORE_CHEEK_PRESSES
-                        | WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
-                        | WindowManager.LayoutParams.FLAG_SECURE
-                        | WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH
-        );
-        WindowManager.LayoutParams window = new WindowManager.LayoutParams();
-        window.gravity = Gravity.TOP;
-        super.onAttachedToWindow();
-    }
-*/
+//    @Override
+//    public void onAttachedToWindow() {
+//        // Set appropriate flags to make the screen appear over the keyguard
+//        this.getWindow().setType(WindowManager.LayoutParams.TYPE_KEYGUARD_DIALOG);
+//        this.getWindow().addFlags(
+//                          WindowManager.LayoutParams.FLAG_FULLSCREEN
+//                        | WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
+//                        | WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
+//                        | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
+//                        // Self added
+//                        | WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON
+//                        | WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN
+//                        | WindowManager.LayoutParams.FLAG_IGNORE_CHEEK_PRESSES
+//                        | WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
+//                        | WindowManager.LayoutParams.FLAG_SECURE
+//                        | WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH
+//        );
+//        WindowManager.LayoutParams window = new WindowManager.LayoutParams();
+//        window.gravity = Gravity.TOP;
+//        super.onAttachedToWindow();
+//    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_slide);
         initialize();
@@ -106,7 +107,7 @@ public class LockScreenActivity extends AppCompatActivity implements LockScreenU
                 //camera
                 if (convexHullClickEngine != null) {
                     startActivity(new Intent(LockScreenActivity.this, LockScreenActivity.class));
-                    LockScreenActivity.shouldRemoveView = true;
+                    //LockScreenActivity.shouldRemoveView = true;
                 }
                 flipPrevious();
             }
@@ -151,7 +152,7 @@ public class LockScreenActivity extends AppCompatActivity implements LockScreenU
             view = new NotificationBlockView(this);
             manager.addView(view, layoutParams);
         } else {
-            //manager.removeView(view);
+            manager.removeView(view);
             unlockHomeButton();
             enableKeyguard();
             LockScreenActivity.shouldRemoveView = false;
@@ -180,9 +181,7 @@ public class LockScreenActivity extends AppCompatActivity implements LockScreenU
         vfFlipper.setOutAnimation(this, R.anim.slide_out_left);
         vfFlipper.showNext();
         // Start the CHC Scheme with the right intent
-        if (intentChooser != -1) {
-            startSurfaceViewThread(intentChooser);
-        }
+        if (intentChooser != -1) startSurfaceViewThread(intentChooser);
     }
 
     public void flipPrevious() {
@@ -242,9 +241,9 @@ public class LockScreenActivity extends AppCompatActivity implements LockScreenU
             // Back button or home
             if (shouldRemoveView) {
                 System.out.println("STOP");
-                shouldRemoveView = false;
-                unlockHomeButton();
                 blockNotificationBar(false);
+//                unlockHomeButton();
+                //shouldRemoveView = false;
             } else {
                 System.out.println("Coming here");
             }
@@ -269,7 +268,7 @@ public class LockScreenActivity extends AppCompatActivity implements LockScreenU
         if (shouldRemoveView) {
             blockNotificationBar(false);
             System.out.println("Paused");
-            shouldRemoveView = false;
+            //shouldRemoveView = false;
         } else {
             System.out.println("Pause finishing activity");
         }
@@ -281,16 +280,16 @@ public class LockScreenActivity extends AppCompatActivity implements LockScreenU
         userLeaveTime = System.currentTimeMillis();
     }
 
-//    @Override
-//    public boolean dispatchKeyEvent(KeyEvent event) {
-//        // Handle the key press events here itself
-//        return !(event.getKeyCode() == KeyEvent.KEYCODE_VOLUME_UP
-//                || (event.getKeyCode() == KeyEvent.KEYCODE_VOLUME_DOWN)
-//                || (event.getKeyCode() == KeyEvent.KEYCODE_POWER)
-//                || (event.getKeyCode() == KeyEvent.KEYCODE_CAMERA))
-//                && (event.getKeyCode() == KeyEvent.KEYCODE_HOME);
-//        // && (event.getKeyCode() == KeyEvent.KEYCODE_APP_SWITCH);
-//    }
+    @Override
+    public boolean dispatchKeyEvent(KeyEvent event) {
+        // Handle the key press events here itself
+        return !(event.getKeyCode() == KeyEvent.KEYCODE_VOLUME_UP
+                || (event.getKeyCode() == KeyEvent.KEYCODE_VOLUME_DOWN)
+                || (event.getKeyCode() == KeyEvent.KEYCODE_POWER)
+                || (event.getKeyCode() == KeyEvent.KEYCODE_CAMERA))
+                && (event.getKeyCode() == KeyEvent.KEYCODE_HOME);
+        // && (event.getKeyCode() == KeyEvent.KEYCODE_APP_SWITCH);
+    }
 
 //    @Override
 //    public void onWindowFocusChanged(boolean hasFocus) {
@@ -302,16 +301,16 @@ public class LockScreenActivity extends AppCompatActivity implements LockScreenU
 //        }
 //    }
 
-//    // Handle button clicks
-//    @Override
-//    public boolean onKeyDown(int keyCode, android.view.KeyEvent event) {
-//        // super.onKeyDown(keyCode, event);
-//        return (keyCode == KeyEvent.KEYCODE_VOLUME_DOWN)
-//                || (keyCode == KeyEvent.KEYCODE_POWER)
-//                || (keyCode == KeyEvent.KEYCODE_VOLUME_UP)
-//                || (keyCode == KeyEvent.KEYCODE_CAMERA)
-//                || (keyCode == KeyEvent.KEYCODE_HOME);
-//    }
+    // Handle button clicks
+    @Override
+    public boolean onKeyDown(int keyCode, android.view.KeyEvent event) {
+        // super.onKeyDown(keyCode, event);
+        return (keyCode == KeyEvent.KEYCODE_VOLUME_DOWN)
+                || (keyCode == KeyEvent.KEYCODE_POWER)
+                || (keyCode == KeyEvent.KEYCODE_VOLUME_UP)
+                || (keyCode == KeyEvent.KEYCODE_CAMERA)
+                || (keyCode == KeyEvent.KEYCODE_HOME);
+    }
 
     // Handle events of calls and unlock screen if necessary
     private class StateListener extends PhoneStateListener {

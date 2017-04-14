@@ -1,18 +1,10 @@
 [
     {
-        "merged": "G:\\CHC-Android-master\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
-        "source": "C:\\Users\\famst\\.android\\build-cache\\1e74b332033c4cac18ab5b7c027a31980cf1b855\\output\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
+        "merged": "C:\\Users\\famst\\Downloads\\CHC-Android-master\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
+        "source": "C:\\Users\\famst\\.android\\build-cache\\1c31a9d6601022207e51f574bc21f753826962b5\\output\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
     },
     {
-        "merged": "G:\\CHC-Android-master\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
-        "source": "C:\\Users\\famst\\.android\\build-cache\\1e74b332033c4cac18ab5b7c027a31980cf1b855\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
-    },
-    {
-        "merged": "G:\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
-        "source": "C:\\Users\\famst\\.android\\build-cache\\1e74b332033c4cac18ab5b7c027a31980cf1b855\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
-    },
-    {
-        "merged": "G:\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
-        "source": "C:\\Users\\famst\\.android\\build-cache\\1e74b332033c4cac18ab5b7c027a31980cf1b855\\output\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
+        "merged": "C:\\Users\\famst\\Downloads\\CHC-Android-master\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
+        "source": "C:\\Users\\famst\\.android\\build-cache\\1c31a9d6601022207e51f574bc21f753826962b5\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
     }
 ]

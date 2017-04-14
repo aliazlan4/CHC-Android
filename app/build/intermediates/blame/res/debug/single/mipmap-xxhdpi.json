@@ -1,10 +1,6 @@
 [
     {
-        "merged": "G:\\CHC-Android-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
-        "source": "G:\\CHC-Android-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "G:\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
-        "source": "G:\\LockScreen\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\famst\\Downloads\\CHC-Android-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\famst\\Downloads\\CHC-Android-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     }
 ]

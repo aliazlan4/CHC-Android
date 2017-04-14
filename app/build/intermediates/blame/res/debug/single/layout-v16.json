@@ -1,10 +1,6 @@
 [
     {
-        "merged": "G:\\CHC-Android-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-v16\\notification_template_custom_big.xml",
-        "source": "C:\\Users\\famst\\.android\\build-cache\\feae81da6c4f4dd222a0daae48e67a486e475e4b\\output\\res\\layout-v16\\notification_template_custom_big.xml"
-    },
-    {
-        "merged": "G:\\LockScreen\\app\\build\\intermediates\\res\\merged\\debug\\layout-v16\\notification_template_custom_big.xml",
-        "source": "C:\\Users\\famst\\.android\\build-cache\\feae81da6c4f4dd222a0daae48e67a486e475e4b\\output\\res\\layout-v16\\notification_template_custom_big.xml"
+        "merged": "C:\\Users\\famst\\Downloads\\CHC-Android-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-v16\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\famst\\.android\\build-cache\\bb5476a01ca61545d6dcb1d181c027e05a2e3860\\output\\res\\layout-v16\\notification_template_custom_big.xml"
     }
 ]

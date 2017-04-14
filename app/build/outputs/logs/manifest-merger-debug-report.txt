@@ -1,204 +1,237 @@
 -- Merging decision tree log ---
 manifest
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:2:1-74:12
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:2:1-82:12
 	package
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:4:5-40
-		INJECTED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml
-		INJECTED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:4:5-40
+		INJECTED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml
-		INJECTED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:3:5-51
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:3:5-51
 	xmlns:android
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml
-		INJECTED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml
-uses-permission#android.permission.DISABLE_KEYGUARD
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:6:5-75
-	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:6:22-72
+		INJECTED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.CAMERA
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:7:5-64
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:6:5-65
 	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:7:22-62
-uses-permission#android.permission.READ_CALL_LOG
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:8:5-72
-	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:8:22-69
-uses-permission#android.permission.WAKE_LOCK
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:9:5-68
-	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:9:22-65
-uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:10:5-81
-	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:10:22-78
-uses-permission#android.permission.READ_PHONE_STATE
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:11:5-75
-	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:11:22-72
-uses-permission#android.permission.SYSTEM_ALERT_WINDOW
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:12:5-78
-	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:12:22-75
-uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:13:5-80
-	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:13:22-77
-uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:14:5-81
-	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:14:22-78
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:6:22-62
 uses-permission#android.permission.VIBRATE
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:15:5-66
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:7:5-66
 	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:15:22-63
-uses-permission#android.permission.REORDER_TASKS
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:16:5-72
-	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:16:22-69
-uses-permission#android.permission.READ_LOGS
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:17:5-68
-	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:17:22-65
-uses-permission#android.permission.READ_CONTACTS
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:18:5-72
-	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:18:22-69
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:7:22-63
 uses-permission#android.permission.READ_SMS
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:19:5-67
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:8:5-67
 	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:19:22-64
-uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:20:5-79
-	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:20:22-76
-uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:21:5-81
-	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:21:22-78
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:8:22-64
 uses-permission#android.permission.INTERNET
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:22:5-67
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:9:5-67
 	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:22:22-64
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:9:22-64
+uses-permission#android.permission.WAKE_LOCK
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:10:5-68
+	android:name
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:10:22-65
+uses-permission#android.permission.READ_LOGS
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:11:5-68
+	android:name
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:11:22-65
+uses-permission#android.permission.ACCESS_GPS
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:12:5-69
+	android:name
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:12:22-66
+uses-permission#android.permission.READ_CALL_LOG
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:13:5-72
+	android:name
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:13:22-69
+uses-permission#android.permission.REORDER_TASKS
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:14:5-72
+	android:name
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:14:22-69
+uses-permission#android.permission.READ_CONTACTS
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:15:5-72
+	android:name
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:15:22-69
+uses-permission#android.permission.USE_FINGERPRINT
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:16:5-74
+	android:name
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:16:22-71
+uses-permission#android.permission.ACCESS_LOCATION
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:17:5-74
+	android:name
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:17:22-71
+uses-permission#android.permission.DISABLE_KEYGUARD
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:18:5-75
+	android:name
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:18:22-72
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:19:5-75
+	android:name
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:19:22-72
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:20:5-78
+	android:name
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:20:22-75
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:21:5-79
+	android:name
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:21:22-76
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:22:5-80
+	android:name
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:22:22-77
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:23:5-81
+	android:name
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:23:22-78
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:24:5-81
+	android:name
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:24:22-78
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:25:5-81
+	android:name
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:25:22-78
 uses-feature#android.hardware.camera
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:24:5-85
-	android:required
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:24:58-82
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:27:5-60
 	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:24:19-57
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:27:19-57
 uses-feature#android.hardware.location.gps
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:25:5-66
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:28:5-66
 	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:25:19-63
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:28:19-63
+uses-feature#android.hardware.camera.autofocus
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:29:5-70
+	android:name
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:29:19-67
 application
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:27:5-72:19
-MERGED from [com.android.support:design:25.2.0] C:\Users\famst\.android\build-cache\1e74b332033c4cac18ab5b7c027a31980cf1b855\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:appcompat-v7:25.2.0] C:\Users\famst\.android\build-cache\feae81da6c4f4dd222a0daae48e67a486e475e4b\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.2.0] C:\Users\famst\.android\build-cache\9f96c386ff8a0dfbafb1d454e5b44af2b9f8b467\output\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:25.2.0] C:\Users\famst\.android\build-cache\c8307e6ab4e40efd7566453b5d17b55bad701a7a\output\AndroidManifest.xml:23:5-20
-MERGED from [com.android.support:transition:25.2.0] C:\Users\famst\.android\build-cache\cea974aee9842a73240e04c91fe737c81ea26b98\output\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:25.2.0] C:\Users\famst\.android\build-cache\fdef05c01a21b081a8ac618c08fdadd07ea33001\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\famst\.android\build-cache\3831e75d7fb1db945c907cdf80b7250cfb953f63\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\famst\.android\build-cache\f047f90396b2a8627f1079a7e3cfa8cd64544cde\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\famst\.android\build-cache\1bbb79a7ff4f8c364114443f3d99e689dc599f3d\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\famst\.android\build-cache\07551f1a7bad6eae2cbcc49a0847006ec24bcd6d\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.2.0] C:\Users\famst\.android\build-cache\80a35df13ea63070979201fbfd46c5120be81057\output\AndroidManifest.xml:25:5-20
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:31:5-80:19
+MERGED from [com.android.support:design:25.3.1] C:\Users\famst\.android\build-cache\1c31a9d6601022207e51f574bc21f753826962b5\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\famst\.android\build-cache\bb5476a01ca61545d6dcb1d181c027e05a2e3860\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\famst\.android\build-cache\8885a624980b512f08b79a39f5d2e90caa13f6d6\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\famst\.android\build-cache\32f5a3cd9c102b70c411522970d3cc2cda9f8816\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] C:\Users\famst\.android\build-cache\545bab0c025dc5bd350cb91f9c73e76a6499c504\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\famst\.android\build-cache\6ae9d1e995c6ff8fc9c93c6748e909c71b3cb833\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\famst\.android\build-cache\7707e84c00d1aaae8c20635810b9bab9c24f4c82\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\famst\.android\build-cache\e14faff38553638c1a1c13830de36a8ce8f3c3e1\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\famst\.android\build-cache\50dd4f20738e77a592ea584645cf1a611869f2fb\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\famst\.android\build-cache\dfbf488082aa4db5262f3746f604c49d4546121f\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\famst\.android\build-cache\0fe0b267dad59ce25c0ec167099ae43fd0e4c077\output\AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:31:9-41
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:36:9-41
 	android:supportsRtl
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:33:9-35
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:38:9-35
+	android:fullBackupContent
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:34:9-41
 	tools:ignore
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:34:9-59
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:39:9-59
 	android:allowBackup
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:29:9-35
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:33:9-35
 	android:icon
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:30:9-43
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:35:9-43
 	android:largeHeap
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:32:9-33
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:37:9-33
 	tools:targetApi
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:35:9-36
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:40:9-36
 	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:28:9-28
-activity#com.scheme.chc.lockscreen.lockscreen.MainLockScreenWindow
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:37:9-49:20
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:32:9-28
+activity#com.scheme.chc.lockscreen.SettingsActivity
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:41:9-54:20
 	android:screenOrientation
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:43:13-49
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:47:13-49
 	android:label
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:41:13-45
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:45:13-45
 	android:excludeFromRecents
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:40:13-46
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:44:13-46
 	android:launchMode
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:42:13-44
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:46:13-44
 	android:configChanges
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:39:13-74
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:43:13-74
 	android:theme
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:44:13-71
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:48:13-71
 	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:38:13-85
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:42:13-45
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:45:13-48:29
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:49:13-53:29
 action#android.intent.action.MAIN
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:46:17-69
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:50:17-69
 	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:46:25-66
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:50:25-66
 category#android.intent.category.LAUNCHER
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:47:17-77
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:52:17-77
 	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:47:27-74
-activity#com.scheme.chc.lockscreen.lockscreen.SlideActivity
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:51:9-57:20
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:52:27-74
+activity#com.scheme.chc.lockscreen.LockScreenActivity
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:55:9-58:70
 	android:screenOrientation
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:53:13-49
-	android:configChanges
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:54:13-74
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:57:13-49
 	android:theme
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:55:13-67
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:58:13-67
 	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:52:13-78
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:56:13-47
 activity#com.scheme.chc.lockscreen.settings.SettingsActivity
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:59:9-61:47
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:59:9-62:47
+	android:screenOrientation
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:61:13-49
 	android:theme
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:61:13-44
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:62:13-44
 	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:60:13-54
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:60:13-54
 service#com.scheme.chc.lockscreen.service.LockScreenService
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:63:9-62
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:66:9-62
 	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:63:18-59
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:66:18-59
 receiver#com.scheme.chc.lockscreen.service.LockScreenReceiver
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:65:9-71:20
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:68:9-74:20
 	android:enabled
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:67:13-35
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:70:13-35
 	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:66:13-55
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:69:13-55
 intent-filter#android.intent.action.BOOT_COMPLETED
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:68:13-70:29
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:71:13-73:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:69:17-79
+ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:72:17-79
 	android:name
-		ADDED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml:69:25-76
+		ADDED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml:72:25-76
 uses-sdk
-INJECTED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:design:25.2.0] C:\Users\famst\.android\build-cache\1e74b332033c4cac18ab5b7c027a31980cf1b855\output\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.2.0] C:\Users\famst\.android\build-cache\feae81da6c4f4dd222a0daae48e67a486e475e4b\output\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.2.0] C:\Users\famst\.android\build-cache\9f96c386ff8a0dfbafb1d454e5b44af2b9f8b467\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.2.0] C:\Users\famst\.android\build-cache\c8307e6ab4e40efd7566453b5d17b55bad701a7a\output\AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:recyclerview-v7:25.2.0] C:\Users\famst\.android\build-cache\95ba3ed80e64397720f78ba946a94690555c7eb4\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.2.0] C:\Users\famst\.android\build-cache\cea974aee9842a73240e04c91fe737c81ea26b98\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:25.2.0] C:\Users\famst\.android\build-cache\fdef05c01a21b081a8ac618c08fdadd07ea33001\output\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\famst\.android\build-cache\3831e75d7fb1db945c907cdf80b7250cfb953f63\output\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\famst\.android\build-cache\f047f90396b2a8627f1079a7e3cfa8cd64544cde\output\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\famst\.android\build-cache\1bbb79a7ff4f8c364114443f3d99e689dc599f3d\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\famst\.android\build-cache\07551f1a7bad6eae2cbcc49a0847006ec24bcd6d\output\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.2.0] C:\Users\famst\.android\build-cache\80a35df13ea63070979201fbfd46c5120be81057\output\AndroidManifest.xml:21:5-23:58
+INJECTED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:design:25.3.1] C:\Users\famst\.android\build-cache\1c31a9d6601022207e51f574bc21f753826962b5\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\famst\.android\build-cache\bb5476a01ca61545d6dcb1d181c027e05a2e3860\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\famst\.android\build-cache\8885a624980b512f08b79a39f5d2e90caa13f6d6\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\famst\.android\build-cache\32f5a3cd9c102b70c411522970d3cc2cda9f8816\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\famst\.android\build-cache\548b3c950a1c38ea57de8fd666ba31c9e5bf9e36\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] C:\Users\famst\.android\build-cache\545bab0c025dc5bd350cb91f9c73e76a6499c504\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\famst\.android\build-cache\6ae9d1e995c6ff8fc9c93c6748e909c71b3cb833\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\famst\.android\build-cache\7707e84c00d1aaae8c20635810b9bab9c24f4c82\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\famst\.android\build-cache\e14faff38553638c1a1c13830de36a8ce8f3c3e1\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\famst\.android\build-cache\50dd4f20738e77a592ea584645cf1a611869f2fb\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\famst\.android\build-cache\dfbf488082aa4db5262f3746f604c49d4546121f\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\famst\.android\build-cache\0fe0b267dad59ce25c0ec167099ae43fd0e4c077\output\AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.2.0] C:\Users\famst\.android\build-cache\1e74b332033c4cac18ab5b7c027a31980cf1b855\output\AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.3.1] C:\Users\famst\.android\build-cache\1c31a9d6601022207e51f574bc21f753826962b5\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml
-		INJECTED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml
-		INJECTED from G:\CHC-Android-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\famst\Downloads\CHC-Android-master\app\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:25.3.1] C:\Users\famst\.android\build-cache\1c31a9d6601022207e51f574bc21f753826962b5\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\famst\.android\build-cache\bb5476a01ca61545d6dcb1d181c027e05a2e3860\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\famst\.android\build-cache\8885a624980b512f08b79a39f5d2e90caa13f6d6\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\famst\.android\build-cache\32f5a3cd9c102b70c411522970d3cc2cda9f8816\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\famst\.android\build-cache\548b3c950a1c38ea57de8fd666ba31c9e5bf9e36\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] C:\Users\famst\.android\build-cache\545bab0c025dc5bd350cb91f9c73e76a6499c504\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\famst\.android\build-cache\6ae9d1e995c6ff8fc9c93c6748e909c71b3cb833\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\famst\.android\build-cache\7707e84c00d1aaae8c20635810b9bab9c24f4c82\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\famst\.android\build-cache\e14faff38553638c1a1c13830de36a8ce8f3c3e1\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\famst\.android\build-cache\50dd4f20738e77a592ea584645cf1a611869f2fb\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\famst\.android\build-cache\dfbf488082aa4db5262f3746f604c49d4546121f\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\famst\.android\build-cache\0fe0b267dad59ce25c0ec167099ae43fd0e4c077\output\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:design:25.3.1] C:\Users\famst\.android\build-cache\1c31a9d6601022207e51f574bc21f753826962b5\output\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:design:25.3.1] C:\Users\famst\.android\build-cache\1c31a9d6601022207e51f574bc21f753826962b5\output\AndroidManifest.xml:26:9-47
