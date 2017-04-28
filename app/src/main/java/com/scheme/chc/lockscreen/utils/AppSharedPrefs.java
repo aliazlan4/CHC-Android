@@ -1,9 +1,12 @@
 package com.scheme.chc.lockscreen.utils;
 
 import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.preference.PreferenceManager;
+import android.support.annotation.RequiresApi;
 
 import java.util.Set;
 
@@ -74,18 +77,22 @@ public class AppSharedPrefs {
         sharedPreferences.edit().putString(PrefProtocols.ROUNDS.getProtocolVal(), val).apply();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
     public Set<String> getViewPassIcons() {
         return sharedPreferences.getStringSet(PrefProtocols.VIEW_PASS_ICONS.getProtocolVal(), null);
     }
 
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public void setViewPassIcons(Set<String> val) {
         sharedPreferences.edit().putStringSet(PrefProtocols.VIEW_PASS_ICONS.getProtocolVal(), val).apply();
     }
 
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public Set<String> getCustomPassIcons() {
         return sharedPreferences.getStringSet(PrefProtocols.CUSTOM_PASS_ICON.getProtocolVal(), null);
     }
 
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public void setCustomPassIcons(Set<String> val) {
         sharedPreferences.edit().putStringSet(PrefProtocols.CUSTOM_PASS_ICON.getProtocolVal(), val).apply();
     }

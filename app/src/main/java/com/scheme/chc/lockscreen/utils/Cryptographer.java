@@ -1,8 +1,11 @@
 package com.scheme.chc.lockscreen.utils;
 
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Environment;
 import android.os.StatFs;
+import android.preference.PreferenceManager;
 import android.util.Base64;
 
 import com.scheme.chc.lockscreen.R;
@@ -11,6 +14,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.nio.channels.FileChannel;
+import java.security.MessageDigest;
+import java.util.Set;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
@@ -20,10 +25,11 @@ import javax.crypto.spec.SecretKeySpec;
 public class Cryptographer {
 
     private static Cryptographer instance;
+    private static String firstinstalltime = null;
+    private static String key;
     private int BUFFER_SIZE = 0;
-
     private Context context;
-    private String key, initVector;
+    private String initVector;
 
     private Cryptographer(Context context, String key) {
         this.context = context;
@@ -35,9 +41,50 @@ public class Cryptographer {
 
     public static Cryptographer getInstance(Context context) {
         if (instance == null) {
-            instance = new Cryptographer(context, context.getString(R.string.key));
+            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+            Set<String> viewingIcons = preferences.getStringSet("view_pass_icons", null);
+            try {
+                firstinstalltime = String.valueOf(context.getPackageManager().getPackageInfo(context.getPackageName(), 0).firstInstallTime);
+            } catch (PackageManager.NameNotFoundException e) {
+                e.printStackTrace();
+            }
+            if (viewingIcons == null) {
+                key = get256bitHash(
+                        "12345",
+                        firstinstalltime
+                );
+                System.out.println("salt is : " + String.valueOf(viewingIcons));
+            } else {
+                key = get256bitHash(
+                        String.valueOf(viewingIcons),
+                        firstinstalltime
+                );
+                System.out.println("salt is : " + String.valueOf(viewingIcons));
+            }
+
+            System.out.println("key is: " + key);
+            instance = new Cryptographer(context, key);
         }
         return instance;
+    }
+
+    public static String get256bitHash(String key, String salt) {
+        try {
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");
+            digest.update(salt.getBytes("UTF-8"));
+            byte[] hash = digest.digest(key.getBytes("UTF-8"));
+            StringBuffer hexString = new StringBuffer();
+
+            for (int i = 0; i < hash.length; i++) {
+                String hex = Integer.toHexString(0xff & hash[i]);
+                if (hex.length() == 1) hexString.append('0');
+                hexString.append(hex);
+            }
+
+            return hexString.toString();
+        } catch (Exception ex) {
+            throw new RuntimeException(ex);
+        }
     }
 
     public String encryptText(String plainText) {
@@ -207,6 +254,5 @@ public class Cryptographer {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 }

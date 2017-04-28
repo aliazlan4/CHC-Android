@@ -162,7 +162,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         return PreferenceFragment.class.getName().equals(fragmentName)
                 || GeneralPreferenceFragment.class.getName().equals(fragmentName)
                 || PassIconsPreferenceFragment.class.getName().equals(fragmentName)
-                || FeedbackPreferenceFragment.class.getName().equals(fragmentName)
+//                || FeedbackPreferenceFragment.class.getName().equals(fragmentName)
                 || ExitPreferenceFragment.class.getName().equals(fragmentName);
     }
 
@@ -433,7 +433,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             totalpassicontoview = Integer.parseInt(preferences.getString("no_of_pass_icons", "5"));
             final ArrayList<GridViewIcon> gridViewIcons = new ArrayList<>();
             ArrayList<String> arrayList = new ArrayList<>();
-            System.out.println("vieing ones: " + viewingIcons);
+            System.out.println("veiwing ones: " + viewingIcons);
 
             if (viewingIcons == null) {
                 AssetManager assetManager = getActivity().getAssets();
@@ -536,28 +536,28 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
      * This fragment shows Feedback preferences only. It is used when the
      * activity is showing a two-pane settings UI.
      */
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    public static class FeedbackPreferenceFragment extends PreferenceFragment {
-        @Override
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            addPreferencesFromResource(R.xml.pref_feedback);
-            setHasOptionsMenu(true);
-
-            bindPreferenceSummaryToValue(findPreference("name"));
-            bindPreferenceSummaryToValue(findPreference("comment"));
-        }
-
-        @Override
-        public boolean onOptionsItemSelected(MenuItem item) {
-            int id = item.getItemId();
-            if (id == android.R.id.home) {
-                startActivity(new Intent(getActivity(), SettingsActivity.class));
-                return true;
-            }
-            return super.onOptionsItemSelected(item);
-        }
-    }
+//    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+//    public static class FeedbackPreferenceFragment extends PreferenceFragment {
+//        @Override
+//        public void onCreate(Bundle savedInstanceState) {
+//            super.onCreate(savedInstanceState);
+//            addPreferencesFromResource(R.xml.pref_feedback);
+//            setHasOptionsMenu(true);
+//
+//            bindPreferenceSummaryToValue(findPreference("name"));
+//            bindPreferenceSummaryToValue(findPreference("comment"));
+//        }
+//
+//        @Override
+//        public boolean onOptionsItemSelected(MenuItem item) {
+//            int id = item.getItemId();
+//            if (id == android.R.id.home) {
+//                startActivity(new Intent(getActivity(), SettingsActivity.class));
+//                return true;
+//            }
+//            return super.onOptionsItemSelected(item);
+//        }
+//    }
 
     /**
      * This fragment shows Exit preferences only. It is used when the
