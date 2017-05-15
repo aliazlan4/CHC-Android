@@ -18,13 +18,19 @@ import java.util.Set;
 public class AppSharedPrefs {
 
     private static AppSharedPrefs instance;
+    private Context context;
     private SharedPreferences sharedPreferences;
 
     private AppSharedPrefs(Context context) {
+        this.context = context;
         this.sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
     }
 
     public static void initialize(Context context) {
+        instance = new AppSharedPrefs(context);
+    }
+
+    public void selfInitialize() {
         instance = new AppSharedPrefs(context);
     }
 

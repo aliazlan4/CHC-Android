@@ -13,6 +13,7 @@ import android.telephony.TelephonyManager;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ViewFlipper;
@@ -48,31 +49,31 @@ public class LockScreenActivity extends AppCompatActivity implements LockScreenU
     private ConvexHullClickEngine convexHullClickEngine;
     private Cryptographer cryptographer;
 
-//    @Override
-//    public void onAttachedToWindow() {
-//        // Set appropriate flags to make the screen appear over the keyguard
-//        this.getWindow().setType(WindowManager.LayoutParams.TYPE_KEYGUARD_DIALOG);
-//        this.getWindow().addFlags(
-//                          WindowManager.LayoutParams.FLAG_FULLSCREEN
-//                        | WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
-//                        | WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
-//                        | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
-//                        // Self added
-//                        | WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON
-//                        | WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN
-//                        | WindowManager.LayoutParams.FLAG_IGNORE_CHEEK_PRESSES
-//                        | WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
-//                        | WindowManager.LayoutParams.FLAG_SECURE
-//                        | WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH
-//        );
-//        WindowManager.LayoutParams window = new WindowManager.LayoutParams();
-//        window.gravity = Gravity.TOP;
-//        super.onAttachedToWindow();
-//    }
+    @Override
+    public void onAttachedToWindow() {
+        // Set appropriate flags to make the screen appear over the keyguard
+        this.getWindow().setType(WindowManager.LayoutParams.TYPE_KEYGUARD_DIALOG);
+        this.getWindow().addFlags(
+                          WindowManager.LayoutParams.FLAG_FULLSCREEN
+                        | WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
+                        | WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
+                        | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
+                        // Self added
+                        | WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON
+                        | WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN
+                        | WindowManager.LayoutParams.FLAG_IGNORE_CHEEK_PRESSES
+                        | WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
+                        | WindowManager.LayoutParams.FLAG_SECURE
+                        | WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH
+        );
+        WindowManager.LayoutParams window = new WindowManager.LayoutParams();
+        window.gravity = Gravity.TOP;
+        super.onAttachedToWindow();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //requestWindowFeature(Window.FEATURE_NO_TITLE);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_slide);
         initialize();

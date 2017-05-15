@@ -31,6 +31,7 @@ import android.provider.MediaStore;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.view.ContextThemeWrapper;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -40,6 +41,7 @@ import android.widget.Toast;
 
 import com.scheme.chc.lockscreen.R;
 import com.scheme.chc.lockscreen.utils.AppSharedPrefs;
+import com.scheme.chc.lockscreen.utils.Utilities;
 
 import java.io.BufferedInputStream;
 import java.io.FileNotFoundException;
@@ -123,6 +125,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                 PreferenceManager
                         .getDefaultSharedPreferences(preference.getContext())
                         .getString(preference.getKey(), ""));
+        // Utilities.getInstance().selfInitialize();
+        Log.d("Settings Check", "I was here...");
     }
 
     public static Bitmap getCroppedBitmap(Bitmap bitmap) {

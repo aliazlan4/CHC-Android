@@ -6,6 +6,7 @@ import android.os.Build;
 import android.text.Html;
 import android.text.Spanned;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Display;
 import android.view.WindowManager;
 
@@ -35,10 +36,12 @@ public class Utilities {
     private SimpleDateFormat simpleDateFormat;
 
     private Utilities(Context context) {
+        System.out.println("I was here in this constructor...");
         this.context = context;
         this.index = new ArrayList<>();
 
         AppSharedPrefs appSharedPrefs = AppSharedPrefs.getInstance();
+        appSharedPrefs.selfInitialize();
         this.totalRounds = Integer.parseInt(appSharedPrefs.getRounds());
         this.totalIconsToDisplay = Integer.parseInt(appSharedPrefs.getTotalIcons());
         this.totalNumberOfPassIcons = Integer.parseInt(appSharedPrefs.getNumPassIcons());
@@ -82,6 +85,10 @@ public class Utilities {
         instance = new Utilities(context);
     }
 
+    public void selfInitialize() {
+        instance = new Utilities(context);
+    }
+
     public static Utilities getInstance() {
         if (instance == null) {
             throw new ExceptionInInitializerError("Context not initialized. User " +
@@ -97,6 +104,7 @@ public class Utilities {
 
     public int getRandomInt(int limit) {
         int random = new Random().nextInt(limit - 5) + 5;
+        // Log.d("Random Integer", String.valueOf(random));
 
         if (index.contains(random)) {
             random = getRandomInt(limit);
@@ -186,5 +194,9 @@ public class Utilities {
             //noinspection deprecation
             return Html.fromHtml(date);
         }
+    }
+
+    public void clearIndex() {
+        index.clear();
     }
 }

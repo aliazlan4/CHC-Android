@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -19,8 +20,10 @@ import android.graphics.RectF;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Vibrator;
+import android.preference.PreferenceManager;
 import android.provider.CallLog;
 import android.provider.Telephony;
+import android.support.annotation.RequiresApi;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -29,6 +32,7 @@ import android.widget.Toast;
 
 import com.scheme.chc.lockscreen.LockScreenActivity;
 import com.scheme.chc.lockscreen.R;
+import com.scheme.chc.lockscreen.utils.AppSharedPrefs;
 import com.scheme.chc.lockscreen.utils.GrahamScan;
 import com.scheme.chc.lockscreen.utils.Icon;
 import com.scheme.chc.lockscreen.utils.IconPool;
@@ -43,6 +47,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
 public class ConvexHullClickEngine extends Thread implements View.OnTouchListener {
 
@@ -68,9 +73,12 @@ public class ConvexHullClickEngine extends Thread implements View.OnTouchListene
     private Paint paint;
     private boolean lock;
     private LockScreenActivity parentActivity;
+    private SharedPreferences preferences;
 
     public ConvexHullClickEngine(final LockScreenActivity parentActivity, boolean lock, final int intentChooser) {
         this.utilities = Utilities.getInstance();
+        // this.utilities.selfInitialize();
+        this.preferences = PreferenceManager.getDefaultSharedPreferences(parentActivity.getApplicationContext());
         this.iconPool = IconPool.getInstance();
         this.parentActivity = parentActivity;
         this.surfaceView = (SurfaceView) parentActivity.findViewById(R.id.mysurface);
@@ -96,6 +104,7 @@ public class ConvexHullClickEngine extends Thread implements View.OnTouchListene
         externalStorageDirectory = System.getenv("EXTERNAL_STORAGE") + "/";
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
     @Override
     public void run() {
         super.run();
@@ -110,6 +119,7 @@ public class ConvexHullClickEngine extends Thread implements View.OnTouchListene
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
     private void draw() {
         /* Start editing pixels in this surface.*/
         Canvas canvas = surfaceHolder.lockCanvas();
@@ -126,22 +136,36 @@ public class ConvexHullClickEngine extends Thread implements View.OnTouchListene
         surfaceHolder.unlockCanvasAndPost(canvas);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
     private void initializeUtilities(Canvas canvas) {
         canvasWidth = canvas.getWidth();
         canvasHeight = canvas.getHeight();
         selectedPassIcons.clear();
 
-        Utilities.initialize(this.parentActivity);
-        String[] passIcons = utilities.getUploadedPassIcons();
+        AppSharedPrefs appSharedPrefs = AppSharedPrefs.getInstance();
+        appSharedPrefs.selfInitialize();
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(parentActivity);
+        Set<String> viewingIcons = preferences.getStringSet("view_pass_icons", null);
+        Set<String> uploadIcons = preferences.getStringSet("custom_pass_icon", null);
+        System.out.println("veiwing ones: " + viewingIcons);
+        String[] passIcons = new String[0];
+
+        if (uploadIcons != null) {
+            passIcons = uploadIcons.toArray(new String[]{});
+        }
+        // passIcons = viewing.toArray(new String[]{});
         if (passIcons.length > 1) {
-            for (int i = 0; i < utilities.getTotalNumberOfPassIcons(); i++) {
+            for (int i = 0; i < Integer.parseInt(preferences.getString("no_of_pass_icons", "5")); i++) {
                 selectedPassIcons.add(getCroppedBitmap(convertUriToBitmap(Uri.parse(passIcons[i]))));
             }
         } else {
-            passIcons = utilities.getViewingPassIcons();
+            if (viewingIcons != null) {
+                passIcons = viewingIcons.toArray(new String[]{});
+            }
+            // passIcons = utilities.getViewingPassIcons();
             System.out.println("vieiwing" + Arrays.toString(passIcons));
             if (passIcons.length > 1) {
-                for (int i = 0; i < utilities.getTotalNumberOfPassIcons(); i++) {
+                for (int i = 0; i < Integer.parseInt(preferences.getString("no_of_pass_icons", "5")); i++) {
                     selectedPassIcons.add(getFilenameFromAssets(passIcons[i]));
                 }
             }
@@ -169,17 +193,22 @@ public class ConvexHullClickEngine extends Thread implements View.OnTouchListene
     }
 
 
+    @RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
     private void getAllIconsFromAssets() {
         try {
             iconsArrayFromAssets.clear();
             iconsArrayFromAssets.addAll(iconPool.getIconPool());
-            if (utilities.getChosenPassIcons().length <= 1
-                    && utilities.getUploadedPassIcons().length <= 1) {
-                for (int i = 1; i <= utilities.getTotalNumberOfPassIcons(); i++) {
+            /*Set<String> chosenPassIcons = preferences.getStringSet("choose_pass_icon", null);
+            Set<String> uploadPassIcons = preferences.getStringSet("custom_pass_icon", null);*/
+            String[] chosenPassIcons = utilities.getChosenPassIcons();
+            String[] uploadPassIcons = utilities.getUploadedPassIcons();
+            if (chosenPassIcons.length <= 1
+                    && uploadPassIcons.length <= 1) {
+                for (int i = 1; i <= Integer.parseInt(preferences.getString("no_of_pass_icons", "5")); i++) {
                     selectedPassIcons.add(bitmapFromAssets(parentActivity.getAssets().open("icons/" + i + ".png")));
                 }
             }
-            totalIconsInAssets = iconsArrayFromAssets.size() - utilities.getTotalNumberOfPassIcons();
+            totalIconsInAssets = iconsArrayFromAssets.size() - Integer.parseInt(preferences.getString("no_of_pass_icons", "5"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -192,14 +221,15 @@ public class ConvexHullClickEngine extends Thread implements View.OnTouchListene
         int iconLeftSpace = 5;
         passIconsXList.clear();
         passIconsYList.clear();
-        utilities.index.clear();
+        // utilities.index.clear();
         path.reset();
 
-        for (int i = 0; i < utilities.getTotalNumberOfPassIcons(); i++) {
+        for (int i = 0; i < Integer.parseInt(preferences.getString("no_of_pass_icons", "5")); i++) {
             bitmapArrayList.add(selectedPassIcons.get(i));
         }
 
-        for (int i = 0; i < utilities.getTotalNumberOfRegularIcons(); i++) {
+        for (int i = 0; i < Integer.parseInt(preferences.getString("total_icons", "40")) - Integer.parseInt(preferences.getString("no_of_pass_icons", "5")); i++) {
+            System.out.println(Integer.parseInt(preferences.getString("total_icons", "40")) - Integer.parseInt(preferences.getString("no_of_pass_icons", "5")));
             int randomNumber = utilities.getRandomInt(totalIconsInAssets);
             Bitmap drawingBitmap = (iconsArrayFromAssets.get(randomNumber)).getImageData();
             boolean same = false;
@@ -213,20 +243,22 @@ public class ConvexHullClickEngine extends Thread implements View.OnTouchListene
         }
 
         Collections.shuffle(bitmapArrayList, new Random(System.nanoTime()));
+        int iconsVer = Math.abs(Integer.parseInt(preferences.getString("total_icons", "40")) / 5);
+        int iconsHor = Math.abs(Integer.parseInt(preferences.getString("total_icons", "40")) / iconsVer);
 
-        for (int i = 0; i < utilities.getTotalIconsToDisplay(); i++) {
+        for (int i = 0; i < Integer.parseInt(preferences.getString("total_icons", "40")); i++) {
             canvas.drawBitmap(bitmapArrayList.get(i), iconLeftSpace, iconTopSpace, paint);
-            iconLeftSpace += canvasWidth / utilities.getNumberOfIconsHorizontally();
+            iconLeftSpace += canvasWidth / iconsHor;
             if (iconLeftSpace >= canvasWidth) {
                 boundary = iconLeftSpace;
                 iconLeftSpace = 5;
-                iconTopSpace += (canvasHeight / utilities.getNumberOfIconsVertically());
+                iconTopSpace += (canvasHeight / iconsVer);
             }
 
             if (isPassIcon(bitmapArrayList.get(i))) {
                 if (iconLeftSpace <= 5) {
                     passIconsXList.add(boundary - (utilities.getIconWidth() / 2));
-                    passIconsYList.add(iconTopSpace - (canvasHeight / utilities.getNumberOfIconsVertically()) + (utilities.getIconHeight() / 2));
+                    passIconsYList.add(iconTopSpace - (canvasHeight / iconsVer) + (utilities.getIconHeight() / 2));
                 } else {
                     passIconsXList.add(iconLeftSpace - (utilities.getIconWidth() / 2));
                     passIconsYList.add(iconTopSpace + (utilities.getIconHeight() / 2));
@@ -254,10 +286,15 @@ public class ConvexHullClickEngine extends Thread implements View.OnTouchListene
 //            }
 //        }
 
-        for (int i = 0; i < points.size() - 1; i++) {
+        passIconsXList = new ArrayList<>();
+        passIconsYList = new ArrayList<>();
+
+        for (int i = 0; i < points.size(); i++) {
             Point point = points.get(i);
-            passIconsXList.set(i, point.x);
-            passIconsYList.set(i, point.y);
+            // passIconsXList.set(i, point.x);
+            // passIconsYList.set(i, point.y);
+            passIconsXList.add(point.x);
+            passIconsYList.add(point.y);
         }
         System.out.println("X1: " + passIconsXList + " Y1:" + passIconsYList);
     }
@@ -321,12 +358,13 @@ public class ConvexHullClickEngine extends Thread implements View.OnTouchListene
     @SuppressLint("NewApi")
     public boolean onTouch(View v, MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_DOWN && v == surfaceView) {
+            utilities.clearIndex();
             RectF pBounds = new RectF();
             float x = event.getX();
             float y = event.getY();
             path.computeBounds(pBounds, true);
             if (pBounds.contains(x, y)) {
-                if (draw == utilities.getTotalRounds()) {
+                if (draw == Integer.parseInt(preferences.getString("rounds", "5"))) {
 
                     switch (intentChooser) {
                         case LockScreenActivity.INTENT_PHONE:
@@ -373,7 +411,7 @@ public class ConvexHullClickEngine extends Thread implements View.OnTouchListene
                 }
                 return true;
             } else {        //outside the convex
-                switch (utilities.getTotalRounds()) {
+                switch (Integer.parseInt(preferences.getString("rounds", "5"))) {
                     case 5:
                         if (wrongTries == 2) {
                             vibrator.vibrate(2000);
@@ -453,5 +491,4 @@ public class ConvexHullClickEngine extends Thread implements View.OnTouchListene
         //return _bmp;
         return output;
     }
-
 }
