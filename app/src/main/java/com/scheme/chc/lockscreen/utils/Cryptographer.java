@@ -53,7 +53,7 @@ public class Cryptographer {
                         "12345",
                         firstinstalltime
                 );
-                System.out.println("salt is : " + String.valueOf(viewingIcons));
+                System.out.println("salt is : 12345 ");
             } else {
                 key = get256bitHash(
                         String.valueOf(viewingIcons),

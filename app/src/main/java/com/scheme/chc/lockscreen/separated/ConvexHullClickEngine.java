@@ -13,6 +13,8 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Point;
 import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
+import android.graphics.Rect;
 import android.graphics.RectF;
 import android.net.Uri;
 import android.os.Build;
@@ -37,6 +39,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
@@ -128,20 +131,43 @@ public class ConvexHullClickEngine extends Thread implements View.OnTouchListene
         canvasHeight = canvas.getHeight();
         selectedPassIcons.clear();
 
-        String[] passIcons = utilities.getChosenPassIcons();
+        Utilities.initialize(this.parentActivity);
+        String[] passIcons = utilities.getUploadedPassIcons();
         if (passIcons.length > 1) {
             for (int i = 0; i < utilities.getTotalNumberOfPassIcons(); i++) {
-                selectedPassIcons.add(getFilenameFromAssets(passIcons[i]));
+                selectedPassIcons.add(getCroppedBitmap(convertUriToBitmap(Uri.parse(passIcons[i]))));
             }
         } else {
-            passIcons = utilities.getUploadedPassIcons();
-        }
-        if (passIcons.length > 1) {
-            for (int i = 0; i < utilities.getTotalNumberOfPassIcons(); i++) {
-                selectedPassIcons.add(convertUriToBitmap(Uri.parse(passIcons[i])));
+            passIcons = utilities.getViewingPassIcons();
+            System.out.println("vieiwing" + Arrays.toString(passIcons));
+            if (passIcons.length > 1) {
+                for (int i = 0; i < utilities.getTotalNumberOfPassIcons(); i++) {
+                    selectedPassIcons.add(getFilenameFromAssets(passIcons[i]));
+                }
             }
         }
+
+//        System.out.println("chosen" + Arrays.toString(passIcons));
+//        if (passIcons.length > 1) {
+//            for (int i = 0; i < utilities.getTotalNumberOfPassIcons(); i++) {
+//                selectedPassIcons.add(getFilenameFromAssets(passIcons[i]));
+//            }
+//        } else {
+//            passIcons = utilities.getUploadedPassIcons();
+
+//        }
+
+//        else {
+//            passIcons = utilities.getViewingPassIcons();
+//            System.out.println("uploaded" + Arrays.toString(passIcons));
+//        }
+//        if (passIcons.length > 1) {
+//            for (int i = 0; i < utilities.getTotalNumberOfPassIcons(); i++) {
+//                selectedPassIcons.add(getCroppedBitmap(convertUriToBitmap(Uri.parse(passIcons[i]))));
+//            }
+//        }
     }
+
 
     private void getAllIconsFromAssets() {
         try {
@@ -212,23 +238,23 @@ public class ConvexHullClickEngine extends Thread implements View.OnTouchListene
     private void createConvexHull() {
         List<Point> points = GrahamScan.getConvexHull(passIconsXList, passIconsYList);
 
-        points.remove(points.size() - 1);
+//        points.remove(points.size() - 1);
 
-        for (int i = 0; i < passIconsYList.size(); i++) {
-            boolean flag = false;
-            for (int j = 0; j < points.size(); j++) {
-                int X = points.get(j).x;
-                int Y = points.get(j).y;
-                if (passIconsXList.get(i) == X && passIconsYList.get(i) == Y) {
-                    flag = true;
-                }
-            }
-            if (!flag) {
-                points.add(new Point(passIconsXList.get(i), passIconsYList.get(i)));
-            }
-        }
+//        for (int i = 0; i < passIconsYList.size(); i++) {
+//            boolean flag = false;
+//            for (int j = 0; j < points.size(); j++) {
+//                int X = points.get(j).x;
+//                int Y = points.get(j).y;
+//                if (passIconsXList.get(i) == X && passIconsYList.get(i) == Y) {
+//                    flag = true;
+//                }
+//            }
+//            if (!flag) {
+//                points.add(new Point(passIconsXList.get(i), passIconsYList.get(i)));
+//            }
+//        }
 
-        for (int i = 0; i < points.size(); i++) {
+        for (int i = 0; i < points.size() - 1; i++) {
             Point point = points.get(i);
             passIconsXList.set(i, point.x);
             passIconsYList.set(i, point.y);
@@ -349,7 +375,7 @@ public class ConvexHullClickEngine extends Thread implements View.OnTouchListene
             } else {        //outside the convex
                 switch (utilities.getTotalRounds()) {
                     case 5:
-                        if (wrongTries == 3) {
+                        if (wrongTries == 2) {
                             vibrator.vibrate(2000);
                             Toast.makeText(parentActivity, "Incorrect: Try Again", Toast.LENGTH_LONG).show();
                             draw = 1;
@@ -406,5 +432,26 @@ public class ConvexHullClickEngine extends Thread implements View.OnTouchListene
         return false;
     }
 
+    private Bitmap getCroppedBitmap(Bitmap bitmap) {
+        Bitmap output = Bitmap.createBitmap(bitmap.getWidth(),
+                bitmap.getHeight(), Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(output);
+
+        final int color = 0xff424242;
+        final Paint paint = new Paint();
+        final Rect rect = new Rect(0, 0, bitmap.getWidth(), bitmap.getHeight());
+
+        paint.setAntiAlias(true);
+        canvas.drawARGB(0, 0, 0, 0);
+        paint.setColor(color);
+        // canvas.drawRoundRect(rectF, roundPx, roundPx, paint);
+        canvas.drawCircle(bitmap.getWidth() / 2, bitmap.getHeight() / 2,
+                bitmap.getWidth() / 2, paint);
+        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
+        canvas.drawBitmap(bitmap, rect, rect, paint);
+        //Bitmap _bmp = Bitmap.createScaledBitmap(output, 60, 60, false);
+        //return _bmp;
+        return output;
+    }
 
 }

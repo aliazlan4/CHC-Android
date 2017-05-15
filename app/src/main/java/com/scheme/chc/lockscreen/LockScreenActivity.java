@@ -36,7 +36,7 @@ public class LockScreenActivity extends AppCompatActivity implements LockScreenU
     public static final int INTENT_MESSAGES = 24;
 
     public static Button btnUnlock;
-    public static boolean shouldRemoveView = false;
+    public static boolean shouldRemoveView;
 
     private ViewFlipper vfFlipper;
     private CameraLayout cameraLayout;
@@ -156,9 +156,11 @@ public class LockScreenActivity extends AppCompatActivity implements LockScreenU
             view = new NotificationBlockView(this);
             manager.addView(view, layoutParams);
         } else {
-            manager.removeView(view);
+            if (view.getWindowToken() != null)
+                manager.removeView(view);
             unlockHomeButton();
             enableKeyguard();
+            System.out.println("falsing it");
             LockScreenActivity.shouldRemoveView = false;
         }
     }

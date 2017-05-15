@@ -53,7 +53,7 @@ public class Utilities {
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.HONEYCOMB) {
             Set<String> viewingIcons = appSharedPrefs.getViewPassIcons();
-            Set<String> selectionsChosenGallery = appSharedPrefs.getCustomPassIcons();
+            Set<String> selectionsChosenGallery = appSharedPrefs.getChosenPassIcons();
             Set<String> selectionsCustomUploaded = appSharedPrefs.getCustomPassIcons();
             this.viewingPassIcons = viewingIcons != null
                     ? viewingIcons.toArray(new String[]{})

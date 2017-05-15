@@ -18,10 +18,10 @@
     <!--android:icon="@drawable/changepassword"-->
     <!--android:title="@string/pref_header_changepassword" />-->
 
-    <header
-        android:fragment="com.scheme.chc.lockscreen.settings.SettingsActivity$FeedbackPreferenceFragment"
-        android:icon="@drawable/feedback"
-        android:title="@string/pref_header_feedback" />
+    <!--<header-->
+    <!--android:fragment="com.scheme.chc.lockscreen.settings.SettingsActivity$FeedbackPreferenceFragment"-->
+    <!--android:icon="@drawable/feedback"-->
+    <!--android:title="@string/pref_header_feedback" />-->
 
     <header
         android:fragment="com.scheme.chc.lockscreen.settings.SettingsActivity$ExitPreferenceFragment"

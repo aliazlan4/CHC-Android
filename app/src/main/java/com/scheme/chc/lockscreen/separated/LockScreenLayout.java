@@ -304,11 +304,15 @@ public class LockScreenLayout implements View.OnTouchListener, View.OnClickListe
 
     @Override
     public void onWeatherReturned(LocationModel locationModel, WeatherModel weatherModel) {
-        if ((int) (weatherModel.temperature.getTemp()) > 0) {
+        if ((int) (weatherModel.temperature.getTemp()) > 0 && weatherModel.currentCondition.getCondition() != null) {
             tvWeather.setText(weatherModel.currentCondition.getCondition());
             tvTemperature.setText(Html.fromHtml(weatherModel.temperature.getTemp() + "°C"));
             tvWeatherIcon.setText(Html.fromHtml(setWeatherIcon(weatherModel.currentCondition.getWeatherId(),
                     locationModel.getSunrise(), locationModel.getSunset())));
+            AppSharedPrefs appSharedPrefs = AppSharedPrefs.getInstance();
+            appSharedPrefs.setCondition(weatherModel.currentCondition.getCondition());
+            appSharedPrefs.setTemperature(String.valueOf(weatherModel.temperature.getTemp()));
+            appSharedPrefs.setWeatherId(weatherModel.currentCondition.getWeatherId());
         } else {
             AppSharedPrefs appSharedPrefs = AppSharedPrefs.getInstance();
             tvWeather.setText(appSharedPrefs.getCondition());

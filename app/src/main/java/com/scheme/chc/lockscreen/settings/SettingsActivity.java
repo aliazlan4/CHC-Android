@@ -13,6 +13,11 @@ import android.content.res.Configuration;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
+import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -45,6 +50,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -117,6 +123,28 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                 PreferenceManager
                         .getDefaultSharedPreferences(preference.getContext())
                         .getString(preference.getKey(), ""));
+    }
+
+    public static Bitmap getCroppedBitmap(Bitmap bitmap) {
+        Bitmap output = Bitmap.createBitmap(bitmap.getWidth(),
+                bitmap.getHeight(), Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(output);
+
+        final int color = 0xff424242;
+        final Paint paint = new Paint();
+        final Rect rect = new Rect(0, 0, bitmap.getWidth(), bitmap.getHeight());
+
+        paint.setAntiAlias(true);
+        canvas.drawARGB(0, 0, 0, 0);
+        paint.setColor(color);
+        // canvas.drawRoundRect(rectF, roundPx, roundPx, paint);
+        canvas.drawCircle(bitmap.getWidth() / 2, bitmap.getHeight() / 2,
+                bitmap.getWidth() / 2, paint);
+        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
+        canvas.drawBitmap(bitmap, rect, rect, paint);
+        //Bitmap _bmp = Bitmap.createScaledBitmap(output, 60, 60, false);
+        //return _bmp;
+        return output;
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent imageReturnedIntent) {
@@ -260,6 +288,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         private boolean uploading = false;
         private ArrayList<String> bitmapsArraylistUploaded = new ArrayList<>();
         private Bitmap bitmapsUploaded;
+        private boolean alreadyselected = false;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -286,7 +315,11 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                     itemclickcount = 0;
                     intent.setType("image/*");
                     intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
-                    intent.setAction(Intent.ACTION_GET_CONTENT);        //                    intent.setAction(Intent.ACTION_PICK);
+                    if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1)
+                        intent.setAction(Intent.ACTION_GET_CONTENT);        //                    intent.setAction(Intent.ACTION_PICK);
+                    else
+                        intent.setAction(Intent.ACTION_OPEN_DOCUMENT);        //                    intent.setAction(Intent.ACTION_PICK);
+
                     for (int i = 0; i < noofpassicons; i++) {
                         itemclickcount++;
                         startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_MULTIPLE);
@@ -373,9 +406,29 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             imagegrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                     GridViewIcon item = (GridViewIcon) parent.getItemAtPosition(position);
-                    passiconarray[itemclickcount] = item.getTitle();
+                    for (int itemno = 0; itemno < itemclickcount; itemno++) {
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                            if (Objects.equals(passiconarray[itemno], item.getTitle())) {
+                                Toast.makeText(getContext(), "Already Selected", Toast.LENGTH_SHORT).show();
+                                alreadyselected = true;
+                                break;
+                            }
+                        } else {
+                            if (passiconarray[itemno].equals(item.getTitle())) {
+                                Toast.makeText(getActivity(), "Already Selected", Toast.LENGTH_SHORT).show();
+                                alreadyselected = true;
+                                break;
+                            }
+                        }
+                    }
 
-                    itemclickcount++;
+                    if (alreadyselected) {
+                        alreadyselected = false;
+                    } else {
+                        passiconarray[itemclickcount] = item.getTitle();
+                        itemclickcount++;
+                    }
+
                     if (itemclickcount == noofpassicons) {
                         System.out.println(itemclickcount + " " + (noofpassicons - 1));
                         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
@@ -454,7 +507,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                     String[] ViewPassIcons = viewing != null ? viewing.toArray(new String[]{}) : new String[0];
                     for (int i = 0; i < totalpassicontoview; i++) {
                         Uri myUri = Uri.parse(ViewPassIcons[i]);
-                        gridViewIcons.add(new GridViewIcon(convertUriToBitmap(myUri), i + ".png"));
+                        gridViewIcons.add(new GridViewIcon(getCroppedBitmap(convertUriToBitmap(myUri)), i + ".png"));
                     }
                 }
             }
@@ -487,14 +540,23 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         public void onActivityResult(int requestCode, int resultCode, Intent data) {
             super.onActivityResult(requestCode, resultCode, data);
             System.out.println(data.getData());
-            if (requestCode == PICK_IMAGE_MULTIPLE && resultCode == RESULT_OK && data.getData() != null && !uploading) {
-                String imagesPath = data.getDataString();
+//            if (requestCode == PICK_IMAGE_MULTIPLE && resultCode == RESULT_OK && data.getData() != null && !uploading) {
+            String imagesPath = String.valueOf(data.getData());
+
+            if (imagesPathList.contains(imagesPath)) {
+                Toast.makeText(getContext(), "Already Selected", Toast.LENGTH_SHORT).show();
+            } else {
                 imagesPathList.add(imagesPath);
-                yourbitmap = BitmapFactory.decodeFile(imagesPath);
-                imagebitmaps.add(yourbitmap);
-            } else if (requestCode == PICK_IMAGE_MULTIPLE && resultCode == RESULT_OK && data.getData() != null && uploading) {
-                bitmapsArraylistUploaded.add(data.getData().toString());
+                bitmapsArraylistUploaded.add(imagesPath);
+//                yourbitmap = BitmapFactory.decodeFile(imagesPath);
+//                imagebitmaps.add(getCroppedBitmap(yourbitmap));
+            }
+//                    else if(
+            if (requestCode == PICK_IMAGE_MULTIPLE && resultCode == RESULT_OK && data.getData() != null && uploading) {
+//                bitmapsArraylistUploaded.add(data.getData().toString());
                 if (bitmapsArraylistUploaded.size() == noofpassicons) {
+//                if (imagebitmaps.size() == noofpassicons) {
+                    System.out.println("OUT");
                     SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
                     SharedPreferences.Editor edit = preferences.edit();
                     System.out.println("array is  " + bitmapsArraylistUploaded);

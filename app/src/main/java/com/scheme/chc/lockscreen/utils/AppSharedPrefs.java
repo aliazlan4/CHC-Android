@@ -97,6 +97,16 @@ public class AppSharedPrefs {
         sharedPreferences.edit().putStringSet(PrefProtocols.CUSTOM_PASS_ICON.getProtocolVal(), val).apply();
     }
 
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    public Set<String> getChosenPassIcons() {
+        return sharedPreferences.getStringSet(PrefProtocols.CHOSEN_PASS_ICON.getProtocolVal(), null);
+    }
+
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    public void getChosenPassIcons(Set<String> val) {
+        sharedPreferences.edit().putStringSet(PrefProtocols.CHOSEN_PASS_ICON.getProtocolVal(), val).apply();
+    }
+
     public int getWeatherId() {
         return sharedPreferences.getInt(PrefProtocols.WEATHER_ID.getProtocolVal(), -1);
     }
@@ -210,6 +220,7 @@ public class AppSharedPrefs {
         VIEW_PASS_ICONS     ("view_pass_icons"),
         NUM_PASS_ICONS      ("no_of_pass_icons"),
         CUSTOM_PASS_ICON("custom_pass_icon"),
+        CHOSEN_PASS_ICON("choose_pass_icon"),
 
         // For weather
         WEATHER_ID("weather_id"),

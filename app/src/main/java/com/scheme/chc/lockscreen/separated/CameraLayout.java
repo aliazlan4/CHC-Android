@@ -139,7 +139,8 @@ public class CameraLayout implements SurfaceHolder.Callback, Camera.PictureCallb
 
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
-        camera = Camera.open();
+        if (camera == null)
+            camera = Camera.open();
         camera.setDisplayOrientation(90);
     }
 
@@ -150,6 +151,7 @@ public class CameraLayout implements SurfaceHolder.Callback, Camera.PictureCallb
             camera.stopPreview(); // Stop preview using stopPreview() method
             camCondition = false; // Setting condition to false means stop
         }
+
         // Condition to check whether your device have camera or not
         if (camera != null) {
             try {
