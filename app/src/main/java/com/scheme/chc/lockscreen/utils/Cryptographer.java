@@ -26,14 +26,14 @@ public class Cryptographer {
 
     private static Cryptographer instance;
     private static String firstinstalltime = null;
-    private static String key;
+    private static byte[] key;
     private int BUFFER_SIZE = 0;
     private Context context;
     private String initVector;
 
-    private Cryptographer(Context context, String key) {
+    private Cryptographer(Context context, byte[] key) {
         this.context = context;
-        this.key = key;
+//        this.key = key;
         this.initVector = context.getString(R.string.initVector);
         BUFFER_SIZE = new StatFs(Environment.getDataDirectory().getPath()).getBlockSize();
         System.out.println(BUFFER_SIZE);
@@ -45,6 +45,7 @@ public class Cryptographer {
             Set<String> viewingIcons = preferences.getStringSet("view_pass_icons", null);
             try {
                 firstinstalltime = String.valueOf(context.getPackageManager().getPackageInfo(context.getPackageName(), 0).firstInstallTime);
+                System.out.println("first" + firstinstalltime);
             } catch (PackageManager.NameNotFoundException e) {
                 e.printStackTrace();
             }
@@ -62,26 +63,36 @@ public class Cryptographer {
                 System.out.println("salt is : " + String.valueOf(viewingIcons));
             }
 
-            System.out.println("key is: " + key);
+//            key = "O2OaVZr6tGHKAacVO2OaVZr6tGHKAacV";
+            System.out.println("key is: " + key.toString());
+
+            System.out.println("key is: " + key.length);
             instance = new Cryptographer(context, key);
         }
         return instance;
     }
 
-    public static String get256bitHash(String key, String salt) {
+    public static byte[] get256bitHash(String key, String salt) {
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
             digest.update(salt.getBytes("UTF-8"));
             byte[] hash = digest.digest(key.getBytes("UTF-8"));
-            StringBuffer hexString = new StringBuffer();
-
-            for (int i = 0; i < hash.length; i++) {
-                String hex = Integer.toHexString(0xff & hash[i]);
-                if (hex.length() == 1) hexString.append('0');
-                hexString.append(hex);
-            }
-
-            return hexString.toString();
+            return hash;
+//            StringBuffer hexString = new StringBuffer();
+//
+//            for (int i = 0; i < hash.length; i++) {
+//                String hex = Integer.toHexString(0xff & hash[i]);
+//                if(hex.length() == 1) hexString.append('0');
+//                hexString.append(hex);
+//            }
+//
+//            String hex = hexString.toString();
+//            StringBuilder output = new StringBuilder();
+//            for (int i = 0; i < hex.length(); i+=2) {
+//                String str = hex.substring(i, i+2);
+//                output.append((char)Integer.parseInt(str, 16));
+//            }
+//            return output.toString();
         } catch (Exception ex) {
             throw new RuntimeException(ex);
         }
@@ -98,7 +109,7 @@ public class Cryptographer {
     public byte[] encryptBytes(byte[] plainBytes) {
         try {
             IvParameterSpec iv = new IvParameterSpec(initVector.getBytes("UTF-8"));
-            SecretKeySpec skeySpec = new SecretKeySpec(key.getBytes("UTF-8"), "AES");
+            SecretKeySpec skeySpec = new SecretKeySpec(key, "AES");
 
             Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING");
             cipher.init(Cipher.ENCRYPT_MODE, skeySpec, iv);
@@ -114,7 +125,7 @@ public class Cryptographer {
     public byte[] decryptBytes(byte[] cipherBytes) {
         try {
             IvParameterSpec iv = new IvParameterSpec(initVector.getBytes("UTF-8"));
-            SecretKeySpec skeySpec = new SecretKeySpec(key.getBytes("UTF-8"), "AES");
+            SecretKeySpec skeySpec = new SecretKeySpec(key, "AES");
 
             Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING");
             cipher.init(Cipher.DECRYPT_MODE, skeySpec, iv);
@@ -138,7 +149,8 @@ public class Cryptographer {
             FileOutputStream out = new FileOutputStream(temp);
             int c;
             IvParameterSpec iv = new IvParameterSpec(initVector.getBytes("UTF-8"));
-            SecretKeySpec skeySpec = new SecretKeySpec(key.getBytes("UTF-8"), "AES");
+            System.out.println(key.toString());
+            SecretKeySpec skeySpec = new SecretKeySpec(key, "AES");
 
             Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING");
             cipher.init(Cipher.ENCRYPT_MODE, skeySpec, iv);
@@ -179,7 +191,7 @@ public class Cryptographer {
             FileOutputStream out = new FileOutputStream(temp);
 
             IvParameterSpec iv = new IvParameterSpec(initVector.getBytes("UTF-8"));
-            SecretKeySpec skeySpec = new SecretKeySpec(key.getBytes("UTF-8"), "AES");
+            SecretKeySpec skeySpec = new SecretKeySpec(key, "AES");
 
             Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING");
             cipher.init(Cipher.DECRYPT_MODE, skeySpec, iv);

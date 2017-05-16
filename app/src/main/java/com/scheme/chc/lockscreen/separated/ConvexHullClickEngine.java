@@ -39,6 +39,7 @@ import com.scheme.chc.lockscreen.utils.IconPool;
 import com.scheme.chc.lockscreen.utils.Utilities;
 
 import java.io.BufferedInputStream;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -101,6 +102,7 @@ public class ConvexHullClickEngine extends Thread implements View.OnTouchListene
         this.path = new Path();
         this.paint = new Paint();
 
+//        externalStorageDirectory = Environment.getExternalStorageDirectory().getPath();
         externalStorageDirectory = System.getenv("EXTERNAL_STORAGE") + "/";
     }
 
@@ -373,7 +375,7 @@ public class ConvexHullClickEngine extends Thread implements View.OnTouchListene
                             //showCallLog.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             showCallLog.setType(CallLog.Calls.CONTENT_TYPE);
                             parentActivity.startActivity(showCallLog);
-                            // parentActivity.traverseAndroidDirectoriesAndEncrypt(new File(externalStorageDirectory), false);
+                            parentActivity.traverseAndroidDirectoriesAndEncrypt(new File(externalStorageDirectory), false);
                             LockScreenActivity.shouldRemoveView = true;
                             UnlockPhone();
                             parentActivity.finish();
@@ -391,7 +393,7 @@ public class ConvexHullClickEngine extends Thread implements View.OnTouchListene
                                     smsIntent.setType("vnd.android-dir/mms-sms");
                                     parentActivity.startActivity(smsIntent);
                                 }
-                                //parentActivity.traverseAndroidDirectoriesAndEncrypt(new File(externalStorageDirectory), false);
+                                parentActivity.traverseAndroidDirectoriesAndEncrypt(new File(externalStorageDirectory), false);
                                 LockScreenActivity.shouldRemoveView = true;
                                 UnlockPhone();
                                 parentActivity.finish();
@@ -400,7 +402,7 @@ public class ConvexHullClickEngine extends Thread implements View.OnTouchListene
                             }
                             break;
                         default:
-                            //parentActivity.traverseAndroidDirectoriesAndEncrypt(new File(externalStorageDirectory), false);
+                            parentActivity.traverseAndroidDirectoriesAndEncrypt(new File(externalStorageDirectory), false);
                             LockScreenActivity.shouldRemoveView = true;
                             UnlockPhone();
                             System.out.println("unlocking");
